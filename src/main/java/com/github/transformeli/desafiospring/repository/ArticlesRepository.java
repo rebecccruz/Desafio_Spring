@@ -2,6 +2,7 @@ package com.github.transformeli.desafiospring.repository;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
+import com.github.transformeli.desafiospring.exception.NotFoundException;
 import com.github.transformeli.desafiospring.model.Articles;
 import org.springframework.stereotype.Repository;
 import java.io.File;
@@ -11,7 +12,7 @@ import java.util.List;
 
 @Repository
 public class ArticlesRepository {
-    private final String linkfile = "src/main/resources/products.json";
+    private final String linkFile = "src/main/resources/products.json";
 
     public List<Articles> getAllArticles() {
         return readFile();
@@ -30,7 +31,7 @@ public class ArticlesRepository {
         catch(Exception e){
 
         }
-
+        throw new NotFoundException("Category not found");
     }
 
     public void saveArticles(Articles articles){
@@ -41,7 +42,7 @@ public class ArticlesRepository {
             listaArticles = readFile();
             listaArticlesNova = new ArrayList<>(listaArticles);
             listaArticlesNova.add(articles);
-            writer.writeValue(new File(linkfile), listaArticlesNova);
+            writer.writeValue(new File(linkFile), listaArticlesNova);
         }catch(Exception e){
             System.out.println("Erro ao inserir as informacoes");
         }
@@ -51,7 +52,7 @@ public class ArticlesRepository {
         ObjectMapper mapper = new ObjectMapper();
         List<Articles> lista = null;
         try{
-            lista = Arrays.asList(mapper.readValue(new File(linkfile),Articles[].class));
+            lista = Arrays.asList(mapper.readValue(new File(linkFile),Articles[].class));
         }
         catch(Exception e){
             lista = new ArrayList<>();
