@@ -1,4 +1,4 @@
-package com.example.desafiospring;
+package com.github.transformeli.desafiospring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

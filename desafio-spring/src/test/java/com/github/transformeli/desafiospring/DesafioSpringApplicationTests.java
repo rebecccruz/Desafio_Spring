@@ -1,4 +1,4 @@
-package com.example.desafiospring;
+package com.github.transformeli.desafiospring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
