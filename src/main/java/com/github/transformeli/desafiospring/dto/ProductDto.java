@@ -15,4 +15,5 @@ public class ProductDto {
     private Integer quantity;
     private Boolean freeShipping;
     private String prestige;
+
 }
