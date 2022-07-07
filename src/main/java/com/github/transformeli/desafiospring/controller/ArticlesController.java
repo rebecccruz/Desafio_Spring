@@ -6,20 +6,22 @@ import com.github.transformeli.desafiospring.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1")
 public class ArticlesController {
     @Autowired
     private IProductService service;
-
+    @GetMapping("/articles")
+    public ResponseEntity<List<Product>> getAllArticles() {
+        List<Product> products = service.getAllProducts();
+        return ResponseEntity.ok().body(products);
+    }
     @PostMapping("/insert-articles-request")
     public ResponseEntity<List<ProductDTO>> createArticles(@RequestBody List<Product> articleList)
     {
