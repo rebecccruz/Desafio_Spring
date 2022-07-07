@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductService implements IProductService {
@@ -49,5 +51,23 @@ public class ProductService implements IProductService {
         return null;
     }
 
-
+    @Override
+    public List<Product> getAllFromFilters(Map<String, String> params) {
+        List<Product> allProducts = this.getAllProducts();
+        List<Product> filtredProducts;
+        if(params.containsKey("category") && params.containsKey("freeShipping")) {
+            filtredProducts = allProducts.stream()
+                    .filter(p -> p.getCategory().equals(params.getOrDefault("category", "")))
+                    .filter(p -> p.getFreeShipping().equals(Boolean.valueOf(params.getOrDefault("freeShipping", "false"))))
+                    .collect(Collectors.toList());
+            return filtredProducts;
+        } else if (params.containsKey("freeShipping") && params.containsKey("prestige")){
+            filtredProducts = allProducts.stream()
+                    .filter(p -> p.getFreeShipping().equals(Boolean.valueOf(params.getOrDefault("freeShipping", "false"))))
+                    .filter(p -> p.getPrestige().equals((params.getOrDefault("prestige", ""))))
+                    .collect(Collectors.toList());
+            return filtredProducts;
+        }
+        return allProducts;
+    }
 }
