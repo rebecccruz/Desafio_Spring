@@ -1,6 +1,7 @@
 package com.github.transformeli.desafiospring.service;
 
 import com.github.transformeli.desafiospring.dto.ProductDTO;
+import com.github.transformeli.desafiospring.exception.NotFoundException;
 import com.github.transformeli.desafiospring.model.Product;
 import com.github.transformeli.desafiospring.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,18 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public Product getByCategory(String category) {
-        return repo.getByCategory(category);
+    public List<ProductDTO> getByCategory(String category) {
+        try {
+            List<Product> productsByCategory = repo.getByCategory(category);
+            List<ProductDTO> treatedProducts = productsByCategory
+                    .stream().map(ProductDTO::new).collect(Collectors.toList());
+
+
+            return treatedProducts;
+        } catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
+        throw new NotFoundException("Sorry, this category has no products yet");
     }
 
     @Override
@@ -61,7 +72,7 @@ public class ProductService implements IProductService {
         }
         return result;
     }
-    
+
     @Override
     public List<ProductDTO> getAllArticles() {
         List<Product> productsModel = repo.getAllProducts();
@@ -72,7 +83,7 @@ public class ProductService implements IProductService {
                 .collect(Collectors.toList());
         return productsDTO;
     }
-    
+
     @Override
     public List<Product> getAllFromFilters(Map<String, String> params) {
         List<Product> allProducts = this.getAllProducts();
