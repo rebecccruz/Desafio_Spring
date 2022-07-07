@@ -27,6 +27,12 @@ public class ArticlesController {
         return ResponseEntity.ok().body(productsDTO);
     }
 
+    @GetMapping("/articles/")
+    public ResponseEntity<List<ProductDTO>> getByCategory(@RequestParam String category) {
+        List<ProductDTO> productsByCategory = service.getByCategory(category);
+        return ResponseEntity.ok().body(productsByCategory);
+    }
+
     @PostMapping("/insert-articles-request")
     public ResponseEntity<List<ProductDTO>> createArticles(@RequestBody List<Product> articleList)
     {
