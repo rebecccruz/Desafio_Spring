@@ -18,9 +18,14 @@ public class ArticlesController {
     @Autowired
     private IProductService service;
     @GetMapping("/articles")
-    public ResponseEntity<List<Product>> getAllArticles() {
-        List<Product> products = service.getAllProducts();
-        return ResponseEntity.ok().body(products);
+    public ResponseEntity<List<ProductDTO>> getAllArticles() {
+        List<Product> productsModel = service.getAllProducts();
+        List<ProductDTO> productsDTO =
+                productsModel
+                        .stream()
+                        .map(ProductDTO::new)
+                        .collect(Collectors.toList());
+        return ResponseEntity.ok().body(productsDTO);
     }
     @PostMapping("/insert-articles-request")
     public ResponseEntity<List<ProductDTO>> createArticles(@RequestBody List<Product> articleList)
