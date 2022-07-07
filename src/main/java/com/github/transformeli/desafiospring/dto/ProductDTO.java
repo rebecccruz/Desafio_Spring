@@ -14,5 +14,6 @@ public class ProductDTO {
         this.productId = product.getProductId();
         this.name = product.getName();
         this.quantity = product.getQuantity();
+
     }
 }
