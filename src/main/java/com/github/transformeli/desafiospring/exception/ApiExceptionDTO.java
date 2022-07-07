@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Builder
-public class NotFoundExceptionDetalhes {
+public class ApiExceptionDTO {
     private String title;
     private int status;
     private String message;
