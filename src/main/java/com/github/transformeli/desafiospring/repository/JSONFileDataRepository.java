@@ -6,10 +6,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.io.File;
-import java.lang.reflect.GenericArrayType;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 @Repository
