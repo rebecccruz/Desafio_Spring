@@ -1,11 +1,13 @@
 package com.github.transformeli.desafiospring.service;
 
+import com.github.transformeli.desafiospring.dto.ProductDTO;
 import com.github.transformeli.desafiospring.model.Product;
 import com.github.transformeli.desafiospring.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductService implements IProductService {
@@ -48,6 +50,19 @@ public class ProductService implements IProductService {
     public List<Product> getAllLowerPrice() {
         return null;
     }
+
+    public List<ProductDTO> getAllArticles() {
+        List<Product> productsModel = repo.getAllProducts();
+        List<ProductDTO> productsDTO
+                = productsModel
+                .stream()
+                .map(ProductDTO::new)
+                .collect(Collectors.toList())
+                ;
+        return productsDTO;
+    }
+
+
 
 
 }
