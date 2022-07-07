@@ -8,6 +8,7 @@ import lombok.*;
 public class ProductDTO {
     private Long productId;
     private String name;
+
     private Integer quantity;
 
     public ProductDTO(Product product) {
