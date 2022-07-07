@@ -22,7 +22,7 @@ public class JSONFileDataRepository<T> {
         try {
             list = Arrays.asList(mapper.readValue(new File(linkFile), Product[].class));
         } catch (Exception e) {
-            list = new ArrayList<T>();
+            list = new ArrayList<>();
         }
         return (List<T>) list;
     }
