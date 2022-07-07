@@ -1,6 +1,7 @@
 package com.github.transformeli.desafiospring.controller;
 
 import com.github.transformeli.desafiospring.dto.ProductDTO;
+import com.github.transformeli.desafiospring.enums.ParamOrderEnum;
 import com.github.transformeli.desafiospring.model.Product;
 import com.github.transformeli.desafiospring.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +16,16 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/v1")
 public class ArticlesController {
+
     @Autowired
     private IProductService service;
-    @GetMapping("/articles")
+
+    @GetMapping("/articles/")
     public ResponseEntity<List<Product>> getAllArticles() {
         List<Product> products = service.getAllProducts();
         return ResponseEntity.ok().body(products);
     }
+
     @PostMapping("/insert-articles-request")
     public ResponseEntity<List<ProductDTO>> createArticles(@RequestBody List<Product> articleList)
     {
@@ -29,4 +33,10 @@ public class ArticlesController {
         articleList.stream().forEach(System.out::println);
         return new ResponseEntity(productDtoList, HttpStatus.CREATED);
     }
-}
+
+    @GetMapping("/articles")
+            public ResponseEntity<List<Product>> getAllByOrder(@RequestParam Integer order){
+            List<Product> products = service.getAllByOrder(order);
+            return ResponseEntity.ok().body(products);
+        }
+    }

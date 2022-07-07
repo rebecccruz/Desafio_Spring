@@ -9,9 +9,11 @@ public interface IProductService {
     public List<Product> getAllProducts();
     public Product getByCategory(String category);
     public void saveProduct(Product product);
-    public List<Product> getAllAsc();
-    public List<Product> getAllDesc();
-    public List<Product> getAllHigherPrice();
-    public List<Product> getAllLowerPrice();
+//    public List<Product> getAllHigherPrice();
+//    public List<Product> getAllLowerPrice();
+//    public List<Product> getAlphaAsc();
+//    public List<Product> getAlphaDesc();
+    public List<Product> getAllByOrder(Integer order);
+
 
 }
