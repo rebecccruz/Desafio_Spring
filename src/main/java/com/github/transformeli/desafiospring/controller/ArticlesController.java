@@ -46,4 +46,11 @@ public class ArticlesController {
         articleList.stream().forEach(product -> service.saveProduct(product));
         return new ResponseEntity(service.getAllArticles(articleList), HttpStatus.CREATED);
     }
+
+    @PutMapping("/articles/update-articles/{productID}")
+    public ResponseEntity<List<Product>> updateStockPriceArticle(@PathVariable Long productID, @RequestBody Product product) {
+        product.setProductId(productID);
+        List<Product> result = service.updateStockPriceArticle(product);
+        return ResponseEntity.ok().body(result);
+    }
 }

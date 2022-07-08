@@ -2,6 +2,7 @@ package com.github.transformeli.desafiospring.service;
 
 import com.github.transformeli.desafiospring.dto.ProductDTO;
 import com.github.transformeli.desafiospring.exception.BadRequestException;
+import com.github.transformeli.desafiospring.exception.InternalServerException;
 import com.github.transformeli.desafiospring.exception.NotFoundException;
 import com.github.transformeli.desafiospring.model.Product;
 import com.github.transformeli.desafiospring.repository.ProductRepository;
@@ -133,5 +134,26 @@ public class ProductService implements IProductService {
             return filtredProducts;
         }
         return allProducts;
+    }
+
+    /**
+     * Update product price and quantity by product ID
+     * @author: Lucas Pinheiro Rocha / Alexandre Borges Souza
+     * @param product product to be updated
+     */
+    @Override
+    public List<Product> updateStockPriceArticle(Product product) {
+        Optional<Product> result = repo.getAllProducts().stream().filter(r -> r.getProductId() == product.getProductId()).findFirst();
+        try {
+            if (result.isPresent()){
+                result.get().setPrice(product.getPrice());
+                result.get().setQuantity(product.getQuantity());
+                return repo.updateProduct(result.get());
+            }
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        throw new NotFoundException("Product not found");
     }
 }
