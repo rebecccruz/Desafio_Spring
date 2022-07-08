@@ -3,13 +3,11 @@ package com.github.transformeli.desafiospring.service;
 import com.github.transformeli.desafiospring.dto.ProductDTO;
 import com.github.transformeli.desafiospring.enums.ParamOrderEnum;
 import com.github.transformeli.desafiospring.exception.BadRequestException;
-import com.github.transformeli.desafiospring.exception.InternalServerException;
 import com.github.transformeli.desafiospring.exception.NotFoundException;
 import com.github.transformeli.desafiospring.model.Product;
 import com.github.transformeli.desafiospring.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -28,25 +26,6 @@ public class ProductService implements IProductService {
     @Override
     public List<Product> getAllProducts() {
         return repo.getAllProducts();
-    }
-
-    /**
-     * This method call getByCategory(String category) in ProductRepository, change Product to ProductDTO and return list.
-     *
-     * @param category Product Category
-     * @author Lucas Pinheiro Rocha
-     */
-    @Override
-    public List<ProductDTO> getByCategory(String category) {
-        try {
-            List<Product> productsByCategory = repo.getByCategory(category);
-            List<ProductDTO> treatedProducts = productsByCategory
-                    .stream().map(ProductDTO::new).collect(Collectors.toList());
-            return treatedProducts;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        throw new NotFoundException("Sorry, this category has no products yet");
     }
 
     /**
@@ -151,6 +130,10 @@ public class ProductService implements IProductService {
         if (order.isPresent()) {
             filteredProducts = this.getAllByOrder(ParamOrderEnum.valueOf(order.get()), filteredProducts);
         }
+        if(filteredProducts.size() == 0)
+        {
+            throw new NotFoundException("We don't have products for these filters");
+        }
         return this.getAllArticles(filteredProducts);
     }
 
@@ -159,6 +142,10 @@ public class ProductService implements IProductService {
         filteredProducts = products.stream()
                 .filter(p -> p.getCategory().equalsIgnoreCase(category))
                 .collect(Collectors.toList());
+        if(filteredProducts.size() == 0)
+        {
+            throw new NotFoundException("category has no products yet");
+        }
         return filteredProducts;
     }
 

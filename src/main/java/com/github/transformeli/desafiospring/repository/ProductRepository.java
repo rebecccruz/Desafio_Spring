@@ -24,21 +24,7 @@ public class ProductRepository {
     public List<Product> getAllProducts() {
         return readFile();
     }
-    /**
-     * Return product if category is equal @parameter.
-     * @author Lucas Pinheiro Rocha and Larissa Navarro
-     * @param
-     */
-    public List<Product> getByCategory(String category) {
-        try {
-            List<Product> list = readFile();
-            return list.stream()
-                    .filter(p -> p.getCategory().equalsIgnoreCase(category)).collect(Collectors.toList());
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        throw new InternalServerException("Could not read the file");
-    }
+
     /**
      * Save clients, this method add the client in the list.
      * @author Isaias Finger and Larissa Navarro
@@ -54,8 +40,7 @@ public class ProductRepository {
             productListNew.add(product);
             writer.writeValue(new File(linkFile), productListNew);
         } catch (Exception e) {
-            // TODO: Exception
-            System.out.println("Erro ao inserir as informacoes");
+            throw new InternalServerException(e.getMessage());
         }
     }
 
@@ -87,7 +72,7 @@ public class ProductRepository {
         try {
             writer.writeValue(new File(linkFile), products);
         } catch (Exception e) {
-            System.out.println("Erro ao inserir as informacoes");
+            throw new InternalServerException(e.getMessage());
         }
     }
 
@@ -102,6 +87,7 @@ public class ProductRepository {
         try {
             list = Arrays.asList(mapper.readValue(new File(linkFile), Product[].class));
         } catch (Exception ex) {
+            throw new InternalServerException(ex.getMessage());
         }
         return list;
     }
