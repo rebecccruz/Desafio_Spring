@@ -2,12 +2,16 @@ package com.github.transformeli.desafiospring.controller;
 
 import com.github.transformeli.desafiospring.dto.ProductDTO;
 import com.github.transformeli.desafiospring.enums.ParamOrderEnum;
+import com.github.transformeli.desafiospring.exception.BadRequestException;
+import com.github.transformeli.desafiospring.exception.InternalServerException;
+import com.github.transformeli.desafiospring.exception.PreConditionFailedException;
 import com.github.transformeli.desafiospring.model.Product;
 import com.github.transformeli.desafiospring.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.*;
 
 @RestController
@@ -21,28 +25,26 @@ public class ArticlesController {
     public ResponseEntity<List<ProductDTO>> getArticles(
             @RequestParam(required = false) Optional<String> category,
             @RequestParam(required = false) Optional<String> brand,
-            @RequestParam(required = false) Optional<Boolean> freeShipping,
+            @RequestParam(required = false) Optional<String> freeShipping,
             @RequestParam(required = false) Optional<String> prestige,
-            @RequestParam(required = false) Optional<Integer> order
+            @RequestParam(required = false) Optional<String> order
     ) {
+        try {
+            Integer.valueOf(order.get());
+        } catch (Exception ex) {
+            throw new PreConditionFailedException(ex.getMessage());
+        }
+        Optional<Boolean> isFreeShipping = Optional.empty();
+        if(freeShipping.isPresent())
+        {
+            isFreeShipping = Optional.of(Boolean.valueOf(freeShipping.get()));
+        }
         return ResponseEntity.ok().body(service.getProductsByFilter(
                 category,
                 brand,
-                freeShipping,
+                isFreeShipping,
                 prestige,
-                order));
-    }
-
-    @GetMapping("/articles/category/{name}")
-    public ResponseEntity<List<ProductDTO>> getByCategory(@PathVariable String name) {
-        List<ProductDTO> productsByCategory = service.getByCategory(name);
-        return ResponseEntity.ok().body(productsByCategory);
-    }
-
-    @GetMapping("/articles/order/{orderId}")
-    public ResponseEntity<List<Product>> getAllByOrder(@PathVariable Integer orderId) {
-        List<Product> products = service.getAllByOrder(ParamOrderEnum.valueOf(orderId), service.getAllProducts());
-        return ResponseEntity.ok().body(products);
+                Optional.of(Integer.valueOf(order.get()))));
     }
 
     @PostMapping("/insert-articles-request")
