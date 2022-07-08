@@ -18,15 +18,19 @@ public class ArticlesController {
     private IProductService service;
 
     @GetMapping("/articles")
-    public ResponseEntity<List<ProductDTO>> getAllArticles(@RequestParam Map<String, String> params) {
-        if (params.isEmpty()) {
-            List<ProductDTO> productsDTO = service.getAllArticles(service.getAllProducts());
-            return ResponseEntity.ok().body(productsDTO);
-        }
-        List<Product> filtredProducts = service.getAllFromFilters(params);
-        List<Product> orderedProducts = service.getAllByOrder(
-                Integer.valueOf(params.getOrDefault("order", "0")), filtredProducts);
-        return ResponseEntity.ok().body(service.getAllArticles(orderedProducts));
+    public ResponseEntity<List<ProductDTO>> getArticles(
+            @RequestParam(required = false) Optional<String> category,
+            @RequestParam(required = false) Optional<String> brand,
+            @RequestParam(required = false) Optional<Boolean> freeShipping,
+            @RequestParam(required = false) Optional<String> prestige,
+            @RequestParam(required = false) Optional<Integer> order
+    ) {
+        return ResponseEntity.ok().body(service.getProductsByFilter(
+                category,
+                brand,
+                freeShipping,
+                prestige,
+                order));
     }
 
     @GetMapping("/articles/category/{name}")
@@ -37,7 +41,7 @@ public class ArticlesController {
 
     @GetMapping("/articles/order/{orderId}")
     public ResponseEntity<List<Product>> getAllByOrder(@PathVariable Integer orderId) {
-        List<Product> products = service.getAllByOrder(orderId, service.getAllProducts());
+        List<Product> products = service.getAllByOrder(ParamOrderEnum.valueOf(orderId), service.getAllProducts());
         return ResponseEntity.ok().body(products);
     }
 
