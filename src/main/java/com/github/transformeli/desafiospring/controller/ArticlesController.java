@@ -41,7 +41,7 @@ public class ArticlesController {
         return new ResponseEntity(productDtoList, HttpStatus.CREATED);
     }
 
-    @GetMapping("/articles")
+    @GetMapping("/articles//")
             public ResponseEntity<List<Product>> getAllByOrder(@RequestParam Integer order){
             List<Product> products = service.getAllByOrder(order);
             return ResponseEntity.ok().body(products);
