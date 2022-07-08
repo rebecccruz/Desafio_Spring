@@ -20,4 +20,5 @@ public interface IProductService {
             Optional<Boolean> freeShipping,
             Optional<String> prestige,
             Optional<Integer> order);
+    public List<Product> updateStockPriceArticle(Product product);
 }
