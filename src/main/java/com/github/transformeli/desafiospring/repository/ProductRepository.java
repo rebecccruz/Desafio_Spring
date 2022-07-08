@@ -68,6 +68,38 @@ public class ProductRepository {
     }
 
     /**
+     * Update price and quantity product by product ID
+     * @author: Lucas Pinheiro Rocha / Alexandre Borges Souza
+     * @param product product to be updated
+     */
+    public List<Product> updateProduct(Product product) {
+        List<Product> productsList = getAllProducts();
+        List<Product> updatedProductList = productsList.stream().map(r-> {
+            if (r.getProductId() == product.getProductId()) {
+                return product;
+            }
+            return r;
+        }).collect(Collectors.toList());
+        this.updateProductsToFile(updatedProductList);
+        return getAllProducts();
+    }
+
+    /**
+     * Update products to JSON file
+     * @author: Lucas Pinheiro Rocha / Alexandre Borges Souza
+     * @param products List of products to be updated
+     */
+    private void updateProductsToFile(List<Product> products) {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
+        try {
+            writer.writeValue(new File(linkFile), products);
+        } catch (Exception e) {
+            System.out.println("Erro ao inserir as informacoes");
+        }
+    }
+
+    /**
      * This method read the file json.
      * @author Isaias Finger
      * @param
