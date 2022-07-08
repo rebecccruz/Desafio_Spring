@@ -10,14 +10,11 @@ public class ClientDTO {
     private String state;
     private String country;
 
-    private String cpf;
-
     public ClientDTO(Client client)
     {
         this.id = client.getId();
         this.name = client.getName();
         this.state = client.getState();
         this.country = client.getCountry();
-        this.cpf = client.getCpf();
     }
 }
