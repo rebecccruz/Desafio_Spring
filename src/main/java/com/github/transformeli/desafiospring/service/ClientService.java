@@ -17,17 +17,35 @@ public class ClientService implements IClientService {
     @Autowired
     private ClientRepository repo;
 
+    /**
+     * This method call getAllClients() in ClientRepository, change Client to ClientDTO and return list.
+     * @author Isaias Finger
+     * @param
+     */
     @Override
     public List<ClientDTO> getAllClients() {
         return repo.getAllClients().stream()
                 .map(ClientDTO::new)
                 .collect(Collectors.toList());
     }
-
+    /**
+     * This method call getBySate(String state) in ClientRepository, change Client to ClientDTO and return list.
+     * @author: Larissa Navarro
+     * @param state
+     */
     @Override
     public List<ClientDTO> getClientsByState(String state) {
-        return this.getAllClients(); // TODO
+        List<Client> clientByStateList = repo.getByState(state);
+        List<ClientDTO> treatedClient = clientByStateList.stream().map(ClientDTO::new).collect(Collectors.toList());
+        return treatedClient;
+
     }
+
+    /**
+     * This method call saveClient(Client client) in ClientRepository
+     * @author Isaias Finger
+     * @param client
+     */
 
     @Override
     public ClientDTO saveClient(Client client) {
@@ -35,7 +53,11 @@ public class ClientService implements IClientService {
         this.validateAddNewClient(client);
         return repo.saveClient(client);
     }
-
+    /**
+     * This method check if attributes is empty and call exceptions
+     * @author Alexandre Borges
+     * @param client
+     */
     private void validateAddNewClient ( Client client) {
         client.setCpf(CPFDocument.getNumberOnlyCPF(client.getCpf()));
         String[] arrClientName = client.getName().split("\\s");
@@ -61,6 +83,11 @@ public class ClientService implements IClientService {
         }
     }
 
+    /**
+     * This method return an id to new Client
+     * @author Alexandre Borges
+     * @param
+     */
     private Integer getNewClientID () {
         Integer id = 0;
 
