@@ -34,15 +34,15 @@ public class ArticlesController {
         } catch (Exception ex) {
             throw new PreConditionFailedException(ex.getMessage());
         }
-        Optional<Boolean> freeShippingId = Optional.empty();
+        Optional<Boolean> isFreeShipping = Optional.empty();
         if(freeShipping.isPresent())
         {
-            freeShippingId = Optional.of(Boolean.valueOf(freeShipping.get()));
+            isFreeShipping = Optional.of(Boolean.valueOf(freeShipping.get()));
         }
         return ResponseEntity.ok().body(service.getProductsByFilter(
                 category,
                 brand,
-                freeShippingId,
+                isFreeShipping,
                 prestige,
                 Optional.of(Integer.valueOf(order.get()))));
     }
