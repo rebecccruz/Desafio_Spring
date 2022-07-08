@@ -13,10 +13,15 @@ public class ApiException extends RuntimeException {
 
     public ApiException(String message) {
         super(message);
-        this.setTitle(message);
         this.setStatus(HttpStatus.MULTI_STATUS);
         this.setMessageData(message);
         this.setTimestamp(LocalDateTime.now());
+    }
+
+    public void setStatus(HttpStatus statusData)
+    {
+        this.status = statusData;
+        this.setTitle(statusData.getReasonPhrase());
     }
 
     public ApiExceptionDTO getDTO() {
