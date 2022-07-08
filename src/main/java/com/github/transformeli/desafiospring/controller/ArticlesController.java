@@ -29,14 +29,16 @@ public class ArticlesController {
             @RequestParam(required = false) Optional<String> prestige,
             @RequestParam(required = false) Optional<String> order
     ) {
-        try {
-            Integer.valueOf(order.get());
-        } catch (Exception ex) {
-            throw new PreConditionFailedException(ex.getMessage());
+        Optional<Integer> orderBy = Optional.empty();
+        if (order.isPresent()) {
+            try {
+                orderBy = Optional.of(Integer.valueOf(order.get()));
+            } catch (Exception ex) {
+                throw new PreConditionFailedException(ex.getMessage());
+            }
         }
         Optional<Boolean> isFreeShipping = Optional.empty();
-        if(freeShipping.isPresent())
-        {
+        if (freeShipping.isPresent()) {
             isFreeShipping = Optional.of(Boolean.valueOf(freeShipping.get()));
         }
         return ResponseEntity.ok().body(service.getProductsByFilter(
@@ -44,7 +46,7 @@ public class ArticlesController {
                 brand,
                 isFreeShipping,
                 prestige,
-                Optional.of(Integer.valueOf(order.get()))));
+                orderBy));
     }
 
     @PostMapping("/insert-articles-request")
