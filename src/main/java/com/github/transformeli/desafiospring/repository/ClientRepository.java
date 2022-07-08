@@ -20,10 +20,6 @@ public class ClientRepository {
 
     public ClientDTO saveClient(Client client) {
         List<Client> clients = this.getAllClients();
-        if(clients.stream().anyMatch(c -> c.getCpf().equalsIgnoreCase(client.getCpf())))
-        {
-            throw new ClientExistsException("Client create request (" + client.getCpf() + ") already exists.");
-        }
         ObjectMapper mapper = new ObjectMapper();
         try {
             List<Client> newClients = new ArrayList<>(clients);

@@ -1,6 +1,7 @@
 package com.github.transformeli.desafiospring.service;
 
 import com.github.transformeli.desafiospring.dto.ClientDTO;
+import com.github.transformeli.desafiospring.exception.ClientExistsException;
 import com.github.transformeli.desafiospring.exception.InvalidClientParamException;
 import com.github.transformeli.desafiospring.helper.CPFDocument;
 import com.github.transformeli.desafiospring.model.Client;
@@ -36,23 +37,27 @@ public class ClientService implements IClientService {
     }
 
     private void validateAddNewClient ( Client client) {
+        client.setCpf(CPFDocument.getNumberOnlyCPF(client.getCpf()));
+        String[] arrClientName = client.getName().split("\\s");
         if (client.getName().isEmpty()) {
             throw new InvalidClientParamException("Client name is required");
+        } else if (arrClientName.length < 2) {
+            throw new InvalidClientParamException("Client name need full name");
         }
-
         if (client.getCountry().isEmpty()) {
             throw new InvalidClientParamException("Client country is required");
         }
-
         if (client.getState().isEmpty()) {
             throw new InvalidClientParamException("Client state is required");
         }
-
         if (client.getCpf().isEmpty()) {
             throw new InvalidClientParamException("Client CPF is required");
         }
-        if (!CPFDocument.isValideCPF(client.getCpf())) {
+        else if (!CPFDocument.isValideCPF(client.getCpf())) {
             throw new InvalidClientParamException("Client CPF is not valide. CPF:" + client.getCpf());
+        }
+        else if (this.getClientByCPF(client)) {
+            throw new ClientExistsException("Client create request (" + client.getCpf() + ") already exists.");
         }
     }
 
@@ -67,5 +72,21 @@ public class ClientService implements IClientService {
             id = (client.getId());
         }
         return ++id;
+    }
+
+    /**
+     * Check client exist by CPF
+     * @Author Alexandre Borges Souza and Isaias Finger
+     * @param client
+     * @return boolean
+     */
+    public Boolean getClientByCPF(Client client) {
+        return (
+                repo
+                        .getAllClients()
+                        .stream()
+                        .anyMatch(
+                                c -> CPFDocument.getNumberOnlyCPF(c.getCpf()).equals(CPFDocument.getNumberOnlyCPF(client.getCpf())))
+                        );
     }
 }
