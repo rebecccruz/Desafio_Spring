@@ -18,6 +18,11 @@ public class PurchaseService implements IPurchaseService {
     @Autowired
     private ProductRepository productRepository;
 
+    /**
+     * This method call getAllProducts(), filter about params and return list
+     * @author Isaias Finger
+     * @param  purchaseList
+     */
     @Override
     public Ticket processPurchase(List<PurchaseRequest> purchaseList) {
         Integer id = new Random().nextInt(Integer.SIZE - 1);

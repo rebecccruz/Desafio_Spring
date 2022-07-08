@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
@@ -22,6 +23,11 @@ public class ClientController {
     public ResponseEntity<List<ClientDTO>> getAllClients()
     {
         return new ResponseEntity<>(service.getAllClients(), HttpStatus.OK);
+    }
+    @GetMapping("/clients/state/{stateName}")
+    public ResponseEntity<List<ClientDTO>> getByState(@PathVariable String stateName){
+        List<ClientDTO> clientsByState  = service.getClientsByState(stateName);
+        return ResponseEntity.ok().body(clientsByState);
     }
 
     @PostMapping("/clients")
