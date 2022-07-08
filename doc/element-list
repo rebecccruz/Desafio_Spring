@@ -1,0 +1,10 @@
+com.github.transformeli.desafiospring
+com.github.transformeli.desafiospring.controller
+com.github.transformeli.desafiospring.dto
+com.github.transformeli.desafiospring.enums
+com.github.transformeli.desafiospring.exception
+com.github.transformeli.desafiospring.handler
+com.github.transformeli.desafiospring.helper
+com.github.transformeli.desafiospring.model
+com.github.transformeli.desafiospring.repository
+com.github.transformeli.desafiospring.service

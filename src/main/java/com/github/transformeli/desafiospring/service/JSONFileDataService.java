@@ -19,4 +19,12 @@ public class JSONFileDataService<T> implements IJSONFileDataService {
     public List readJSONData(String linkFile) {
         return repository.readJSONData(linkFile);
     }
+
+    /**
+     * This method return a list the elements, this method is generic
+     * @author Alexandre Borges and Larissa Navarro
+     * @param linkFile
+     */
+
+
 }

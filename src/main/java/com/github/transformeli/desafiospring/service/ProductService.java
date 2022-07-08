@@ -16,11 +16,21 @@ public class ProductService implements IProductService {
     @Autowired
     private ProductRepository repo;
 
+    /**
+     * This method call getAllProducts() in ProductRepository and return list.
+     * @author Isaias Finger
+     * @param
+     */
     @Override
     public List<Product> getAllProducts() {
         return repo.getAllProducts();
     }
 
+    /**
+     * This method call getByCategory(String category) in ProductRepository, change Product to ProductDTO and return list.
+     * @author Lucas Pinheiro Rocha
+     * @param category
+     */
     @Override
     public List<ProductDTO> getByCategory(String category) {
         try {
@@ -35,12 +45,21 @@ public class ProductService implements IProductService {
         }
         throw new NotFoundException("Sorry, this category has no products yet");
     }
-
+    /**
+     * This method call saveProduct(String category) in ProductRepository.
+     * @author Isaias Finger
+     * @param product
+     */
     @Override
     public void saveProduct(Product product) {
         repo.saveProduct(product);
     }
 
+    /**
+     * This method order attributes and return list.
+     * @author Rebecca Cunha Cruz and Isaias Finger
+     * @param order, productList
+     */
     @Override
     public List<Product> getAllByOrder(Integer order, List<Product> productList) {
         List<Product> result = new ArrayList<>();
@@ -75,6 +94,11 @@ public class ProductService implements IProductService {
         return result;
     }
 
+    /**
+     * This method get list param, change Product to ProductDTO and return list.
+     * @author Evelyn Cristini Oliveira and Isaias Finger
+     * @param productList
+     */
     @Override
     public List<ProductDTO> getAllArticles(List<Product> productList) {
         List<Product> productsModel = productList;
@@ -86,6 +110,11 @@ public class ProductService implements IProductService {
         return productsDTO;
     }
 
+    /**
+     * This method call getAllProducts(), filter about params and return list
+     * @author Evelyn Cristini Oliveira and Isaias Finger
+     * @param  params
+     */
     @Override
     public List<Product> getAllFromFilters(Map<String, String> params) {
         List<Product> allProducts = this.getAllProducts();

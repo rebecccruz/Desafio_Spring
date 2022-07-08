@@ -14,6 +14,11 @@ import java.util.List;
 @AllArgsConstructor
 public class JSONFileDataRepository<T> {
 
+    /**
+     * This method return a list the elements, this method is generic
+     * @author Alexandre Borges and Larissa Navarro
+     * @param  linkFile
+     */
     public List<T> readJSONData(String linkFile) {
         ObjectMapper mapper = new ObjectMapper();
         List<?> list = null;

@@ -24,10 +24,19 @@ public class ProductRepository {
     IJSONFileDataService wrapper;
     private final String linkFile = "src/main/resources/products.json";
 
+    /**
+     * Get all products, this method call readFile
+     * @author Larissa Navarro
+     * @param
+     */
     public List<Product> getAllProducts() {
         return readFile();
     }
-
+    /**
+     * Return product if category is equal @parameter.
+     * @author Lucas Pinheiro Rocha and Larissa Navarro
+     * @param
+     */
     public List<Product> getByCategory(String category) {
         try {
             List<Product> list = readFile();
@@ -38,7 +47,11 @@ public class ProductRepository {
         }
         throw new InternalServerException("Could not read the file");
     }
-
+    /**
+     * Save clients, this method add the client in the list.
+     * @author Isaias Finger and Larissa Navarro
+     * @param product
+     */
     public void saveProduct(Product product) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
@@ -54,6 +67,11 @@ public class ProductRepository {
         }
     }
 
+    /**
+     * This method read the file json.
+     * @author Isaias Finger
+     * @param
+     */
     private List<Product> readFile() {
         List<Product> list = wrapper.readJSONData(linkFile);
         return list;
