@@ -1,6 +1,7 @@
 package com.github.transformeli.desafiospring.service;
 
 import com.github.transformeli.desafiospring.dto.ProductDTO;
+import com.github.transformeli.desafiospring.exception.BadRequestException;
 import com.github.transformeli.desafiospring.exception.NotFoundException;
 import com.github.transformeli.desafiospring.model.Product;
 import com.github.transformeli.desafiospring.repository.ProductRepository;
@@ -41,9 +42,8 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public List<Product> getAllByOrder(Integer order) {
-        List<Product> productList = getAllProducts();
-        List<Product> result = null;
+    public List<Product> getAllByOrder(Integer order, List<Product> productList) {
+        List<Product> result = new ArrayList<>();
         switch (order) {
             case 0: {
                 result = productList.stream()
@@ -69,13 +69,15 @@ public class ProductService implements IProductService {
                         .collect(Collectors.toList());
                 break;
             }
+            default:
+                throw new BadRequestException("invalid orderId");
         }
         return result;
     }
 
     @Override
-    public List<ProductDTO> getAllArticles() {
-        List<Product> productsModel = repo.getAllProducts();
+    public List<ProductDTO> getAllArticles(List<Product> productList) {
+        List<Product> productsModel = productList;
         List<ProductDTO> productsDTO
                 = productsModel
                 .stream()
