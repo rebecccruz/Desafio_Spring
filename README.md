@@ -29,7 +29,7 @@ R13 - Obter uma lista de todos os clientes filtrados por Estado.<br>
 
 <br>
 
-## 🛠️ Tecnologias e Arquitetura da Aplicação
+## 🛠️ Tecnologias
 O projeto foi desenvolvido utilizado o framework Spring.<br>
 
 * Dependências:  SpringBoot Dev Tools, Spring Boot Web e Lombok
