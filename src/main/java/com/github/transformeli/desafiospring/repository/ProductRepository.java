@@ -3,25 +3,17 @@ package com.github.transformeli.desafiospring.repository;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.github.transformeli.desafiospring.dto.ProductDTO;
 import com.github.transformeli.desafiospring.exception.InternalServerException;
-import com.github.transformeli.desafiospring.exception.NotFoundException;
 import com.github.transformeli.desafiospring.model.Product;
-import com.github.transformeli.desafiospring.service.IJSONFileDataService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Repository
 public class ProductRepository {
 
-    @Autowired
-    IJSONFileDataService wrapper;
     private final String linkFile = "src/main/resources/products.json";
 
     /**
@@ -101,11 +93,16 @@ public class ProductRepository {
 
     /**
      * This method read the file json.
-     * @author Isaias Finger
+     * @author Larissa Navarro
      * @param
      */
     private List<Product> readFile() {
-        List<Product> list = wrapper.readJSONData(linkFile);
+        ObjectMapper mapper = new ObjectMapper();
+        List<Product> list = new ArrayList<>();
+        try {
+            list = Arrays.asList(mapper.readValue(new File(linkFile), Product[].class));
+        } catch (Exception ex) {
+        }
         return list;
     }
 
