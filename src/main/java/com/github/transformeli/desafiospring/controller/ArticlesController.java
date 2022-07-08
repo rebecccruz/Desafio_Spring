@@ -9,8 +9,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
@@ -21,29 +23,33 @@ public class ArticlesController {
     private IProductService service;
 
     @GetMapping("/articles")
-    public ResponseEntity<List<ProductDTO>> getAllArticles() {
-        List<ProductDTO> productsDTO
-                = service.getAllArticles();
-        return ResponseEntity.ok().body(productsDTO);
+    public ResponseEntity<List<ProductDTO>> getAllArticles(@RequestParam Map<String, String> params) {
+        if (params.isEmpty()) {
+            List<ProductDTO> productsDTO = service.getAllArticles(service.getAllProducts());
+            return ResponseEntity.ok().body(productsDTO);
+        }
+        List<Product> filtredProducts = service.getAllFromFilters(params);
+        List<Product> orderedProducts = service.getAllByOrder(
+                Integer.valueOf(params.getOrDefault("order", "0")), filtredProducts);
+        return ResponseEntity.ok().body(service.getAllArticles(orderedProducts));
     }
 
-    @GetMapping("/articles/")
-    public ResponseEntity<List<ProductDTO>> getByCategory(@RequestParam String category) {
-        List<ProductDTO> productsByCategory = service.getByCategory(category);
+    @GetMapping("/articles/category/{name}")
+    public ResponseEntity<List<ProductDTO>> getByCategory(@PathVariable String name) {
+        List<ProductDTO> productsByCategory = service.getByCategory(name);
         return ResponseEntity.ok().body(productsByCategory);
     }
 
+    @GetMapping("/articles/order/{orderId}")
+    public ResponseEntity<List<Product>> getAllByOrder(@PathVariable Integer orderId) {
+        List<Product> products = service.getAllByOrder(orderId, service.getAllProducts());
+        return ResponseEntity.ok().body(products);
+    }
+
     @PostMapping("/insert-articles-request")
-    public ResponseEntity<List<ProductDTO>> createArticles(@RequestBody List<Product> articleList)
-    {
+    public ResponseEntity<List<ProductDTO>> createArticles(@RequestBody List<Product> articleList) {
         List<ProductDTO> productDtoList = new ArrayList<>();
         articleList.stream().forEach(System.out::println);
         return new ResponseEntity(productDtoList, HttpStatus.CREATED);
     }
-
-    @GetMapping("/articles//")
-            public ResponseEntity<List<Product>> getAllByOrder(@RequestParam Integer order){
-            List<Product> products = service.getAllByOrder(order);
-            return ResponseEntity.ok().body(products);
-        }
-    }
+}
