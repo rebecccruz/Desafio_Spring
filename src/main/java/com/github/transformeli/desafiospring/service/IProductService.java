@@ -11,7 +11,6 @@ import java.util.Optional;
 public interface IProductService {
     public List<Product> getAllProducts();
     public List<ProductDTO> getAllArticles(List<Product> productList);
-    public List<ProductDTO> getByCategory(String category);
     public void saveProduct(Product product);
     public List<Product> getAllByOrder(ParamOrderEnum orderBy, List<Product> productList);
     public List<ProductDTO> getProductsByFilter(
