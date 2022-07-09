@@ -64,7 +64,7 @@ public class ClientService implements IClientService {
         if (client.getName().isEmpty()) {
             throw new InvalidClientParamException("Client name is required");
         } else if (arrClientName.length < 2) {
-            throw new InvalidClientParamException("Client name need full name");
+            throw new InvalidClientParamException("Client requires full name");
         }
         if (client.getCountry().isEmpty()) {
             throw new InvalidClientParamException("Client country is required");

@@ -249,7 +249,7 @@
 							]
 						},
 						{
-							"name": "[200] Busca por categoria inválida",
+							"name": "[404] Busca por categoria inválida",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -305,7 +305,7 @@
 							]
 						},
 						{
-							"name": "[200] Busca sem filtro de categoria",
+							"name": "[404] Busca sem filtro de categoria",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -389,12 +389,12 @@
 					"name": "api/v1/articles?category=&freeShipping=",
 					"item": [
 						{
-							"name": "[200] Categoria válida, frete grátis true e ordenação alfabética crescente",
+							"name": "[200] Categoria válida e frete grátis false e ordenação alfabética decrescente",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=0",
+									"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false&order=1",
 									"host": [
 										"{{API_URL}}"
 									],
@@ -406,17 +406,17 @@
 									"query": [
 										{
 											"key": "category",
-											"value": "Ferramentas",
+											"value": "Roupas",
 											"description": "Categoria do produto."
 										},
 										{
 											"key": "freeShipping",
-											"value": "true",
+											"value": "false",
 											"description": "Frete grátis do produto."
 										},
 										{
 											"key": "order",
-											"value": "0",
+											"value": "1",
 											"description": "Critério de ordenação."
 										}
 									]
@@ -424,12 +424,12 @@
 							},
 							"response": [
 								{
-									"name": "[200] Categoria válida, frete grátis true e ordenação alfabética crescente",
+									"name": "[200] Categoria válida e frete grátis false e ordenação alfabética decrescente",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=0",
+											"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false&order=1",
 											"host": [
 												"{{API_URL}}"
 											],
@@ -441,17 +441,17 @@
 											"query": [
 												{
 													"key": "category",
-													"value": "Ferramentas",
+													"value": "Roupas",
 													"description": "Categoria do produto."
 												},
 												{
 													"key": "freeShipping",
-													"value": "true",
+													"value": "false",
 													"description": "Frete grátis do produto."
 												},
 												{
 													"key": "order",
-													"value": "0",
+													"value": "1",
 													"description": "Critério de ordenação."
 												}
 											]
@@ -471,7 +471,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 08 Jul 2022 20:51:51 GMT"
+											"value": "Fri, 08 Jul 2022 23:48:16 GMT"
 										},
 										{
 											"key": "Keep-Alive",
@@ -483,7 +483,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    }\n]"
+									"body": "[\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    }\n]"
 								}
 							]
 						},
@@ -690,12 +690,12 @@
 							]
 						},
 						{
-							"name": "[200] Categoria válida e frete grátis false e ordenação alfabética decrescente",
+							"name": "[200] Categoria válida, frete grátis true e ordenação alfabética crescente",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{API_URL}}/api/v1/articles?category=Celulares&freeShipping=false&order=1",
+									"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=0",
 									"host": [
 										"{{API_URL}}"
 									],
@@ -707,17 +707,17 @@
 									"query": [
 										{
 											"key": "category",
-											"value": "Celulares",
+											"value": "Ferramentas",
 											"description": "Categoria do produto."
 										},
 										{
 											"key": "freeShipping",
-											"value": "false",
+											"value": "true",
 											"description": "Frete grátis do produto."
 										},
 										{
 											"key": "order",
-											"value": "1",
+											"value": "0",
 											"description": "Critério de ordenação."
 										}
 									]
@@ -725,12 +725,12 @@
 							},
 							"response": [
 								{
-									"name": "[200] Categoria válida e frete grátis false e ordenação alfabética decrescente",
+									"name": "[200] Categoria válida, frete grátis true e ordenação alfabética crescente",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{API_URL}}/api/v1/articles?category=Celulares&freeShipping=false&order=1",
+											"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=0",
 											"host": [
 												"{{API_URL}}"
 											],
@@ -742,17 +742,17 @@
 											"query": [
 												{
 													"key": "category",
-													"value": "Celulares",
+													"value": "Ferramentas",
 													"description": "Categoria do produto."
 												},
 												{
 													"key": "freeShipping",
-													"value": "false",
+													"value": "true",
 													"description": "Frete grátis do produto."
 												},
 												{
 													"key": "order",
-													"value": "1",
+													"value": "0",
 													"description": "Critério de ordenação."
 												}
 											]
@@ -772,7 +772,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 08 Jul 2022 21:36:41 GMT"
+											"value": "Fri, 08 Jul 2022 20:51:51 GMT"
 										},
 										{
 											"key": "Keep-Alive",
@@ -784,47 +784,121 @@
 										}
 									],
 									"cookie": [],
-									"body": "[]"
+									"body": "[\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Categoria válida, frete grátis true e ordenação alfabética crescente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=0",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Ferramentas",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "0",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Categoria válida, frete grátis true e ordenação alfabética crescente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=0",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Ferramentas",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "0",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 08 Jul 2022 20:51:51 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    }\n]"
 								}
 							]
 						}
 					]
 				},
 				{
-					"name": "api/v1/articles?prestige=&freeShipping=",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{API_URL}}/api/v1/articles?prestige=&freeShipping=blablabla",
-							"host": [
-								"{{API_URL}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"articles"
-							],
-							"query": [
-								{
-									"key": "prestige",
-									"value": ""
-								},
-								{
-									"key": "freeShipping",
-									"value": "blablabla"
-								}
-							]
-						}
-					},
-					"response": [
+					"name": "api/v1/articles?freeShipping=&prestige=",
+					"item": [
 						{
-							"name": "[200] Prestige válido e freeShipping false",
-							"originalRequest": {
+							"name": "[200] freeShipping=true & prestige=***",
+							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{API_URL}}/api/v1/articles?prestige=*&freeShipping=false",
+									"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=***",
 									"host": [
 										"{{API_URL}}"
 									],
@@ -835,51 +909,86 @@
 									],
 									"query": [
 										{
-											"key": "prestige",
-											"value": "*"
+											"key": "freeShipping",
+											"value": "true"
 										},
 										{
-											"key": "freeShipping",
-											"value": "false"
+											"key": "prestige",
+											"value": "***"
 										}
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 07 Jul 2022 19:35:55 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
+									"name": "api/v1/articles?freeShipping=&prestige=",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=***",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "true"
+												},
+												{
+													"key": "prestige",
+													"value": "***"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 09 Jul 2022 00:00:21 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    }\n]"
 								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"category\": \"Roupas\",\n        \"brand\": \"Gonew\",\n        \"price\": 10,\n        \"quantity\": 8,\n        \"freeShipping\": false,\n        \"prestige\": \"*\"\n    }\n]"
-						},
+							]
+						}
+					]
+				},
+				{
+					"name": "api/v1/articles?category=&freeShipping=&order=",
+					"item": [
 						{
-							"name": "[200] Prestige válido e freeShipping true",
-							"originalRequest": {
+							"name": "[200] Categoria, FreeShipping, Order",
+							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{API_URL}}/api/v1/articles?prestige=***&freeShipping=true",
+									"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=0",
 									"host": [
 										"{{API_URL}}"
 									],
@@ -890,43 +999,166 @@
 									],
 									"query": [
 										{
-											"key": "prestige",
-											"value": "***"
+											"key": "category",
+											"value": "Ferramentas"
 										},
 										{
 											"key": "freeShipping",
 											"value": "true"
+										},
+										{
+											"key": "order",
+											"value": "0"
 										}
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json"
+									"name": "Alfabético crescente.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=0",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Ferramentas"
+												},
+												{
+													"key": "freeShipping",
+													"value": "true"
+												},
+												{
+													"key": "order",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
 								},
 								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
+									"name": "Alfabético decrescente.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=1",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Ferramentas"
+												},
+												{
+													"key": "freeShipping",
+													"value": "true"
+												},
+												{
+													"key": "order",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
 								},
 								{
-									"key": "Date",
-									"value": "Thu, 07 Jul 2022 19:37:12 GMT"
+									"name": "Maior a menor preço.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=2",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "FORTGPRO"
+												},
+												{
+													"key": "freeShipping",
+													"value": "true"
+												},
+												{
+													"key": "order",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
 								},
 								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
+									"name": "Menor a maior preço.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=3",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Ferramentas"
+												},
+												{
+													"key": "freeShipping",
+													"value": "true"
+												},
+												{
+													"key": "order",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
 								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 350,\n        \"quantity\": 10,\n        \"freeShipping\": true,\n        \"prestige\": \"***\"\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"category\": \"Roupas\",\n        \"brand\": \"Lacoste\",\n        \"price\": 275,\n        \"quantity\": 9,\n        \"freeShipping\": true,\n        \"prestige\": \"***\"\n    }\n]"
+							]
 						}
 					]
 				},
@@ -958,184 +1190,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "api/v1/articles?category=&freeShipping=&order=",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=0",
-							"host": [
-								"{{API_URL}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"articles"
-							],
-							"query": [
-								{
-									"key": "category",
-									"value": "FORTGPRO"
-								},
-								{
-									"key": "freeShipping",
-									"value": "true"
-								},
-								{
-									"key": "order",
-									"value": "0"
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Alfabético crescente.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=0",
-									"host": [
-										"{{API_URL}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"articles"
-									],
-									"query": [
-										{
-											"key": "category",
-											"value": "FORTGPRO"
-										},
-										{
-											"key": "freeShipping",
-											"value": "true"
-										},
-										{
-											"key": "order",
-											"value": "0"
-										}
-									]
-								}
-							},
-							"_postman_previewlanguage": null,
-							"header": null,
-							"cookie": [],
-							"body": null
-						},
-						{
-							"name": "Alfabético decrescente.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=1",
-									"host": [
-										"{{API_URL}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"articles"
-									],
-									"query": [
-										{
-											"key": "category",
-											"value": "FORTGPRO"
-										},
-										{
-											"key": "freeShipping",
-											"value": "true"
-										},
-										{
-											"key": "order",
-											"value": "1"
-										}
-									]
-								}
-							},
-							"_postman_previewlanguage": null,
-							"header": null,
-							"cookie": [],
-							"body": null
-						},
-						{
-							"name": "Maior a menor preço.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=2",
-									"host": [
-										"{{API_URL}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"articles"
-									],
-									"query": [
-										{
-											"key": "category",
-											"value": "FORTGPRO"
-										},
-										{
-											"key": "freeShipping",
-											"value": "true"
-										},
-										{
-											"key": "order",
-											"value": "2"
-										}
-									]
-								}
-							},
-							"_postman_previewlanguage": null,
-							"header": null,
-							"cookie": [],
-							"body": null
-						},
-						{
-							"name": "Menor a maior preço.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=3",
-									"host": [
-										"{{API_URL}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"articles"
-									],
-									"query": [
-										{
-											"key": "category",
-											"value": "FORTGPRO"
-										},
-										{
-											"key": "freeShipping",
-											"value": "true"
-										},
-										{
-											"key": "order",
-											"value": "3"
-										}
-									]
-								}
-							},
-							"_postman_previewlanguage": null,
-							"header": null,
-							"cookie": [],
-							"body": null
-						}
-					]
 				},
 				{
 					"name": "[200] api/v1/articles",
@@ -1304,32 +1358,6 @@
 			]
 		},
 		{
-			"name": "api/v1/articles/order/{id-0-3}",
-			"item": [
-				{
-					"name": "api/v1/articles/order/{id-0-3}",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{API_URL}}/api/v1/articles/order/3",
-							"host": [
-								"{{API_URL}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"articles",
-								"order",
-								"3"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "api/v1/insert-articles-request",
 			"item": [
 				{
@@ -1366,7 +1394,7 @@
 			"name": "api/v1/purchase-request",
 			"item": [
 				{
-					"name": "api/v1/purchase-request",
+					"name": "[200] api/v1/purchase-request",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1396,35 +1424,122 @@
 			]
 		},
 		{
-			"name": "api/v1/clients",
+			"name": "EXTRA BONUS",
 			"item": [
 				{
 					"name": "api/v1/clients",
+					"item": [
+						{
+							"name": "[200] api/v1/clients",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[200] api/v1/clients/state/{name}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients/state/Santa Catarina",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients",
+										"state",
+										"Santa Catarina"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[406] api/v1/clients",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Isaias Finger\",\n    \"cpf\": \"009.593.432-32\",\n    \"state\": \"Santa Catarina\",\n    \"country\": \"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "[200] api/v1/articles/update-articles/{productId}",
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{API_URL}}/api/v1/clients",
+							"raw": "{{API_URL}}/api/v1/articles/update-articles/1",
 							"host": [
 								"{{API_URL}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"clients"
+								"articles",
+								"update-articles",
+								"1"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "api/v1/clients",
+					"name": "[200] Busca de clientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Isaias\",\n    \"cpf\": \"123-456-789-00\",\n    \"state\": \"Santa Catarina\",\n    \"country\": \"b\"\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1443,7 +1558,1382 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "[200] Busca de clientes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:55:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Alexandre Borges Souza\",\n        \"state\": \"Santa Catarina\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Alexandre Borges Souza\",\n        \"state\": \"Santa Catarina\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Evelyn Cristini Oliveira\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Luciana Azevedo\",\n        \"state\": \"I\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Daniele Silva\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "[201] Envio de dados do cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":3,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    \"cpf\":\"12345678912\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[201] Envio de dados do cliente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":3,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    \"cpf\":\"12345678912\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 13:49:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"name\": \"Evelyn Cristini Oliveira\",\n    \"state\": \"São Paulo\",\n    \"country\": \"Brasil\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[201] Envio de dados do cliente novo com valor de ID persistido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n    \"name\":\"Daniele Silva\",\n    \"cpf\":\"78698543809\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[201] Envio de dados do cliente novo com valor de ID persistido",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":1,\n    \"name\":\"Daniele Silva\",\n    \"cpf\":\"78698543809\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:53:41 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"name\": \"Daniele Silva\",\n    \"state\": \"São Paulo\",\n    \"country\": \"Brasil\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[400] Envio de dados do cliente com body incorreto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":7,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    \"cpf\":\"12345678912\",\n    \"state\":\"São Paulo\"\n    \"country\":\"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[400] Envio de dados do cliente com body incorreto",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":7,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    \"cpf\":\"12345678912\",\n    \"state\":\"São Paulo\"\n    \"country\":\"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:38:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2022-07-09T14:38:07.406+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 6, column: 6]\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:681)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\nCaused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 6, column: 6]\\n\\tat com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2391)\\n\\tat com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:735)\\n\\tat com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:659)\\n\\tat com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1056)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:398)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:184)\\n\\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380)\\n\\t... 51 more\\n\",\n    \"message\": \"JSON parse error: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 6, column: 6]\",\n    \"path\": \"/api/v1/clients\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[400] Envio de dados do cliente com sintaxe do body incorreta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":7,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    cpf:\"12345678912\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[400] Envio de dados do cliente com sintaxe do body incorreta",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":7,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    \"cpf\":\"12345678912\",\n    \"state\":\"São Paulo\"\n    \"country\":\"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:38:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2022-07-09T14:38:07.406+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 6, column: 6]\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:681)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\nCaused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 6, column: 6]\\n\\tat com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2391)\\n\\tat com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:735)\\n\\tat com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:659)\\n\\tat com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1056)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:398)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:184)\\n\\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380)\\n\\t... 51 more\\n\",\n    \"message\": \"JSON parse error: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 6, column: 6]\",\n    \"path\": \"/api/v1/clients\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[400] Envio de dados do cliente sem body",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[400] Envio de dados do cliente sem body",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:47:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2022-07-09T14:47:45.151+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.github.transformeli.desafiospring.dto.ClientDTO> com.github.transformeli.desafiospring.controller.ClientController.createClient(com.github.transformeli.desafiospring.model.Client)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:163)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:681)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\n\",\n    \"message\": \"Required request body is missing: public org.springframework.http.ResponseEntity<com.github.transformeli.desafiospring.dto.ClientDTO> com.github.transformeli.desafiospring.controller.ClientController.createClient(com.github.transformeli.desafiospring.model.Client)\",\n    \"path\": \"/api/v1/clients\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[404] Envio de dados do cliente em rota inválida",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":3,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    \"cpf\":\"12345678912\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/client",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"client"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[404] Envio de dados do cliente em rota inválida",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":3,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    \"cpf\":\"12345678912\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/client",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"client"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:56:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2022-07-09T14:56:50.557+00:00\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"message\": \"No message available\",\n    \"path\": \"/api/v1/client\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[406] Envio de dados do cliente existente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":3,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    \"cpf\":\"12345678912\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[406] Envio de dados do cliente existente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":3,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    \"cpf\":\"12345678912\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:32:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Client Already Exists\",\n    \"status\": 406,\n    \"message\": \"Client create request (12345678912) already exists.\",\n    \"timestamp\": \"2022-07-09T11:32:05.943637\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[406] Envio de dados do cliente com nome vazio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":4,\n    \"name\": \"\",\n    \"cpf\":\"73034578901\",\n    \"state\":\"Rio de Janeiro\",\n    \"country\":\"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[406] Envio de dados do cliente com nome vazio",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":4,\n    \"name\": \"\",\n    \"cpf\":\"73034578901\",\n    \"state\":\"Rio de Janeiro\",\n    \"country\":\"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 13:54:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Client param error\",\n    \"status\": 406,\n    \"message\": \"Client name is required\",\n    \"timestamp\": \"2022-07-09T10:54:00.733834\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[406] Envio de dados do cliente com nome com caracteres insuficientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":4,\n    \"name\": \"Lu\",\n    \"cpf\":\"23423423489\",\n    \"state\":\"Rio de Janeiro\",\n    \"country\":\"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[406] Envio de dados do cliente com nome com caracteres insuficientes",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":4,\n    \"name\": \"Lu\",\n    \"cpf\":\"23423423489\",\n    \"state\":\"Rio de Janeiro\",\n    \"country\":\"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:08:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Client param error\",\n    \"status\": 406,\n    \"message\": \"Client requires full name\",\n    \"timestamp\": \"2022-07-09T11:08:20.381662\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[406] Envio de dados do cliente com país não informado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":5,\n    \"name\": \"Luciana Azevedo\",\n    \"cpf\":\"43028698709\",\n    \"state\":\"Rio Grande do Sul\",\n    \"country\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[406] Envio de dados do cliente com país não informado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":5,\n    \"name\": \"Luciana Azevedo\",\n    \"cpf\":\"43028698709\",\n    \"state\":\"Rio Grande do Sul\",\n    \"country\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:15:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Client param error\",\n    \"status\": 406,\n    \"message\": \"Client country is required\",\n    \"timestamp\": \"2022-07-09T11:15:24.345372\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[406] Envio de dados do cliente com estado não informado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":5,\n    \"name\": \"Luciana Azevedo\",\n    \"cpf\":\"43028698709\",\n    \"state\":\"\",\n    \"country\":\"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[406] Envio de dados do cliente com estado não informado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":5,\n    \"name\": \"Luciana Azevedo\",\n    \"cpf\":\"43028698709\",\n    \"state\":\"\",\n    \"country\":\"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:20:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Client param error\",\n    \"status\": 406,\n    \"message\": \"Client state is required\",\n    \"timestamp\": \"2022-07-09T11:20:35.909368\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[406] Envio de dados do cliente repetido com valor de ID diferente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":10,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    \"cpf\":\"12345678912\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[406] Envio de dados do cliente repetido com valor de ID diferente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":10,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    \"cpf\":\"12345678912\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:51:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Client Already Exists\",\n    \"status\": 406,\n    \"message\": \"Client create request (12345678912) already exists.\",\n    \"timestamp\": \"2022-07-09T11:51:13.111079\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[406] Envio de dados do cliente com CPF não informado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":5,\n    \"name\": \"Luciana Azevedo\",\n    \"cpf\":\"\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[406] Envio de dados do cliente com CPF não informado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":5,\n    \"name\": \"Luciana Azevedo\",\n    \"cpf\":\"\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:24:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Client param error\",\n    \"status\": 406,\n    \"message\": \"Client CPF is required\",\n    \"timestamp\": \"2022-07-09T11:24:27.344232\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[406] Envio de dados do cliente com CPF inválido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":5,\n    \"name\": \"Luciana Azevedo\",\n    \"cpf\":\"430126\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[406] Envio de dados do cliente com CPF inválido",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":5,\n    \"name\": \"Luciana Azevedo\",\n    \"cpf\":\"430126\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:25:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Client param error\",\n    \"status\": 406,\n    \"message\": \"Client CPF is not valide. CPF:430126\",\n    \"timestamp\": \"2022-07-09T11:25:14.131865\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[500] Envio de dados do cliente com o body vazio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[500] Envio de dados do cliente com o body vazio",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:45:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2022-07-09T14:45:59.275+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"trace\": \"java.lang.NullPointerException\\n\\tat com.github.transformeli.desafiospring.helper.CPFDocument.getNumberOnlyCPF(CPFDocument.java:15)\\n\\tat com.github.transformeli.desafiospring.service.ClientService.validateAddNewClient(ClientService.java:62)\\n\\tat com.github.transformeli.desafiospring.service.ClientService.saveClient(ClientService.java:53)\\n\\tat com.github.transformeli.desafiospring.controller.ClientController.createClient(ClientController.java:36)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:681)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\n\",\n    \"message\": \"No message available\",\n    \"path\": \"/api/v1/clients\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[500] Envio de dados do cliente com chave do CPF incorreta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":7,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    \"cpfe\":\"12345678912\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[500] Envio de dados do cliente com chave do CPF incorreta",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":7,\n    \"name\":\"Evelyn Cristini Oliveira\",\n    \"cpfe\":\"12345678912\",\n    \"state\":\"São Paulo\",\n    \"country\":\"Brasil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/clients",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"clients"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Jul 2022 14:43:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2022-07-09T14:43:59.989+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"trace\": \"java.lang.NullPointerException\\n\\tat com.github.transformeli.desafiospring.helper.CPFDocument.getNumberOnlyCPF(CPFDocument.java:15)\\n\\tat com.github.transformeli.desafiospring.service.ClientService.validateAddNewClient(ClientService.java:62)\\n\\tat com.github.transformeli.desafiospring.service.ClientService.saveClient(ClientService.java:53)\\n\\tat com.github.transformeli.desafiospring.controller.ClientController.createClient(ClientController.java:36)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:681)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\n\",\n    \"message\": \"No message available\",\n    \"path\": \"/api/v1/clients\"\n}"
+						}
+					]
 				}
 			]
 		}
