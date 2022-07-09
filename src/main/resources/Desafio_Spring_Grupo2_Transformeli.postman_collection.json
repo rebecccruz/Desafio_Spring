@@ -3,115 +3,800 @@
 		"_postman_id": "afb3346a-4011-4881-8f74-f33e4a6d13c7",
 		"name": "Desafio_Spring_Grupo2_Transformeli",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "21824266"
+		"_exporter_id": "21600732"
 	},
 	"item": [
 		{
-			"name": "api/v1/insert-articles-request",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"articles\": [\n        {\n            \"productId\": 1,\n            \"name\": \"Serra de Bancada\",\n            \"category\": \"Ferramentas\",\n            \"brand\": \"FORTGPRO\",\n            \"price\": 1800.00,\n            \"quantity\": 5,\n            \"freeShipping\": true,\n            \"prestige\": \"****\"\n        },\n        {\n            \"productId\": 2,\n            \"name\": \"Furadeira\",\n            \"category\": \"Ferramentas\",\n            \"brand\": \"Black & Decker\",\n            \"price\": 500.00,\n            \"quantity\": 7,\n            \"freeShipping\": true,\n            \"prestige\": \"****\"\n        }\n    ]\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{API_URL}}/v1/insert-articles-request",
-					"host": [
-						"{{API_URL}}"
-					],
-					"path": [
-						"v1",
-						"insert-articles-request"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "api/v1/articles",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{API_URL}}/api/v1/articles",
-					"host": [
-						"{{API_URL}}"
-					],
-					"path": [
-						"api",
-						"v1",
-						"articles"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "api/v1/articles?category=",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas",
-					"host": [
-						"{{API_URL}}"
-					],
-					"path": [
-						"api",
-						"v1",
-						"articles"
-					],
-					"query": [
+			"item": [
+				{
+					"name": "api/v1/articles?category=",
+					"item": [
 						{
-							"key": "category",
-							"value": "Ferramentas"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "api/v1/articles?category=&freeShipping=",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true",
-					"host": [
-						"{{API_URL}}"
-					],
-					"path": [
-						"api",
-						"v1",
-						"articles"
-					],
-					"query": [
-						{
-							"key": "category",
-							"value": "Ferramentas"
+							"name": "[200] Busca por categoria válida de produtos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Esportes",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Esportes",
+											"description": "Categoria de produtos. "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Busca por categoria válida de produtos",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Esportes",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Esportes"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 08 Jul 2022 20:24:02 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    },\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    }\n]"
+								}
+							]
 						},
 						{
-							"key": "freeShipping",
-							"value": "true"
+							"name": "[200] Busca por categoria válida em upper case",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=CELULARES",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "CELULARES",
+											"description": "Categoria de produtos. "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Busca por categoria válida em upper case",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=CELULARES",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "CELULARES",
+													"description": "Categoria de produtos. "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 08 Jul 2022 20:29:30 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Busca por categoria válida em lower case",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=roupas",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "roupas",
+											"description": "Categoria de produtos. "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Busca por categoria válida em lower case",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=roupas",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "roupas",
+													"description": "Categoria de produtos. "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 08 Jul 2022 20:28:43 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Busca por categoria inválida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=PeRFuMaRi4",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "PeRFuMaRi4",
+											"description": "Categoria de produtos. "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Busca por categoria inválida",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=PeRFuMaRi4",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "PeRFuMaRi4",
+													"description": "Categoria de produtos. "
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "[200] Busca sem filtro de categoria",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "",
+											"description": "Categoria de produtos. "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Busca sem filtro de categoria",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "",
+													"description": "Categoria de produtos. "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 08 Jul 2022 21:14:35 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"Sorry, this category has no products yet\",\n    \"timestamp\": \"2022-07-08T18:14:35.88833\"\n}"
+								}
+							]
 						}
 					]
-				}
-			},
-			"response": [
+				},
 				{
-					"name": "Combinação de qualquer um dos filtros. Por exemplo: categoria + frete grátis",
-					"originalRequest": {
+					"name": "api/v1/articles?category=&freeShipping=",
+					"item": [
+						{
+							"name": "[200] Categoria válida, frete grátis true e ordenação alfabética crescente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=0",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Ferramentas",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "0",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Categoria válida, frete grátis true e ordenação alfabética crescente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=0",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Ferramentas",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "0",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 08 Jul 2022 20:51:51 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Categoria válida, frete grátis true e sem ordenação",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Roupas",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "false",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "0",
+											"description": "Critério de ordenação.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Categoria válida, frete grátis true e sem ordenação",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Roupas",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "0",
+													"description": "Critério de ordenação.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 08 Jul 2022 20:58:24 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Categoria válida e frete grátis false sem ordenação",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Roupas",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "false",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "0",
+											"description": "Critério de ordenação.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Categoria válida e frete grátis false sem ordenação",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Roupas",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "0",
+													"description": "Critério de ordenação.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 08 Jul 2022 21:09:05 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Categoria válida e frete grátis false e ordenação alfabética decrescente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Celulares&freeShipping=false&order=1",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Celulares",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "false",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "1",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Categoria válida e frete grátis false e ordenação alfabética decrescente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Celulares&freeShipping=false&order=1",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Celulares",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "1",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 08 Jul 2022 21:36:41 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "api/v1/articles?prestige=&freeShipping=",
+					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true",
+							"raw": "{{API_URL}}/api/v1/articles?prestige=&freeShipping=blablabla",
 							"host": [
 								"{{API_URL}}"
 							],
@@ -122,87 +807,161 @@
 							],
 							"query": [
 								{
-									"key": "category",
-									"value": "Ferramentas"
+									"key": "prestige",
+									"value": ""
 								},
 								{
 									"key": "freeShipping",
-									"value": "true"
+									"value": "blablabla"
 								}
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
-					"cookie": [],
-					"body": null
-				}
-			]
-		},
-		{
-			"name": "api/v1/articles?product=&brand=",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{API_URL}}/api/v1/articles?product=Serra de Bancada&brand=FORTGPRO",
-					"host": [
-						"{{API_URL}}"
-					],
-					"path": [
-						"api",
-						"v1",
-						"articles"
-					],
-					"query": [
+					"response": [
 						{
-							"key": "product",
-							"value": "Serra de Bancada"
+							"name": "[200] Prestige válido e freeShipping false",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?prestige=*&freeShipping=false",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "prestige",
+											"value": "*"
+										},
+										{
+											"key": "freeShipping",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Jul 2022 19:35:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"category\": \"Roupas\",\n        \"brand\": \"Gonew\",\n        \"price\": 10,\n        \"quantity\": 8,\n        \"freeShipping\": false,\n        \"prestige\": \"*\"\n    }\n]"
 						},
 						{
-							"key": "brand",
-							"value": "FORTGPRO"
+							"name": "[200] Prestige válido e freeShipping true",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?prestige=***&freeShipping=true",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "prestige",
+											"value": "***"
+										},
+										{
+											"key": "freeShipping",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Jul 2022 19:37:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 350,\n        \"quantity\": 10,\n        \"freeShipping\": true,\n        \"prestige\": \"***\"\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"category\": \"Roupas\",\n        \"brand\": \"Lacoste\",\n        \"price\": 275,\n        \"quantity\": 9,\n        \"freeShipping\": true,\n        \"prestige\": \"***\"\n    }\n]"
 						}
 					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "api/v1/articles?category=&freeShipping=&order=",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=0",
-					"host": [
-						"{{API_URL}}"
-					],
-					"path": [
-						"api",
-						"v1",
-						"articles"
-					],
-					"query": [
-						{
-							"key": "category",
-							"value": "FORTGPRO"
-						},
-						{
-							"key": "freeShipping",
-							"value": "true"
-						},
-						{
-							"key": "order",
-							"value": "0"
-						}
-					]
-				}
-			},
-			"response": [
+				},
 				{
-					"name": "Alfabético crescente.",
-					"originalRequest": {
+					"name": "api/v1/articles?product=&brand=",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/v1/articles?product=Serra de Bancada&brand=FORTGPRO",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "product",
+									"value": "Serra de Bancada"
+								},
+								{
+									"key": "brand",
+									"value": "FORTGPRO"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/v1/articles?category=&freeShipping=&order=",
+					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -231,18 +990,160 @@
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
-					"cookie": [],
-					"body": null
+					"response": [
+						{
+							"name": "Alfabético crescente.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=0",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "FORTGPRO"
+										},
+										{
+											"key": "freeShipping",
+											"value": "true"
+										},
+										{
+											"key": "order",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Alfabético decrescente.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=1",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "FORTGPRO"
+										},
+										{
+											"key": "freeShipping",
+											"value": "true"
+										},
+										{
+											"key": "order",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Maior a menor preço.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=2",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "FORTGPRO"
+										},
+										{
+											"key": "freeShipping",
+											"value": "true"
+										},
+										{
+											"key": "order",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Menor a maior preço.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=3",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "FORTGPRO"
+										},
+										{
+											"key": "freeShipping",
+											"value": "true"
+										},
+										{
+											"key": "order",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
 				},
 				{
-					"name": "Alfabético decrescente.",
-					"originalRequest": {
+					"name": "[200] api/v1/articles",
+					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=1",
+							"raw": "{{API_URL}}/api/v1/articles",
 							"host": [
 								"{{API_URL}}"
 							],
@@ -250,129 +1151,301 @@
 								"api",
 								"v1",
 								"articles"
-							],
-							"query": [
-								{
-									"key": "category",
-									"value": "FORTGPRO"
-								},
-								{
-									"key": "freeShipping",
-									"value": "true"
-								},
-								{
-									"key": "order",
-									"value": "1"
-								}
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
-					"cookie": [],
-					"body": null
+					"response": [
+						{
+							"name": "[200] Busca lista de produtos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Jul 2022 20:21:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    },\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    }\n]"
+						}
+					]
 				},
 				{
-					"name": "Maior a menor preço.",
-					"originalRequest": {
+					"name": "[404] api/v1/article",
+					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=2",
+							"raw": "{{API_URL}}/api/v1/article",
 							"host": [
 								"{{API_URL}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"articles"
-							],
-							"query": [
-								{
-									"key": "category",
-									"value": "FORTGPRO"
-								},
-								{
-									"key": "freeShipping",
-									"value": "true"
-								},
-								{
-									"key": "order",
-									"value": "2"
-								}
+								"article"
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
-					"cookie": [],
-					"body": null
+					"response": [
+						{
+							"name": "[404] Endpoint não encontrado de busca de produtos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/article",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"article"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Jul 2022 20:22:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2022-07-08T20:22:23.454+00:00\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"message\": \"No message available\",\n    \"path\": \"/api/v1/article\"\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				},
 				{
-					"name": "Menor a maior preço.",
-					"originalRequest": {
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code 200\", () => {",
+							"    pm.response.to.have.status(200);",
+							"})"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "api/v1/articles/order/{id-0-3}",
+			"item": [
+				{
+					"name": "api/v1/articles/order/{id-0-3}",
+					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_URL}}/api/v1/articles?category=FORTGPRO&freeShipping=true&order=3",
+							"raw": "{{API_URL}}/api/v1/articles/order/3",
 							"host": [
 								"{{API_URL}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"articles"
-							],
-							"query": [
-								{
-									"key": "category",
-									"value": "FORTGPRO"
-								},
-								{
-									"key": "freeShipping",
-									"value": "true"
-								},
-								{
-									"key": "order",
-									"value": "3"
-								}
+								"articles",
+								"order",
+								"3"
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
-					"cookie": [],
-					"body": null
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api/v1/insert-articles-request",
+			"item": [
+				{
+					"name": "api/v1/insert-articles-request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000.00,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100.00,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/insert-articles-request",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"insert-articles-request"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
 		{
 			"name": "api/v1/purchase-request",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"articlesPurchaseRequest\": [\n        {\n            \"productId\": 1,\n            \"name\": \"Serra de Bancada\",\n            \"brand\": \"FORTGPRO\",\n            \"quantity\": 5\n        },\n        {\n            \"productId\": 2,\n            \"name\": \"Furadeira\",\n            \"brand\": \"Black & Decker\",\n            \"quantity\": 7\n        }\n    ]\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"item": [
+				{
+					"name": "api/v1/purchase-request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"brand\": \"FORTGPRO\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"brand\": \"Black & Decker\",\n        \"quantity\": 7\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/purchase-request",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"purchase-request"
+							]
 						}
-					}
-				},
-				"url": {
-					"raw": "{{API_URL}}/api/v1/purchase-request",
-					"host": [
-						"{{API_URL}}"
-					],
-					"path": [
-						"api",
-						"v1",
-						"purchase-request"
-					]
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "api/v1/clients",
+			"item": [
+				{
+					"name": "api/v1/clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/v1/clients",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Isaias\",\n    \"cpf\": \"123-456-789-00\",\n    \"state\": \"Santa Catarina\",\n    \"country\": \"b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/clients",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
