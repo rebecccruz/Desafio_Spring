@@ -19,7 +19,6 @@ public class ClientRepository {
     /**
      * Get all clients, this method read the file Json.
      * @author Isaias Finger
-     * @param
      */
     public List<Client> getAllClients() {
         return this.readFile();
@@ -27,7 +26,7 @@ public class ClientRepository {
     /**
      * Save clients, this method add the client in the list.
      * @author Isaias Finger
-     * @param client
+     * @param client  client object
      */
     public ClientDTO saveClient(Client client) {
         List<Client> clients = this.getAllClients();
@@ -45,7 +44,7 @@ public class ClientRepository {
     /**
      * Return client if state is equal parameter.
      * @author Isaias Finger
-     * @param state
+     * @param state stage of client
      */
     public List<Client> getByState(String state){
         try{
@@ -63,7 +62,6 @@ public class ClientRepository {
     /**
      * This method read the file json.
      * @author Isaias Finger
-     * @param
      */
     private List<Client> readFile() {
         ObjectMapper mapper = new ObjectMapper();

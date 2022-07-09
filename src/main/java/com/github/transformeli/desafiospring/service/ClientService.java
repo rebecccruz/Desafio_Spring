@@ -20,7 +20,7 @@ public class ClientService implements IClientService {
     /**
      * This method call getAllClients() in ClientRepository, change Client to ClientDTO and return list.
      * @author Isaias Finger
-     * @param
+     *
      */
     @Override
     public List<ClientDTO> getAllClients() {
@@ -31,7 +31,7 @@ public class ClientService implements IClientService {
     /**
      * This method call getBySate(String state) in ClientRepository, change Client to ClientDTO and return list.
      * @author: Larissa Navarro
-     * @param state
+     * @param state of client
      */
     @Override
     public List<ClientDTO> getClientsByState(String state) {
@@ -44,7 +44,7 @@ public class ClientService implements IClientService {
     /**
      * This method call saveClient(Client client) in ClientRepository
      * @author Isaias Finger
-     * @param client
+     * @param client client object
      */
 
     @Override
@@ -56,7 +56,7 @@ public class ClientService implements IClientService {
     /**
      * This method check if attributes is empty and call exceptions
      * @author Alexandre Borges
-     * @param client
+     * @param client client object
      */
     private void validateAddNewClient ( Client client) {
         client.setCpf(CPFDocument.getNumberOnlyCPF(client.getCpf()));
@@ -86,7 +86,7 @@ public class ClientService implements IClientService {
     /**
      * This method return an id to new Client
      * @author Alexandre Borges
-     * @param
+     *
      */
     private Integer getNewClientID () {
         Integer id = 0;
@@ -104,7 +104,7 @@ public class ClientService implements IClientService {
     /**
      * Check client exist by CPF
      * @Author Alexandre Borges Souza and Isaias Finger
-     * @param client
+     * @param client client object
      * @return boolean
      */
     public Boolean getClientByCPF(Client client) {
