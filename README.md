@@ -36,10 +36,10 @@ O projeto foi desenvolvido utilizado o framework Spring.<br>
 
 <br>
 
-## 💻 Requisições e JavaDoc
+## 💻 JavaDoc e Requisições
 
 Acesse o <a href="https://github.com/laridevmeli/Desafio_Spring/tree/main/doc">JavaDoc</a>.<br>
-É possível importar a collection na pasta <a href="">NOME DA PASTA</a> e utilizá-la no POSTMAN (ou API Client de sua preferência) para testar os endpoints.
+É possível importar a <a href="https://github.com/laridevmeli/Desafio_Spring/blob/main/src/main/resources/Desafio_Spring_Grupo2_Transformeli.postman_collection.json">collection</a> na pasta resource e utilizá-la no POSTMAN (ou API Client de sua preferência) para testar os endpoints.
 
 <br>
 
