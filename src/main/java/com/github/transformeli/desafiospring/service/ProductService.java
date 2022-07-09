@@ -20,7 +20,6 @@ public class ProductService implements IProductService {
 
     /**
      * This method call getAllProducts() in ProductRepository and return list.
-     *
      * @author Isaias Finger
      */
     @Override
@@ -30,7 +29,6 @@ public class ProductService implements IProductService {
 
     /**
      * This method call saveProduct(String category) in ProductRepository.
-     *
      * @param product Product to be saved
      * @author Isaias Finger
      */
@@ -41,7 +39,6 @@ public class ProductService implements IProductService {
 
     /**
      * This method order attributes and return list.
-     *
      * @param orderBy ParamOrderEnum
      * @param productList ProductList to be ordered
      * @author Rebecca Cunha Cruz and Isaias Finger
@@ -82,7 +79,6 @@ public class ProductService implements IProductService {
 
     /**
      * This method get list param, change Product to ProductDTO and return list.
-     *
      * @param productList ProductList conversion to DTO
      * @author Evelyn Cristini Oliveira and Isaias Finger
      */
@@ -99,7 +95,6 @@ public class ProductService implements IProductService {
 
     /**
      * This method call getAllProducts(), filter by params and return list
-     *
      * @param category Category
      * @param brand Brand
      * @param freeShipping Is freeShipping
@@ -136,7 +131,12 @@ public class ProductService implements IProductService {
         }
         return this.getAllArticles(filteredProducts);
     }
-
+    /**
+     * This method get list param, and filter by category.
+     * @param products products object
+     * @param category category of products
+     * @author Evelyn Cristini Oliveira and Isaias Finger
+     */
     private List<Product> getProductsFilterByCategory(List<Product> products, String category) {
         List<Product> filteredProducts = new ArrayList<>(products);
         filteredProducts = products.stream()
@@ -149,6 +149,12 @@ public class ProductService implements IProductService {
         return filteredProducts;
     }
 
+    /**
+     * This method get list param, and filter by freeshipping.
+     * @param products products object
+     * @param freeShipping freeshipping of products
+     * @author Evelyn Cristini Oliveira and Isaias Finger
+     */
     private List<Product> getProductsFilterByFreeShipping(List<Product> products, Boolean freeShipping) {
         List<Product> filteredProducts = new ArrayList<>(products);
         filteredProducts = products.stream()
@@ -157,6 +163,13 @@ public class ProductService implements IProductService {
         return filteredProducts;
     }
 
+    /**
+     * This method get list param, and filter by brand.
+     * @param products products object
+     * @param brand brand of products
+     * @author Evelyn Cristini Oliveira and Isaias Finger
+     */
+
     private List<Product> getProductsFilterByBrand(List<Product> products, String brand) {
         List<Product> filteredProducts = new ArrayList<>(products);
         filteredProducts = products.stream()
@@ -164,6 +177,12 @@ public class ProductService implements IProductService {
                 .collect(Collectors.toList());
         return filteredProducts;
     }
+    /**
+     * This method get list param, and filter by prestige.
+     * @param products products object
+     * @param prestige prestige of products
+     * @author Evelyn Cristini Oliveira and Isaias Finger
+     */
 
     private List<Product> getProductsFilterByPrestige(List<Product> products, String prestige) {
         List<Product> filteredProducts = new ArrayList<>(products);
