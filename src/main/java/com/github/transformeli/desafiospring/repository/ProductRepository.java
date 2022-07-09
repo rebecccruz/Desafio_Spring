@@ -19,7 +19,7 @@ public class ProductRepository {
     /**
      * Get all products, this method call readFile
      * @author Larissa Navarro
-     * @param
+     *
      */
     public List<Product> getAllProducts() {
         return readFile();
@@ -28,7 +28,7 @@ public class ProductRepository {
     /**
      * Save clients, this method add the client in the list.
      * @author Isaias Finger and Larissa Navarro
-     * @param product
+     * @param product product object
      */
     public void saveProduct(Product product) {
         ObjectMapper mapper = new ObjectMapper();
@@ -79,7 +79,6 @@ public class ProductRepository {
     /**
      * This method read the file json.
      * @author Larissa Navarro
-     * @param
      */
     private List<Product> readFile() {
         ObjectMapper mapper = new ObjectMapper();

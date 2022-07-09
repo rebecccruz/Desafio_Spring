@@ -21,7 +21,7 @@ public class PurchaseService implements IPurchaseService {
     /**
      * This method call getAllProducts(), filter about params and return list
      * @author Isaias Finger
-     * @param  purchaseList
+     * @param  purchaseList purchase
      */
     @Override
     public Ticket processPurchase(List<PurchaseRequest> purchaseList) {
