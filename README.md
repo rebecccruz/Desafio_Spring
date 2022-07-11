@@ -30,17 +30,17 @@ R13 - Obter uma lista de todos os clientes filtrados por Estado.<br>
 <br>
 
 ## 🛠️ Tecnologias
-O projeto foi desenvolvido utilizado o framework Spring.<br>
+O projeto foi desenvolvido utilizando o framework Spring.<br>
 
-* Dependências:  SpringBoot Dev Tools, Spring Boot Web e Lombok
+* Dependências:  SpringBoot Dev Tools, SpringBoot Web e Lombok
 
 <br>
 
 ## 💻 JavaDoc e Requisições
 
 Acesse o <a href="https://github.com/laridevmeli/Desafio_Spring/tree/main/doc">JavaDoc</a>.<br>
-É possível importar a <a href="https://github.com/laridevmeli/Desafio_Spring/blob/main/src/main/resources/Desafio_Spring_Grupo2_Transformeli.postman_collection.json">collection</a> na pasta resource e utilizá-la no POSTMAN (ou API Client de sua preferência) para testar os endpoints.
-
+É possível importar a <a href="https://github.com/laridevmeli/Desafio_Spring/blob/main/src/main/resources/Desafio_Spring_Grupo2_Transformeli.postman_collection.json">collection</a> na pasta resource e utilizá-la no Postman (ou API Client de sua preferência) para testar os endpoints.
+Disponibilizamos as <a href="https://github.com/laridevmeli/Desafio_Spring/blob/main/src/main/resources/workspace.postman_globals.json">varíaveis de ambiente</a> para viabilizar o funcionamento da collection bem como o <a href="https://github.com/laridevmeli/Desafio_Spring/blob/main/src/main/resources/Desafio_Spring_Grupo2_Transformeli.postman_test_run.json">arquivo</a> com o registro dos testes unitários da API.
 <br>
 
 ## 🚀 Como clonar e iniciar a aplicação
@@ -82,8 +82,7 @@ mvn spring-boot:run
 
 - <a href="https://github.com/aborgssouzameli">Alexandre Borges Souza</a>
 - <a href="https://github.com/evycoliveira">Evelyn Cristini Oliveira</a>
-- <a href="https://github.com/lucaspinheirorocha">Isaias Finger</a>
+- <a href="https://github.com/isaiasfmeli">Isaias Finger</a>
 - <a href="https://github.com/laridevmeli">Larissa Navarro</a>
 - <a href="https://github.com/lucaspinheirorocha">Lucas Pinheiro Rocha</a>
 - <a href="https://github.com/rebecccruz">Rebecca da Cunha Cruz</a>
-
