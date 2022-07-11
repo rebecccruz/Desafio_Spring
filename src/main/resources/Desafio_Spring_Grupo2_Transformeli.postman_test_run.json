@@ -1,0 +1,6227 @@
+{
+	"id": "d2b9fdf3-342c-488d-8111-37d73712c19f",
+	"name": "Desafio_Spring_Grupo2_Transformeli",
+	"timestamp": "2022-07-11T04:52:26.710Z",
+	"collection_id": "21824266-afb3346a-4011-4881-8f74-f33e4a6d13c7",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 498,
+	"totalFail": 66,
+	"results": [
+		{
+			"id": "551ae281-906f-4995-9743-59b650392a65",
+			"name": "[200] Busca de produtos",
+			"url": "http://127.0.0.1:8080/api/v1/articles",
+			"time": 175,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				175
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "260e3bba-5cb7-4aa3-ad66-4c425b0cc37b",
+			"name": "[404] Busca de produtos com rota inválida",
+			"url": "http://127.0.0.1:8080/api/v1/article",
+			"time": 28,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 404": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				28
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 404": true
+				}
+			]
+		},
+		{
+			"id": "739cd7f6-52b8-43b3-a2b5-e22f3069d4d9",
+			"name": "[200] Busca por categoria válida de produtos",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Esportes",
+			"time": 24,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "78d765fe-7bd6-4ab5-a221-aa8d7380d9cf",
+			"name": "[200] Busca por categoria válida em upper case",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=CELULARES",
+			"time": 11,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "5d7a3147-ef88-4f25-beda-388777cab3e6",
+			"name": "[200] Busca por categoria válida em lower case",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=roupas",
+			"time": 15,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "07ad4cc8-b8b0-4719-a2b7-0fbfaf0b7c99",
+			"name": "[404] Busca por categoria inválida",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=PeRFuMaRi4",
+			"time": 9,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 404": false
+				}
+			]
+		},
+		{
+			"id": "ab86b496-6eef-4279-ae69-f6b8d293ff7d",
+			"name": "[404] Busca sem filtro de categoria",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=",
+			"time": 12,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 404": false
+				}
+			]
+		},
+		{
+			"id": "45998f8d-5827-4934-b298-4d353cadf1f9",
+			"name": "[200] Busca por categoria válida",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Celulares",
+			"time": 18,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "a7e8e31b-0a97-4a7b-9f02-0bfb2dcb3fed",
+			"name": "[200] Busca por frete grátis true",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=true",
+			"time": 12,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "54714f0c-190a-47aa-b1da-4f225314d7aa",
+			"name": "[200] Busca por frete grátis false",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=false",
+			"time": 16,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "4e6f350e-c1bb-45f4-bc44-9d34874c308f",
+			"name": "[200] Busca por ordenação crescente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?order=0",
+			"time": 13,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "f65d0a85-5ea0-4ece-8b29-dc6afe9dcae2",
+			"name": "[200] Busca por ordenação decrescente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?order=1",
+			"time": 19,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "2660b4d0-f0cb-4b65-a3f9-b504e16f336b",
+			"name": "[200] Busca por ordenação do maior para o menor preço",
+			"url": "http://127.0.0.1:8080/api/v1/articles?order=2",
+			"time": 19,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "ba1499bf-9641-4138-a3ab-5b022265cd0a",
+			"name": "[200] Busca por ordenação do menor para o maior preço",
+			"url": "http://127.0.0.1:8080/api/v1/articles?order=3",
+			"time": 9,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "65ac0c29-ee41-44ee-b723-6ced4be1001a",
+			"name": "[200] Busca por categoria válida e frete grátis false e ordenação alfabética crescente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Roupas&freeShipping=false&order=0",
+			"time": 9,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "1e8cb773-78b6-44c7-afea-29b78165cdac",
+			"name": "[200] Busca por categoria válida e frete grátis false e ordenação alfabética decrescente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Roupas&freeShipping=false&order=1",
+			"time": 9,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "8716e891-64a3-4d28-91a3-1cc760d5ecd4",
+			"name": "[200] Busca por categoria válida e frete grátis false e ordenação por menor preço até o maior preço",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Roupas&freeShipping=false&order=3",
+			"time": 17,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "4f2476e7-6514-47e2-a8e3-637c6bd9003b",
+			"name": "[200] Busca por categoria válida e frete grátis false e ordenação por maior preço até o menor preço",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Roupas&freeShipping=false&order=2",
+			"time": 14,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "324f6de9-167f-4522-b5e6-675c495426aa",
+			"name": "[200] Busca por categoria válida e frete grátis false sem ordenação",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Roupas&freeShipping=false",
+			"time": 8,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "ed3f7b2a-4e4b-4c5f-81df-e41908d635b1",
+			"name": "[200] Busca por categoria válida e frete grátis false sem ordenação",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Roupas&freeShipping=false",
+			"time": 8,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "ad49ab7f-ff33-41a1-a622-a0080c7272cd",
+			"name": "[200] Busca por categoria válida, frete grátis true sem ordenação",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Roupas&freeShipping=false",
+			"time": 17,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "c4cd63a4-ab2f-432f-b66a-6505c6c8dc2a",
+			"name": "[200] Busca por categoria válida, frete grátis true e ordenação alfabética crescente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Ferramentas&freeShipping=true&order=0",
+			"time": 9,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "39ea87f3-a04b-4ddf-a106-c7529fc6c79b",
+			"name": "[200] Busca por categoria válida, frete grátis true e ordenação alfabética decrescente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Ferramentas&freeShipping=true&order=1",
+			"time": 15,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "ef9665ad-d922-4574-a4a3-87ece40ca071",
+			"name": "[200] Busca por categoria válida, frete grátis true ordenado do maior para o menor preço",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Ferramentas&freeShipping=true&order=2",
+			"time": 19,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "58a5bbcc-258a-4a7a-bfdb-bf2c409636cd",
+			"name": "[200] Busca por categoria válida, frete grátis true ordenado do menor para o maior preço",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Ferramentas&freeShipping=true&order=3",
+			"time": 9,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "1c724b72-a1f4-45c5-b7fd-364dc6136ba5",
+			"name": "[400] Busca por categoria válida com ordenação não existente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Celulares&order=10",
+			"time": 14,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "9d4564ac-80b5-4806-ab92-b18a2ce7d294",
+			"name": "[400] Busca por frete grátis true com ordenação não existente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=true&order=100",
+			"time": 15,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "0237af0e-245d-42df-a1ab-38b910e52b80",
+			"name": "[400] Busca por categoria inválida com ordenação não existente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=false&order=10000",
+			"time": 11,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "15a6e0d5-435d-49f3-9f12-c951931947d6",
+			"name": "[400] Busca por frete grátis false com ordenação não existente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=false&order=1000",
+			"time": 7,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "94dfbd5a-1489-4db5-adbc-3d8f5fb3eb6e",
+			"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Banho&freeShipping=true",
+			"time": 13,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "0aa20d46-d649-4cf6-8621-477fe992afd4",
+			"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação alfabética crescente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Mesa&freeShipping=true&order=0",
+			"time": 13,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "3f0c9e38-5e1d-4e79-81bc-b524a19c1246",
+			"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação alfabética decrescente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Cama&freeShipping=true&order=1",
+			"time": 17,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "2c159d31-7001-4c3b-926e-6770b7041f71",
+			"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação do maior para o menor preço",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Cama&freeShipping=true&order=2",
+			"time": 11,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "23b5029e-fb53-4693-a98f-9b6364f6758c",
+			"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação do menor para o maior preço",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Cama&freeShipping=true&order=3",
+			"time": 11,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "72d8ea37-7b62-4d41-b923-d26ed8faa3b7",
+			"name": "[404] Busca por categoria inválida, frete grátis false sem ordenação",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Cama&freeShipping=true",
+			"time": 15,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "79dc6401-5705-4c51-8832-38869cd5f8ab",
+			"name": "[404] Busca por categoria inválida, frete grátis false em ordem alfabética crescente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Cama&freeShipping=true&order=0",
+			"time": 14,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "25352f8f-512e-41bf-bc96-90992d466e7e",
+			"name": "[404] Busca por categoria inválida, frete grátis false em ordem alfabética decrescente",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Cama&freeShipping=true&order=1",
+			"time": 9,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "7285bceb-0672-49b4-9c23-7627b84a29ad",
+			"name": "[404] Busca por categoria inválida, frete grátis false em ordem do maior para o menor preço",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Cama&freeShipping=true&order=2",
+			"time": 9,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "901e9a6b-caac-4b7b-b355-1837844b10a2",
+			"name": "[404] Busca por categoria inválida, frete grátis false em ordem do menor para o maior preço",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Cama&freeShipping=true&order=3",
+			"time": 10,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "6cba32e2-8ecf-4c8f-a133-5a4ee8cd70cf",
+			"name": "[404] Busca por categoria inválida",
+			"url": "http://127.0.0.1:8080/api/v1/articles?category=Mesa",
+			"time": 15,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "08fb1980-8db8-4a62-982a-425eca4d9f04",
+			"name": "[200] Busca por produtos sem filtro",
+			"url": "http://127.0.0.1:8080/api/v1/articles",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "f0af733d-9a8b-4cee-a923-c4229d7921d0",
+			"name": "[200] Busca por frete grátis true sem filtro de avaliação",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=true",
+			"time": 11,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "cb996b11-eb9e-417f-bfa2-5b4d6293fae7",
+			"name": "[200] Busca por frete grátis true e avaliação 2",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=true&prestige=**",
+			"time": 8,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "98734b84-3d9f-4154-8b7c-00fd961ff070",
+			"name": "[200] Busca por frete grátis true e avaliação 3",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=true&prestige=***",
+			"time": 7,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "4fdffa37-9d4f-456a-a48c-a5ae75686eeb",
+			"name": "[200] Busca por frete grátis true e avaliação 4",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=true&prestige=****",
+			"time": 16,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "ea25eaf1-eeeb-431d-8744-fd6735af8727",
+			"name": "[200] Busca por frete grátis true e avaliação 5",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=true&prestige=*****",
+			"time": 17,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "ce9a10d8-3395-490b-bb24-94ea6c752ce3",
+			"name": "[200] Busca por frete grátis false sem filtro de avaliação",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=false",
+			"time": 12,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "caf8622d-c324-407f-b969-b45617006abb",
+			"name": "[200] Busca por frete grátis false e avaliação 1",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=false&prestige=*",
+			"time": 11,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "fe1c3c6e-682f-41aa-b4e9-70987460dba0",
+			"name": "[200] Busca por frete grátis false e avaliação 3",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=false&prestige=***",
+			"time": 8,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "c96fbb86-df42-4f80-bc64-a84695fb6395",
+			"name": "[200] Busca por avaliação 1",
+			"url": "http://127.0.0.1:8080/api/v1/articles?prestige=*",
+			"time": 12,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "4d633ea8-2ec7-4620-9658-f7d5be35256f",
+			"name": "[200] Busca por avaliação 2",
+			"url": "http://127.0.0.1:8080/api/v1/articles?prestige=**",
+			"time": 17,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "a099fc71-25a9-4914-9dea-daa6e9622c3e",
+			"name": "[200] Busca por avaliação 3",
+			"url": "http://127.0.0.1:8080/api/v1/articles?prestige=***",
+			"time": 14,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "69ba4642-5163-4fa4-9c53-843eb0e3a9a1",
+			"name": "[200] Busca por avaliação 4",
+			"url": "http://127.0.0.1:8080/api/v1/articles?prestige=****",
+			"time": 8,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "c6beb4fd-235f-4259-85a5-4b578d9e7e75",
+			"name": "[200] Busca por avaliação 5",
+			"url": "http://127.0.0.1:8080/api/v1/articles?prestige=*****",
+			"time": 8,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "35531722-ecd8-4469-9905-78e19990904a",
+			"name": "[404] Busca por frete grátis true e sem avaliação",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=true&prestige=",
+			"time": 11,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "e9d4f026-7c93-472f-a6e8-fee7484f9ab3",
+			"name": "[404] Busca por frete grátis true e avaliação 1",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=true&prestige=*",
+			"time": 13,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "affae03e-0459-41cc-ae06-bfdbdbd376db",
+			"name": "[400] Busca por frete grátis true e avaliação com valor não esperado",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=true&prestige=4*7[*",
+			"time": 23,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": false,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": false,
+				"Status code 400 ou 404": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code 400 ou 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				23
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": false,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": false,
+					"Status code 400 ou 404": true
+				}
+			]
+		},
+		{
+			"id": "486dd06b-2418-4523-9d95-a64aadd041b4",
+			"name": "[404] Busca por frete grátis false e sem avaliação",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=false&prestige=",
+			"time": 10,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "17498c7d-bfe5-4018-92f6-f182e8f178c2",
+			"name": "[404] Busca por frete grátis false e avaliação 2",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=false&prestige=**",
+			"time": 8,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "65fb82fd-9c74-4c17-9e7a-1b4062d15e2b",
+			"name": "[404] Busca por frete grátis false e avaliação 5",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=false&prestige=*****",
+			"time": 10,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "52f7eda5-889e-4c9f-855a-b29cd6c5268f",
+			"name": "[404] Busca por frete grátis false e avaliação 4",
+			"url": "http://127.0.0.1:8080/api/v1/articles?freeShipping=false&prestige=****",
+			"time": 17,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 404": false
+				}
+			]
+		},
+		{
+			"id": "b5e6971a-0948-4f94-8ad4-99f1a39063cc",
+			"name": "[200] Busca por produto e marca válidas",
+			"url": "http://127.0.0.1:8080/api/v1/articles?product=Furadeira&brand=Black%20%26%20Decker",
+			"time": 10,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "6ce97983-524d-42bc-bbbe-da6be29a11cd",
+			"name": "[200] Busca por nome do produto vazio e marca válida",
+			"url": "http://127.0.0.1:8080/api/v1/articles?product=&brand=FORTGPRO",
+			"time": 8,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "43c15858-76ca-42be-890a-2eebc76db2fb",
+			"name": "[200] Busca por produto",
+			"url": "http://127.0.0.1:8080/api/v1/articles?product=Soldadora",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "1ff53218-f977-4f58-bdec-af40e78f836d",
+			"name": "[200] Busca por marca do produto",
+			"url": "http://127.0.0.1:8080/api/v1/articles?brand=Gonew",
+			"time": 8,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": false
+				}
+			]
+		},
+		{
+			"id": "d0835d9c-8e02-4256-a8c3-cc1fb8d6b2d4",
+			"name": "[404] Busca por produto e marcas inválidas",
+			"url": "http://127.0.0.1:8080/api/v1/articles?product=L%C3%A2mpada&brand=Lorenzetti",
+			"time": 14,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 404": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 404": false
+				}
+			]
+		},
+		{
+			"id": "c97a33ec-562a-4264-8d41-950536b9891a",
+			"name": "[201] Envio de dados do produto",
+			"url": "http://127.0.0.1:8080/api/v1/insert-articles-request",
+			"time": 30,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 201": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				30
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 201": true
+				}
+			]
+		},
+		{
+			"id": "a08ba107-59af-4bc0-b1f2-1d77fea7f726",
+			"name": "[201] Envio de dados do produto por array vazio",
+			"url": "http://127.0.0.1:8080/api/v1/insert-articles-request",
+			"time": 7,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 201": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 201": true
+				}
+			]
+		},
+		{
+			"id": "e7f53a65-21b4-432b-b856-623e3ce5fd69",
+			"name": "[201] Envio de dados com atributo nome interpretado como null",
+			"url": "http://127.0.0.1:8080/api/v1/insert-articles-request",
+			"time": 9,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 201": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 201": true
+				}
+			]
+		},
+		{
+			"id": "9a6ad306-a8fc-4276-b15d-e90488bbf5cf",
+			"name": "[201] Envio de dados sem preço de produto",
+			"url": "http://127.0.0.1:8080/api/v1/insert-articles-request",
+			"time": 11,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 201": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 201": true
+				}
+			]
+		},
+		{
+			"id": "60fad7a2-336b-4c1b-8398-5f523c927f5c",
+			"name": "[400] Envio de dados do produto sem body",
+			"url": "http://127.0.0.1:8080/api/v1/insert-articles-request",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 415": true
+				}
+			]
+		},
+		{
+			"id": "787ca2f3-3c29-4363-9421-1ddd5f767ee7",
+			"name": "[400] Envio de dados com sintaxe errada no body",
+			"url": "http://127.0.0.1:8080/api/v1/insert-articles-request",
+			"time": 20,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 415": true
+				}
+			]
+		},
+		{
+			"id": "c9bbc215-a215-47ba-a241-57567f4c648d",
+			"name": "[415] Envio de dados com body em formato não esperado",
+			"url": "http://127.0.0.1:8080/api/v1/insert-articles-request",
+			"time": 12,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 ou 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 ou 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 ou 415": true
+				}
+			]
+		},
+		{
+			"id": "06be1625-a59f-4bb0-a7a6-f151587e7188",
+			"name": "[200] Envio de dados de compra de produto com body válido",
+			"url": "http://127.0.0.1:8080/api/v1/purchase-request",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "274010b6-e880-4e2e-9579-13568c482bea",
+			"name": "[400] Envio de dados de compra de produto com erro de sintaxe",
+			"url": "http://127.0.0.1:8080/api/v1/purchase-request",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 e 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 e 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 e 415": true
+				}
+			]
+		},
+		{
+			"id": "742f4e69-a5b8-4aeb-aec1-51ae754ed29b",
+			"name": "[400] Envio de dados de compra de produto sem body",
+			"url": "http://127.0.0.1:8080/api/v1/purchase-request",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 e 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 e 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 e 415": true
+				}
+			]
+		},
+		{
+			"id": "82da121d-807d-4e22-97e3-e71b1b469846",
+			"name": "[400] Envio de dados de compra de produto com formato de frete grátis não esperado",
+			"url": "http://127.0.0.1:8080/api/v1/purchase-request",
+			"time": 11,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 e 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 e 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 e 415": true
+				}
+			]
+		},
+		{
+			"id": "6e754823-3c19-4d5b-becf-c4f4d6a829b0",
+			"name": "[415] Envio de dados de compra de produto com body enviado em formato não esperado",
+			"url": "http://127.0.0.1:8080/api/v1/purchase-request",
+			"time": 9,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400 e 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400 e 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400 e 415": true
+				}
+			]
+		},
+		{
+			"id": "3101af12-182e-4904-93df-592eac46c202",
+			"name": "[500] Envio de dados de compra de produto com array vazio no body",
+			"url": "http://127.0.0.1:8080/api/v1/purchase-request",
+			"time": 6,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 500": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 500": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 500": true
+				}
+			]
+		},
+		{
+			"id": "867e95b0-7b82-4024-94ff-20d1f1e1ef09",
+			"name": "[200] Atualização do registro de produto",
+			"url": "http://127.0.0.1:8080/api/v1/articles/update-articles/1",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "e8391c30-3bb4-482f-b066-a7a06464e225",
+			"name": "[400] Atualização do registro de produto com path param inválido",
+			"url": "http://127.0.0.1:8080/api/v1/articles/update-articles/OjkD",
+			"time": 8,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 415": true
+				}
+			]
+		},
+		{
+			"id": "e880d43e-acfe-4288-b03f-67565f448c19",
+			"name": "[400] Atualização do registro de produto com quantidade no formato não esperado",
+			"url": "http://127.0.0.1:8080/api/v1/articles/update-articles/5",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 415": true
+				}
+			]
+		},
+		{
+			"id": "24c6bcbc-af43-4bab-ab95-49a4bfe7d671",
+			"name": "[400] Atualização do registro de produto com erro de sintaxe no body",
+			"url": "http://127.0.0.1:8080/api/v1/articles/update-articles/10",
+			"time": 8,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 415": true
+				}
+			]
+		},
+		{
+			"id": "a9f879fa-bf88-4504-be10-696024d2f384",
+			"name": "[404] Atualização do registro de produto com path param vazio",
+			"url": "http://127.0.0.1:8080/api/v1/articles/update-articles/",
+			"time": 8,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 415": true
+				}
+			]
+		},
+		{
+			"id": "f341e1db-c007-491f-8a3b-e0cf0e9e7abf",
+			"name": "[415] Atualização do registro de produto em formato não suportado",
+			"url": "http://127.0.0.1:8080/api/v1/articles/update-articles/10",
+			"time": 8,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 415": true
+				}
+			]
+		},
+		{
+			"id": "63b2bc37-2427-4c5b-bdac-24b938123991",
+			"name": "[200] Busca de clientes por estado via path param",
+			"url": "http://127.0.0.1:8080/api/v1/clients/state/Rio%20de%20Janeiro",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true
+				}
+			]
+		},
+		{
+			"id": "4a8d2513-a5e5-4006-8615-0b948f98af84",
+			"name": "[200] Busca de clientes",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200 ou 201": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200 ou 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200 ou 201": true
+				}
+			]
+		},
+		{
+			"id": "4743117c-c91a-4ae8-83e8-bcfb46338a73",
+			"name": "[201] Envio de dados do cliente",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 11,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200 ou 201": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200 ou 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200 ou 201": true
+				}
+			]
+		},
+		{
+			"id": "3e0e143e-6bac-41d6-bce0-2fc41f46e478",
+			"name": "[201] Envio de dados do cliente com nome em upper case",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 23,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200 ou 201": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200 ou 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				23
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200 ou 201": true
+				}
+			]
+		},
+		{
+			"id": "59bcd292-81de-4e5b-a140-08511fa942d0",
+			"name": "[201] Envio de dados do cliente com estado em upper case",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 9,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200 ou 201": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200 ou 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200 ou 201": true
+				}
+			]
+		},
+		{
+			"id": "9af6707d-8486-403e-8bc5-8d0fcec27cd7",
+			"name": "[201] Envio de dados do cliente com país em lower case",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 9,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 200 ou 201": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 200 ou 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 200 ou 201": true
+				}
+			]
+		},
+		{
+			"id": "ea310cbe-6dbf-4c3d-b5d4-994f41772722",
+			"name": "[404] Busca de clientes em rota inválida",
+			"url": "http://127.0.0.1:8080/api/v1/client",
+			"time": 7,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "2002d84d-251f-4744-959a-1b552e7872a2",
+			"name": "[404] Busca de clientes em rota inválida com path param",
+			"url": "http://127.0.0.1:8080/api/v1/client/2",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "637d0cd0-95f5-4a68-9904-3dff7c98c730",
+			"name": "[400] Envio de dados do cliente com caracteres especiais no nome",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 29,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				29
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "eab3e48f-170d-41db-90a4-9621eab13af9",
+			"name": "[400] Envio de dados do cliente com letras e caracteres especiais no CPF",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "702cb483-43ad-4b7e-b012-ee41a7a3c605",
+			"name": "[400] Envio de dados do cliente com ID em formato incorreto",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "769c7aea-650c-4118-86fe-66e10a00f042",
+			"name": "[400] Envio de dados do cliente com body incorreto",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 10,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "3a3cb772-96e7-4be7-8a2a-749b2b3f1273",
+			"name": "[400] Envio de dados do cliente com sintaxe do body incorreta",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "bd912eef-59e9-490f-b806-104d6dce3ddf",
+			"name": "[400] Envio de dados do cliente sem body",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "1d2c0489-4be1-4003-8bd5-72eaf5867668",
+			"name": "[400] Envio de dados do cliente com caracteres insuficientes no CPF",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "92ce1ffc-67c3-494e-bba3-a36aec495952",
+			"name": "[400] Envio de dados do cliente com números adicionais no CPF",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 10,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "57cb90eb-68a6-46d4-ad77-ea7e3e8031a1",
+			"name": "[404] Envio de dados do cliente em rota inválida",
+			"url": "http://127.0.0.1:8080/api/v1/client",
+			"time": 9,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "1600a865-1062-414c-8dec-7d4e9a963e55",
+			"name": "[406] Envio de dados do cliente sobreescrito",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 10,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": false
+				}
+			]
+		},
+		{
+			"id": "26e9065e-e4f3-4b66-a621-29ecf51b0a4b",
+			"name": "[406] Envio de dados do cliente novo com valor de ID persistido",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 9,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": false
+				}
+			]
+		},
+		{
+			"id": "c547b645-3a92-4ce4-808a-fb729cdd0a0e",
+			"name": "[406] Envio de dados do cliente com caracteres especiais no CPF",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 7,
+			"responseCode": {
+				"code": 406,
+				"name": "Not Acceptable"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "f8da4867-c032-420c-a691-1f1969199fa0",
+			"name": "[406] Envio de dados do cliente com nome vazio",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 7,
+			"responseCode": {
+				"code": 406,
+				"name": "Not Acceptable"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "bf267f52-de04-45be-b905-cb593364dffd",
+			"name": "[406] Envio de dados do cliente com nome com caracteres insuficientes",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 6,
+			"responseCode": {
+				"code": 406,
+				"name": "Not Acceptable"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "eec98a0c-6ab4-417d-858e-d7fc64b80dc0",
+			"name": "[406] Envio de dados do cliente com país não informado",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 7,
+			"responseCode": {
+				"code": 406,
+				"name": "Not Acceptable"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "818e60e8-9b34-4db3-bb4a-89f9ff4d2c0b",
+			"name": "[406] Envio de dados do cliente com estado não informado",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 6,
+			"responseCode": {
+				"code": 406,
+				"name": "Not Acceptable"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "05a425de-a149-43b5-ad4c-90864359d1c2",
+			"name": "[406] Envio de dados do cliente repetido com valor de ID diferente",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 15,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": false
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": false
+				}
+			]
+		},
+		{
+			"id": "924b5bfc-5cc6-4c4e-8d48-04049c8766db",
+			"name": "[406] Envio de dados do cliente com CPF não informado",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 7,
+			"responseCode": {
+				"code": 406,
+				"name": "Not Acceptable"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "d521b277-c7e7-445a-a457-0cddfd40a26e",
+			"name": "[415] Envio de dados do cliente em formato não esperado",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 5,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 400, 404, 406, 415": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 400, 404, 406, 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 400, 404, 406, 415": true
+				}
+			]
+		},
+		{
+			"id": "303985d9-88ae-4ec8-a171-c641a2a4d773",
+			"name": "[500] Envio de dados do cliente com o body vazio",
+			"url": "http://127.0.0.1:8080/api/v1/clients",
+			"time": 12,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Verificação de body do response": true,
+				"Content-Type de resposta está no formato application/json": true,
+				"Tempo de resposta inferior a 200ms": true,
+				"Lista de verificação de opções válidas de conteúdo de retorno": true,
+				"Status code 500": true
+			},
+			"testPassFailCounts": {
+				"Verificação de body do response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type de resposta está no formato application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Tempo de resposta inferior a 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de verificação de opções válidas de conteúdo de retorno": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code 500": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Verificação de body do response": true,
+					"Content-Type de resposta está no formato application/json": true,
+					"Tempo de resposta inferior a 200ms": true,
+					"Lista de verificação de opções válidas de conteúdo de retorno": true,
+					"Status code 500": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1453,
+	"collection": {
+		"requests": [
+			{
+				"id": "551ae281-906f-4995-9743-59b650392a65",
+				"method": "GET"
+			},
+			{
+				"id": "260e3bba-5cb7-4aa3-ad66-4c425b0cc37b",
+				"method": "GET"
+			},
+			{
+				"id": "739cd7f6-52b8-43b3-a2b5-e22f3069d4d9",
+				"method": "GET"
+			},
+			{
+				"id": "78d765fe-7bd6-4ab5-a221-aa8d7380d9cf",
+				"method": "GET"
+			},
+			{
+				"id": "5d7a3147-ef88-4f25-beda-388777cab3e6",
+				"method": "GET"
+			},
+			{
+				"id": "07ad4cc8-b8b0-4719-a2b7-0fbfaf0b7c99",
+				"method": "GET"
+			},
+			{
+				"id": "ab86b496-6eef-4279-ae69-f6b8d293ff7d",
+				"method": "GET"
+			},
+			{
+				"id": "45998f8d-5827-4934-b298-4d353cadf1f9",
+				"method": "GET"
+			},
+			{
+				"id": "a7e8e31b-0a97-4a7b-9f02-0bfb2dcb3fed",
+				"method": "GET"
+			},
+			{
+				"id": "54714f0c-190a-47aa-b1da-4f225314d7aa",
+				"method": "GET"
+			},
+			{
+				"id": "4e6f350e-c1bb-45f4-bc44-9d34874c308f",
+				"method": "GET"
+			},
+			{
+				"id": "f65d0a85-5ea0-4ece-8b29-dc6afe9dcae2",
+				"method": "GET"
+			},
+			{
+				"id": "2660b4d0-f0cb-4b65-a3f9-b504e16f336b",
+				"method": "GET"
+			},
+			{
+				"id": "ba1499bf-9641-4138-a3ab-5b022265cd0a",
+				"method": "GET"
+			},
+			{
+				"id": "65ac0c29-ee41-44ee-b723-6ced4be1001a",
+				"method": "GET"
+			},
+			{
+				"id": "1e8cb773-78b6-44c7-afea-29b78165cdac",
+				"method": "GET"
+			},
+			{
+				"id": "8716e891-64a3-4d28-91a3-1cc760d5ecd4",
+				"method": "GET"
+			},
+			{
+				"id": "4f2476e7-6514-47e2-a8e3-637c6bd9003b",
+				"method": "GET"
+			},
+			{
+				"id": "324f6de9-167f-4522-b5e6-675c495426aa",
+				"method": "GET"
+			},
+			{
+				"id": "ed3f7b2a-4e4b-4c5f-81df-e41908d635b1",
+				"method": "GET"
+			},
+			{
+				"id": "ad49ab7f-ff33-41a1-a622-a0080c7272cd",
+				"method": "GET"
+			},
+			{
+				"id": "c4cd63a4-ab2f-432f-b66a-6505c6c8dc2a",
+				"method": "GET"
+			},
+			{
+				"id": "39ea87f3-a04b-4ddf-a106-c7529fc6c79b",
+				"method": "GET"
+			},
+			{
+				"id": "ef9665ad-d922-4574-a4a3-87ece40ca071",
+				"method": "GET"
+			},
+			{
+				"id": "58a5bbcc-258a-4a7a-bfdb-bf2c409636cd",
+				"method": "GET"
+			},
+			{
+				"id": "1c724b72-a1f4-45c5-b7fd-364dc6136ba5",
+				"method": "GET"
+			},
+			{
+				"id": "9d4564ac-80b5-4806-ab92-b18a2ce7d294",
+				"method": "GET"
+			},
+			{
+				"id": "0237af0e-245d-42df-a1ab-38b910e52b80",
+				"method": "GET"
+			},
+			{
+				"id": "15a6e0d5-435d-49f3-9f12-c951931947d6",
+				"method": "GET"
+			},
+			{
+				"id": "94dfbd5a-1489-4db5-adbc-3d8f5fb3eb6e",
+				"method": "GET"
+			},
+			{
+				"id": "0aa20d46-d649-4cf6-8621-477fe992afd4",
+				"method": "GET"
+			},
+			{
+				"id": "3f0c9e38-5e1d-4e79-81bc-b524a19c1246",
+				"method": "GET"
+			},
+			{
+				"id": "2c159d31-7001-4c3b-926e-6770b7041f71",
+				"method": "GET"
+			},
+			{
+				"id": "23b5029e-fb53-4693-a98f-9b6364f6758c",
+				"method": "GET"
+			},
+			{
+				"id": "72d8ea37-7b62-4d41-b923-d26ed8faa3b7",
+				"method": "GET"
+			},
+			{
+				"id": "79dc6401-5705-4c51-8832-38869cd5f8ab",
+				"method": "GET"
+			},
+			{
+				"id": "25352f8f-512e-41bf-bc96-90992d466e7e",
+				"method": "GET"
+			},
+			{
+				"id": "7285bceb-0672-49b4-9c23-7627b84a29ad",
+				"method": "GET"
+			},
+			{
+				"id": "901e9a6b-caac-4b7b-b355-1837844b10a2",
+				"method": "GET"
+			},
+			{
+				"id": "6cba32e2-8ecf-4c8f-a133-5a4ee8cd70cf",
+				"method": "GET"
+			},
+			{
+				"id": "08fb1980-8db8-4a62-982a-425eca4d9f04",
+				"method": "GET"
+			},
+			{
+				"id": "f0af733d-9a8b-4cee-a923-c4229d7921d0",
+				"method": "GET"
+			},
+			{
+				"id": "cb996b11-eb9e-417f-bfa2-5b4d6293fae7",
+				"method": "GET"
+			},
+			{
+				"id": "98734b84-3d9f-4154-8b7c-00fd961ff070",
+				"method": "GET"
+			},
+			{
+				"id": "4fdffa37-9d4f-456a-a48c-a5ae75686eeb",
+				"method": "GET"
+			},
+			{
+				"id": "ea25eaf1-eeeb-431d-8744-fd6735af8727",
+				"method": "GET"
+			},
+			{
+				"id": "ce9a10d8-3395-490b-bb24-94ea6c752ce3",
+				"method": "GET"
+			},
+			{
+				"id": "caf8622d-c324-407f-b969-b45617006abb",
+				"method": "GET"
+			},
+			{
+				"id": "fe1c3c6e-682f-41aa-b4e9-70987460dba0",
+				"method": "GET"
+			},
+			{
+				"id": "c96fbb86-df42-4f80-bc64-a84695fb6395",
+				"method": "GET"
+			},
+			{
+				"id": "4d633ea8-2ec7-4620-9658-f7d5be35256f",
+				"method": "GET"
+			},
+			{
+				"id": "a099fc71-25a9-4914-9dea-daa6e9622c3e",
+				"method": "GET"
+			},
+			{
+				"id": "69ba4642-5163-4fa4-9c53-843eb0e3a9a1",
+				"method": "GET"
+			},
+			{
+				"id": "c6beb4fd-235f-4259-85a5-4b578d9e7e75",
+				"method": "GET"
+			},
+			{
+				"id": "35531722-ecd8-4469-9905-78e19990904a",
+				"method": "GET"
+			},
+			{
+				"id": "e9d4f026-7c93-472f-a6e8-fee7484f9ab3",
+				"method": "GET"
+			},
+			{
+				"id": "affae03e-0459-41cc-ae06-bfdbdbd376db",
+				"method": "GET"
+			},
+			{
+				"id": "486dd06b-2418-4523-9d95-a64aadd041b4",
+				"method": "GET"
+			},
+			{
+				"id": "17498c7d-bfe5-4018-92f6-f182e8f178c2",
+				"method": "GET"
+			},
+			{
+				"id": "65fb82fd-9c74-4c17-9e7a-1b4062d15e2b",
+				"method": "GET"
+			},
+			{
+				"id": "52f7eda5-889e-4c9f-855a-b29cd6c5268f",
+				"method": "GET"
+			},
+			{
+				"id": "b5e6971a-0948-4f94-8ad4-99f1a39063cc",
+				"method": "GET"
+			},
+			{
+				"id": "6ce97983-524d-42bc-bbbe-da6be29a11cd",
+				"method": "GET"
+			},
+			{
+				"id": "43c15858-76ca-42be-890a-2eebc76db2fb",
+				"method": "GET"
+			},
+			{
+				"id": "1ff53218-f977-4f58-bdec-af40e78f836d",
+				"method": "GET"
+			},
+			{
+				"id": "d0835d9c-8e02-4256-a8c3-cc1fb8d6b2d4",
+				"method": "GET"
+			},
+			{
+				"id": "c97a33ec-562a-4264-8d41-950536b9891a",
+				"method": "POST"
+			},
+			{
+				"id": "a08ba107-59af-4bc0-b1f2-1d77fea7f726",
+				"method": "POST"
+			},
+			{
+				"id": "e7f53a65-21b4-432b-b856-623e3ce5fd69",
+				"method": "POST"
+			},
+			{
+				"id": "9a6ad306-a8fc-4276-b15d-e90488bbf5cf",
+				"method": "POST"
+			},
+			{
+				"id": "60fad7a2-336b-4c1b-8398-5f523c927f5c",
+				"method": "POST"
+			},
+			{
+				"id": "787ca2f3-3c29-4363-9421-1ddd5f767ee7",
+				"method": "POST"
+			},
+			{
+				"id": "c9bbc215-a215-47ba-a241-57567f4c648d",
+				"method": "POST"
+			},
+			{
+				"id": "06be1625-a59f-4bb0-a7a6-f151587e7188",
+				"method": "POST"
+			},
+			{
+				"id": "274010b6-e880-4e2e-9579-13568c482bea",
+				"method": "POST"
+			},
+			{
+				"id": "742f4e69-a5b8-4aeb-aec1-51ae754ed29b",
+				"method": "POST"
+			},
+			{
+				"id": "82da121d-807d-4e22-97e3-e71b1b469846",
+				"method": "POST"
+			},
+			{
+				"id": "6e754823-3c19-4d5b-becf-c4f4d6a829b0",
+				"method": "POST"
+			},
+			{
+				"id": "3101af12-182e-4904-93df-592eac46c202",
+				"method": "POST"
+			},
+			{
+				"id": "867e95b0-7b82-4024-94ff-20d1f1e1ef09",
+				"method": "PUT"
+			},
+			{
+				"id": "e8391c30-3bb4-482f-b066-a7a06464e225",
+				"method": "PUT"
+			},
+			{
+				"id": "e880d43e-acfe-4288-b03f-67565f448c19",
+				"method": "PUT"
+			},
+			{
+				"id": "24c6bcbc-af43-4bab-ab95-49a4bfe7d671",
+				"method": "PUT"
+			},
+			{
+				"id": "a9f879fa-bf88-4504-be10-696024d2f384",
+				"method": "PUT"
+			},
+			{
+				"id": "f341e1db-c007-491f-8a3b-e0cf0e9e7abf",
+				"method": "PUT"
+			},
+			{
+				"id": "63b2bc37-2427-4c5b-bdac-24b938123991",
+				"method": "GET"
+			},
+			{
+				"id": "4a8d2513-a5e5-4006-8615-0b948f98af84",
+				"method": "GET"
+			},
+			{
+				"id": "4743117c-c91a-4ae8-83e8-bcfb46338a73",
+				"method": "POST"
+			},
+			{
+				"id": "3e0e143e-6bac-41d6-bce0-2fc41f46e478",
+				"method": "POST"
+			},
+			{
+				"id": "59bcd292-81de-4e5b-a140-08511fa942d0",
+				"method": "POST"
+			},
+			{
+				"id": "9af6707d-8486-403e-8bc5-8d0fcec27cd7",
+				"method": "POST"
+			},
+			{
+				"id": "ea310cbe-6dbf-4c3d-b5d4-994f41772722",
+				"method": "GET"
+			},
+			{
+				"id": "2002d84d-251f-4744-959a-1b552e7872a2",
+				"method": "GET"
+			},
+			{
+				"id": "637d0cd0-95f5-4a68-9904-3dff7c98c730",
+				"method": "POST"
+			},
+			{
+				"id": "eab3e48f-170d-41db-90a4-9621eab13af9",
+				"method": "POST"
+			},
+			{
+				"id": "702cb483-43ad-4b7e-b012-ee41a7a3c605",
+				"method": "POST"
+			},
+			{
+				"id": "769c7aea-650c-4118-86fe-66e10a00f042",
+				"method": "POST"
+			},
+			{
+				"id": "3a3cb772-96e7-4be7-8a2a-749b2b3f1273",
+				"method": "POST"
+			},
+			{
+				"id": "bd912eef-59e9-490f-b806-104d6dce3ddf",
+				"method": "POST"
+			},
+			{
+				"id": "1d2c0489-4be1-4003-8bd5-72eaf5867668",
+				"method": "POST"
+			},
+			{
+				"id": "92ce1ffc-67c3-494e-bba3-a36aec495952",
+				"method": "POST"
+			},
+			{
+				"id": "57cb90eb-68a6-46d4-ad77-ea7e3e8031a1",
+				"method": "POST"
+			},
+			{
+				"id": "1600a865-1062-414c-8dec-7d4e9a963e55",
+				"method": "POST"
+			},
+			{
+				"id": "26e9065e-e4f3-4b66-a621-29ecf51b0a4b",
+				"method": "POST"
+			},
+			{
+				"id": "c547b645-3a92-4ce4-808a-fb729cdd0a0e",
+				"method": "POST"
+			},
+			{
+				"id": "f8da4867-c032-420c-a691-1f1969199fa0",
+				"method": "POST"
+			},
+			{
+				"id": "bf267f52-de04-45be-b905-cb593364dffd",
+				"method": "POST"
+			},
+			{
+				"id": "eec98a0c-6ab4-417d-858e-d7fc64b80dc0",
+				"method": "POST"
+			},
+			{
+				"id": "818e60e8-9b34-4db3-bb4a-89f9ff4d2c0b",
+				"method": "POST"
+			},
+			{
+				"id": "05a425de-a149-43b5-ad4c-90864359d1c2",
+				"method": "POST"
+			},
+			{
+				"id": "924b5bfc-5cc6-4c4e-8d48-04049c8766db",
+				"method": "POST"
+			},
+			{
+				"id": "d521b277-c7e7-445a-a457-0cddfd40a26e",
+				"method": "POST"
+			},
+			{
+				"id": "303985d9-88ae-4ec8-a171-c641a2a4d773",
+				"method": "POST"
+			}
+		]
+	}
+}
