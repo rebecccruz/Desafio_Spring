@@ -39,8 +39,8 @@ O projeto foi desenvolvido utilizando o framework Spring.<br>
 ## 💻 JavaDoc e Requisições
 
 Acesse o <a href="https://github.com/laridevmeli/Desafio_Spring/tree/main/doc">JavaDoc</a>.<br>
-É possível importar a <a href="https://github.com/laridevmeli/Desafio_Spring/blob/main/src/main/resources/Desafio_Spring_Grupo2_Transformeli.postman_collection.json">collection</a> na pasta resource e utilizá-la no POSTMAN (ou API Client de sua preferência) para testar os endpoints.
-
+É possível importar a <a href="https://github.com/laridevmeli/Desafio_Spring/blob/main/src/main/resources/Desafio_Spring_Grupo2_Transformeli.postman_collection.json">collection</a> na pasta resource e utilizá-la no Postman (ou API Client de sua preferência) para testar os endpoints.
+Disponibilizamos as <a href="https://github.com/laridevmeli/Desafio_Spring/blob/main/src/main/resources/workspace.postman_globals.json">varíaveis de ambiente</a> para viabilizar o funcionamento da collection bem como o <a href="https://github.com/laridevmeli/Desafio_Spring/blob/main/src/main/resources/Desafio_Spring_Grupo2_Transformeli.postman_test_run.json">arquivo</a> com o registro dos testes unitários da API.
 <br>
 
 ## 🚀 Como clonar e iniciar a aplicação
