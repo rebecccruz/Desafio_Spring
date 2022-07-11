@@ -274,7 +274,7 @@
 							},
 							"response": [
 								{
-									"name": "[200] Busca por categoria inválida",
+									"name": "[404] Busca por categoria inválida",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -297,10 +297,33 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": null,
-									"header": null,
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Jul 2022 23:17:52 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
 									"cookie": [],
-									"body": null
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"No registered products in this category\",\n    \"timestamp\": \"2022-07-10T20:17:52.008091\"\n}"
 								}
 							]
 						},
@@ -330,7 +353,7 @@
 							},
 							"response": [
 								{
-									"name": "[200] Busca sem filtro de categoria",
+									"name": "[404] Busca sem filtro de categoria",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -367,7 +390,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 08 Jul 2022 21:14:35 GMT"
+											"value": "Sun, 10 Jul 2022 23:18:26 GMT"
 										},
 										{
 											"key": "Keep-Alive",
@@ -379,7 +402,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"Sorry, this category has no products yet\",\n    \"timestamp\": \"2022-07-08T18:14:35.88833\"\n}"
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"No registered products in this category\",\n    \"timestamp\": \"2022-07-10T20:18:26.159461\"\n}"
 								}
 							]
 						}
@@ -388,6 +411,1317 @@
 				{
 					"name": "api/v1/articles?category=&freeShipping=",
 					"item": [
+						{
+							"name": "[200] Categoria válida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Celulares",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Celulares",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto.",
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": "3",
+											"description": "Critério de ordenação.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Categoria válida",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Celulares",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Celulares",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto.",
+													"disabled": true
+												},
+												{
+													"key": "order",
+													"value": "3",
+													"description": "Critério de ordenação.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:09:44 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Categoria inválida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Mesa",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Mesa",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto.",
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": "3",
+											"description": "Critério de ordenação.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Categoria inválida",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Mesa",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Mesa",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto.",
+													"disabled": true
+												},
+												{
+													"key": "order",
+													"value": "3",
+													"description": "Critério de ordenação.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:10:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"No registered products in this category\",\n    \"timestamp\": \"2022-07-10T21:10:31.386778\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[200] Frete grátis true",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?freeShipping=true",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Mesa",
+											"description": "Categoria do produto.",
+											"disabled": true
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "3",
+											"description": "Critério de ordenação.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Frete grátis true",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=true",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Mesa",
+													"description": "Categoria do produto.",
+													"disabled": true
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "3",
+													"description": "Critério de ordenação.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:11:07 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    },\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Frete grátis false",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?freeShipping=false",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Mesa",
+											"description": "Categoria do produto.",
+											"disabled": true
+										},
+										{
+											"key": "freeShipping",
+											"value": "false",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "3",
+											"description": "Critério de ordenação.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Frete grátis false",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=false",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Mesa",
+													"description": "Categoria do produto.",
+													"disabled": true
+												},
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "3",
+													"description": "Critério de ordenação.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:11:42 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Ordenação crescente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?order=0",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Mesa",
+											"description": "Categoria do produto.",
+											"disabled": true
+										},
+										{
+											"key": "freeShipping",
+											"value": "false",
+											"description": "Frete grátis do produto.",
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": "0",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Ordenação crescente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?order=0",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Mesa",
+													"description": "Categoria do produto.",
+													"disabled": true
+												},
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto.",
+													"disabled": true
+												},
+												{
+													"key": "order",
+													"value": "0",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:12:45 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    },\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Ordenação decrescente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?order=1",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Mesa",
+											"description": "Categoria do produto.",
+											"disabled": true
+										},
+										{
+											"key": "freeShipping",
+											"value": "false",
+											"description": "Frete grátis do produto.",
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": "1",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Ordenação decrescente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?order=1",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Mesa",
+													"description": "Categoria do produto.",
+													"disabled": true
+												},
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto.",
+													"disabled": true
+												},
+												{
+													"key": "order",
+													"value": "1",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:13:14 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    },\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Ordenação do maior para o menor preço",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?order=2",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Mesa",
+											"description": "Categoria do produto.",
+											"disabled": true
+										},
+										{
+											"key": "freeShipping",
+											"value": "false",
+											"description": "Frete grátis do produto.",
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": "2",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Ordenação do maior para o menor preço",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?order=2",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Mesa",
+													"description": "Categoria do produto.",
+													"disabled": true
+												},
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto.",
+													"disabled": true
+												},
+												{
+													"key": "order",
+													"value": "2",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:14:32 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    },\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Ordenação do menor para o maior preço",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?order=3",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Mesa",
+											"description": "Categoria do produto.",
+											"disabled": true
+										},
+										{
+											"key": "freeShipping",
+											"value": "false",
+											"description": "Frete grátis do produto.",
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": "3",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Ordenação do menor para o maior preço",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?order=3",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Mesa",
+													"description": "Categoria do produto.",
+													"disabled": true
+												},
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto.",
+													"disabled": true
+												},
+												{
+													"key": "order",
+													"value": "3",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:15:17 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    },\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    },\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[400] Categoria válida com ordenação não existente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Celulares&order=10",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Celulares",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto.",
+											"disabled": true
+										},
+										{
+											"key": "order",
+											"value": "10",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[400] Categoria válida com ordenação não existente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Celulares&order=10",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Celulares",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto.",
+													"disabled": true
+												},
+												{
+													"key": "order",
+													"value": "10",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:19:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Bad Request\",\n    \"status\": 400,\n    \"message\": \"invalid orderId\",\n    \"timestamp\": \"2022-07-10T21:19:00.363401\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[400] Categoria inválida com ordenação não existente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&order=10000",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Celulares",
+											"description": "Categoria do produto.",
+											"disabled": true
+										},
+										{
+											"key": "freeShipping",
+											"value": "false",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "10000",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[400] Categoria inválida com ordenação não existente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&order=10000",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Celulares",
+													"description": "Categoria do produto.",
+													"disabled": true
+												},
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "10000",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:21:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Bad Request\",\n    \"status\": 400,\n    \"message\": \"invalid orderId\",\n    \"timestamp\": \"2022-07-10T21:21:45.094691\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[400] Frete grátis true com ordenação não existente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&order=100",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Celulares",
+											"description": "Categoria do produto.",
+											"disabled": true
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "100",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[400] Frete grátis true com ordenação não existente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&order=100",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Celulares",
+													"description": "Categoria do produto.",
+													"disabled": true
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "100",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:20:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Bad Request\",\n    \"status\": 400,\n    \"message\": \"invalid orderId\",\n    \"timestamp\": \"2022-07-10T21:20:08.914182\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[400] Frete grátis false com ordenação não existente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&order=1000",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Celulares",
+											"description": "Categoria do produto.",
+											"disabled": true
+										},
+										{
+											"key": "freeShipping",
+											"value": "false",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "1000",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[400] Frete grátis false com ordenação não existente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&order=1000",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Celulares",
+													"description": "Categoria do produto.",
+													"disabled": true
+												},
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "1000",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:20:43 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Bad Request\",\n    \"status\": 400,\n    \"message\": \"invalid orderId\",\n    \"timestamp\": \"2022-07-10T21:20:43.794798\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[200] Categoria válida e frete grátis false e ordenação alfabética crescente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false&order=0",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Roupas",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "false",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "0",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Categoria válida e frete grátis false e ordenação alfabética crescente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false&order=0",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Roupas",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "0",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Jul 2022 23:34:40 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    }\n]"
+								}
+							]
+						},
 						{
 							"name": "[200] Categoria válida e frete grátis false e ordenação alfabética decrescente",
 							"request": {
@@ -471,7 +1805,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 08 Jul 2022 23:48:16 GMT"
+											"value": "Sun, 10 Jul 2022 23:20:35 GMT"
 										},
 										{
 											"key": "Keep-Alive",
@@ -488,7 +1822,205 @@
 							]
 						},
 						{
-							"name": "[200] Categoria válida, frete grátis true e sem ordenação",
+							"name": "[200] Categoria válida e frete grátis false e ordenação por menor preço até o maior preço",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false&order=3",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Roupas",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "false",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "3",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Categoria válida e frete grátis false e ordenação por menor preço até o maior preço",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false&order=3",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Roupas",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "3",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Jul 2022 23:38:10 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Categoria válida e frete grátis false e ordenação por maior preço até o menor preço",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false&order=2",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Roupas",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "false",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "2",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Categoria válida e frete grátis false e ordenação por maior preço até o menor preço",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false&order=2",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Roupas",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "2",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Jul 2022 23:41:22 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Categoria válida e frete grátis false sem ordenação",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -515,7 +2047,7 @@
 										},
 										{
 											"key": "order",
-											"value": "0",
+											"value": "2",
 											"description": "Critério de ordenação.",
 											"disabled": true
 										}
@@ -524,7 +2056,7 @@
 							},
 							"response": [
 								{
-									"name": "[200] Categoria válida, frete grátis true e sem ordenação",
+									"name": "[200] Categoria válida e frete grátis false sem ordenação",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -551,7 +2083,7 @@
 												},
 												{
 													"key": "order",
-													"value": "0",
+													"value": "2",
 													"description": "Critério de ordenação.",
 													"disabled": true
 												}
@@ -572,7 +2104,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 08 Jul 2022 20:58:24 GMT"
+											"value": "Sun, 10 Jul 2022 23:43:11 GMT"
 										},
 										{
 											"key": "Keep-Alive",
@@ -690,12 +2222,12 @@
 							]
 						},
 						{
-							"name": "[200] Categoria válida, frete grátis true e ordenação alfabética crescente",
+							"name": "[200] Categoria válida, frete grátis true sem ordenação",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=0",
+									"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false",
 									"host": [
 										"{{API_URL}}"
 									],
@@ -707,30 +2239,31 @@
 									"query": [
 										{
 											"key": "category",
-											"value": "Ferramentas",
+											"value": "Roupas",
 											"description": "Categoria do produto."
 										},
 										{
 											"key": "freeShipping",
-											"value": "true",
+											"value": "false",
 											"description": "Frete grátis do produto."
 										},
 										{
 											"key": "order",
 											"value": "0",
-											"description": "Critério de ordenação."
+											"description": "Critério de ordenação.",
+											"disabled": true
 										}
 									]
 								}
 							},
 							"response": [
 								{
-									"name": "[200] Categoria válida, frete grátis true e ordenação alfabética crescente",
+									"name": "[200] Categoria válida, frete grátis true sem ordenação",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=0",
+											"raw": "{{API_URL}}/api/v1/articles?category=Roupas&freeShipping=false",
 											"host": [
 												"{{API_URL}}"
 											],
@@ -742,18 +2275,19 @@
 											"query": [
 												{
 													"key": "category",
-													"value": "Ferramentas",
+													"value": "Roupas",
 													"description": "Categoria do produto."
 												},
 												{
 													"key": "freeShipping",
-													"value": "true",
+													"value": "false",
 													"description": "Frete grátis do produto."
 												},
 												{
 													"key": "order",
 													"value": "0",
-													"description": "Critério de ordenação."
+													"description": "Critério de ordenação.",
+													"disabled": true
 												}
 											]
 										}
@@ -772,7 +2306,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 08 Jul 2022 20:51:51 GMT"
+											"value": "Sun, 10 Jul 2022 23:44:48 GMT"
 										},
 										{
 											"key": "Keep-Alive",
@@ -784,7 +2318,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    }\n]"
+									"body": "[\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    }\n]"
 								}
 							]
 						},
@@ -884,6 +2418,1297 @@
 									],
 									"cookie": [],
 									"body": "[\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Categoria válida, frete grátis true e ordenação alfabética decrescente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=1",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Ferramentas",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "1",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Categoria válida, frete grátis true e ordenação alfabética decrescente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=1",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Ferramentas",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "1",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Jul 2022 23:49:07 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Categoria válida, frete grátis true ordenado do maior para o menor preço",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=2",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Ferramentas",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "2",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Categoria válida, frete grátis true ordenado do maior para o menor preço",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=2",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Ferramentas",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "2",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Jul 2022 23:50:22 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[200] Categoria válida, frete grátis true ordenado do menor para o maior preço",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=3",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Ferramentas",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "3",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Categoria válida, frete grátis true ordenado do menor para o maior preço",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Ferramentas&freeShipping=true&order=3",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Ferramentas",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "3",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Jul 2022 23:51:24 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[404] Categoria inválida, frete grátis true sem ordenação",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Banho&freeShipping=true",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Banho",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "3",
+											"description": "Critério de ordenação.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] Categoria inválida, frete grátis true sem ordenação",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Banho&freeShipping=true",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Banho",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "3",
+													"description": "Critério de ordenação.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Jul 2022 23:55:07 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"No registered products in this category\",\n    \"timestamp\": \"2022-07-10T20:55:07.450302\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[404] Categoria inválida, frete grátis true sem ordenação alfabética crescente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Mesa&freeShipping=true&order=0",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Mesa",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "0",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] Categoria inválida, frete grátis true sem ordenação alfabética crescente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Mesa&freeShipping=true&order=0",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Mesa",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "0",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Jul 2022 23:56:49 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"No registered products in this category\",\n    \"timestamp\": \"2022-07-10T20:56:49.871879\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[404] Categoria inválida, frete grátis true sem ordenação alfabética decrescente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=1",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Cama",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "1",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] Categoria inválida, frete grátis true sem ordenação alfabética decrescente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=1",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Cama",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "1",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Jul 2022 23:57:36 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"No registered products in this category\",\n    \"timestamp\": \"2022-07-10T20:57:36.576874\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[404] Categoria inválida, frete grátis true sem ordenação do maior para o menor preço",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=2",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Cama",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "2",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] Categoria inválida, frete grátis true sem ordenação do maior para o menor preço",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=2",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Cama",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "2",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Jul 2022 23:58:44 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"No registered products in this category\",\n    \"timestamp\": \"2022-07-10T20:58:44.215141\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[404] Categoria inválida, frete grátis true sem ordenação do menor para o maior preço",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=3",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Cama",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "3",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] Categoria inválida, frete grátis true sem ordenação do menor para o maior preço",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=3",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Cama",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "3",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Jul 2022 23:59:39 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"No registered products in this category\",\n    \"timestamp\": \"2022-07-10T20:59:39.888865\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[404] Categoria inválida, frete grátis false sem ordenação",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Cama",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "3",
+											"description": "Critério de ordenação.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] Categoria inválida, frete grátis false sem ordenação",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Cama",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "3",
+													"description": "Critério de ordenação.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:04:26 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"No registered products in this category\",\n    \"timestamp\": \"2022-07-10T21:04:26.718156\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[404] Categoria inválida, frete grátis false em ordem alfabética crescente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=0",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Cama",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "0",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] Categoria inválida, frete grátis false em ordem alfabética crescente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=0",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Cama",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "0",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:05:47 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"No registered products in this category\",\n    \"timestamp\": \"2022-07-10T21:05:47.349897\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[404] Categoria inválida, frete grátis false em ordem alfabética decrescente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=1",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Cama",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "1",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] Categoria inválida, frete grátis false em ordem alfabética decrescente",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=1",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Cama",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "1",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:06:13 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"No registered products in this category\",\n    \"timestamp\": \"2022-07-10T21:06:13.948484\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[404] Categoria inválida, frete grátis false em ordem do maior para o menor preço",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=2",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Cama",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "2",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] Categoria inválida, frete grátis false em ordem do maior para o menor preço",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=2",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Cama",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "2",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:07:01 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"No registered products in this category\",\n    \"timestamp\": \"2022-07-10T21:07:01.144712\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[404] Categoria inválida, frete grátis false em ordem do menor para o maior preço",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=3",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Cama",
+											"description": "Categoria do produto."
+										},
+										{
+											"key": "freeShipping",
+											"value": "true",
+											"description": "Frete grátis do produto."
+										},
+										{
+											"key": "order",
+											"value": "3",
+											"description": "Critério de ordenação."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] Categoria inválida, frete grátis false em ordem do menor para o maior preço",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?category=Cama&freeShipping=true&order=3",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "Cama",
+													"description": "Categoria do produto."
+												},
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "order",
+													"value": "3",
+													"description": "Critério de ordenação."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:07:39 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"No registered products in this category\",\n    \"timestamp\": \"2022-07-10T21:07:39.027758\"\n}"
 								}
 							]
 						}
@@ -1424,6 +4249,41 @@
 			]
 		},
 		{
+			"name": "api/v1/articles/update-articles/{productId}",
+			"item": [
+				{
+					"name": "[200] api/v1/articles/update-articles/{productId}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/v1/articles/update-articles/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"articles",
+								"update-articles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "EXTRA BONUS",
 			"item": [
 				{
@@ -1516,77 +4376,13 @@
 									]
 								}
 							]
-						}
-					]
-				},
-				{
-					"name": "api/v1/articles/update-articles/{productId}",
-					"item": [
-						{
-							"name": "[200] api/v1/articles/update-articles/{productId}",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{API_URL}}/api/v1/articles/update-articles/1",
-									"host": [
-										"{{API_URL}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"articles",
-										"update-articles",
-										"1"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "[200] Busca de clientes",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
 						},
-						"url": {
-							"raw": "{{API_URL}}/api/v1/clients",
-							"host": [
-								"{{API_URL}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"clients"
-							]
-						}
-					},
-					"response": [
 						{
 							"name": "[200] Busca de clientes",
-							"originalRequest": {
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
 								"method": "GET",
 								"header": [],
 								"body": {
@@ -1610,33 +4406,62 @@
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 10 Jul 2022 22:25:20 GMT"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=60"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
+									"name": "[200] Busca de clientes",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/clients",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"clients"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Jul 2022 22:25:20 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Alexandre Borges Souza\",\n        \"state\": \"Santa Catarina\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Alexandre Borges Souza\",\n        \"state\": \"Santa Catarina\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Evelyn Cristini Oliveira\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Luciana Azevedo\",\n        \"state\": \"I\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Daniele Silva\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Luísa do Amaral\",\n        \"state\": \"SÃO PAULO\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Amanda Cardoso\",\n        \"state\": \"SÃO PAULO\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"BOB DYLAN OLIVEIRA THROSSELL\",\n        \"state\": \"SÃO PAULO\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"José Carvalho\",\n        \"state\": \"SÃO PAULO\",\n        \"country\": \"brasil\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Marcela Silva\",\n        \"state\": \"Santa Catarina\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Mari*a Pereira4\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Gust*vo Oliveir4\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Dani*le Oliveir4\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 14,\n        \"name\": \"Dani*le Oliveir4\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 15,\n        \"name\": \"Dani*le Oliveir4 Souza\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 16,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 17,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 18,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 19,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 20,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 21,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 22,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 23,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 24,\n        \"name\": \"Alex George\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 25,\n        \"name\": \"Maria Aparecida Pereira Oliveira\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 26,\n        \"name\": \"Maria Aparecida Pereira Oliveira\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 27,\n        \"name\": \"Clifford Knight\",\n        \"state\": \"S&0 P4ul0\",\n        \"country\": \"Brasil\"\n    }\n]"
 								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Alexandre Borges Souza\",\n        \"state\": \"Santa Catarina\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Alexandre Borges Souza\",\n        \"state\": \"Santa Catarina\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Evelyn Cristini Oliveira\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Luciana Azevedo\",\n        \"state\": \"I\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Daniele Silva\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Luísa do Amaral\",\n        \"state\": \"SÃO PAULO\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Amanda Cardoso\",\n        \"state\": \"SÃO PAULO\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"BOB DYLAN OLIVEIRA THROSSELL\",\n        \"state\": \"SÃO PAULO\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"José Carvalho\",\n        \"state\": \"SÃO PAULO\",\n        \"country\": \"brasil\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Marcela Silva\",\n        \"state\": \"Santa Catarina\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Mari*a Pereira4\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Gust*vo Oliveir4\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Dani*le Oliveir4\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 14,\n        \"name\": \"Dani*le Oliveir4\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 15,\n        \"name\": \"Dani*le Oliveir4 Souza\",\n        \"state\": \"São Paulo\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 16,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 17,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 18,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 19,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 20,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 21,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 22,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 23,\n        \"name\": \"Elisa dos Santos\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 24,\n        \"name\": \"Alex George\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 25,\n        \"name\": \"Maria Aparecida Pereira Oliveira\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 26,\n        \"name\": \"Maria Aparecida Pereira Oliveira\",\n        \"state\": \"S*0 P#ul0\",\n        \"country\": \"Brasil\"\n    },\n    {\n        \"id\": 27,\n        \"name\": \"Clifford Knight\",\n        \"state\": \"S&0 P4ul0\",\n        \"country\": \"Brasil\"\n    }\n]"
+							]
 						}
 					]
 				},

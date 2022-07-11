@@ -144,7 +144,7 @@ public class ProductService implements IProductService {
                 .collect(Collectors.toList());
         if(filteredProducts.size() == 0)
         {
-            throw new NotFoundException("category has no products yet");
+            throw new NotFoundException("No registered products in this category");
         }
         return filteredProducts;
     }
