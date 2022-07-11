@@ -10,6 +10,202 @@
 			"name": "api/v1/articles",
 			"item": [
 				{
+					"name": "2xx",
+					"item": [
+						{
+							"name": "[200] Busca de produtos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[200] Busca de produtos",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:34:47 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    },\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    }\n]"
+								}
+							]
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code 200\", () => {",
+									"  pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "4xx",
+					"item": [
+						{
+							"name": "[404] Busca de produtos com rota inválida",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/article",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"article"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] Busca de produtos com rota inválida",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/article",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"article"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 00:36:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T00:36:09.616+00:00\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"message\": \"No message available\",\n    \"path\": \"/api/v1/article\"\n}"
+								}
+							]
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code 404\", () => {",
+									"  pm.response.to.have.status(404);",
+									"});"
+								]
+							}
+						}
+					]
+				},
+				{
 					"name": "api/v1/articles?category=",
 					"item": [
 						{
@@ -470,7 +666,7 @@
 							"name": "2xx",
 							"item": [
 								{
-									"name": "[200] Categoria válida",
+									"name": "[200] Busca por categoria válida",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -507,7 +703,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Categoria válida",
+											"name": "[200] Busca por categoria válida",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -573,7 +769,7 @@
 									]
 								},
 								{
-									"name": "[200] Frete grátis true",
+									"name": "[200] Busca por frete grátis true",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -610,7 +806,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Frete grátis true",
+											"name": "[200] Busca por frete grátis true",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -676,7 +872,7 @@
 									]
 								},
 								{
-									"name": "[200] Frete grátis false",
+									"name": "[200] Busca por frete grátis false",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -713,7 +909,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Frete grátis false",
+											"name": "[200] Busca por frete grátis false",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -779,7 +975,7 @@
 									]
 								},
 								{
-									"name": "[200] Ordenação crescente",
+									"name": "[200] Busca por ordenação crescente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -816,7 +1012,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Ordenação crescente",
+											"name": "[200] Busca por ordenação crescente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -882,7 +1078,7 @@
 									]
 								},
 								{
-									"name": "[200] Ordenação decrescente",
+									"name": "[200] Busca por ordenação decrescente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -919,7 +1115,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Ordenação decrescente",
+											"name": "[200] Busca por ordenação decrescente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -985,7 +1181,7 @@
 									]
 								},
 								{
-									"name": "[200] Ordenação do maior para o menor preço",
+									"name": "[200] Busca por ordenação do maior para o menor preço",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -1022,7 +1218,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Ordenação do maior para o menor preço",
+											"name": "[200] Busca por ordenação do maior para o menor preço",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -1088,7 +1284,7 @@
 									]
 								},
 								{
-									"name": "[200] Ordenação do menor para o maior preço",
+									"name": "[200] Busca por ordenação do menor para o maior preço",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -1125,7 +1321,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Ordenação do menor para o maior preço",
+											"name": "[200] Busca por ordenação do menor para o maior preço",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -1191,7 +1387,7 @@
 									]
 								},
 								{
-									"name": "[200] Categoria válida e frete grátis false e ordenação alfabética crescente",
+									"name": "[200] Busca por categoria válida e frete grátis false e ordenação alfabética crescente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -1226,7 +1422,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Categoria válida e frete grátis false e ordenação alfabética crescente",
+											"name": "[200] Busca por categoria válida e frete grátis false e ordenação alfabética crescente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -1290,7 +1486,7 @@
 									]
 								},
 								{
-									"name": "[200] Categoria válida e frete grátis false e ordenação alfabética decrescente",
+									"name": "[200] Busca por categoria válida e frete grátis false e ordenação alfabética decrescente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -1325,7 +1521,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Categoria válida e frete grátis false e ordenação alfabética decrescente",
+											"name": "[200] Busca por categoria válida e frete grátis false e ordenação alfabética decrescente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -1389,7 +1585,7 @@
 									]
 								},
 								{
-									"name": "[200] Categoria válida e frete grátis false e ordenação por menor preço até o maior preço",
+									"name": "[200] Busca por categoria válida e frete grátis false e ordenação por menor preço até o maior preço",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -1424,7 +1620,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Categoria válida e frete grátis false e ordenação por menor preço até o maior preço",
+											"name": "[200] Busca por categoria válida e frete grátis false e ordenação por menor preço até o maior preço",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -1488,7 +1684,7 @@
 									]
 								},
 								{
-									"name": "[200] Categoria válida e frete grátis false e ordenação por maior preço até o menor preço",
+									"name": "[200] Busca por categoria válida e frete grátis false e ordenação por maior preço até o menor preço",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -1523,7 +1719,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Categoria válida e frete grátis false e ordenação por maior preço até o menor preço",
+											"name": "[200] Busca por categoria válida e frete grátis false e ordenação por maior preço até o menor preço",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -1587,7 +1783,7 @@
 									]
 								},
 								{
-									"name": "[200] Categoria válida e frete grátis false sem ordenação",
+									"name": "[200] Busca por categoria válida e frete grátis false sem ordenação",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -1623,7 +1819,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Categoria válida e frete grátis false sem ordenação",
+											"name": "[200] Busca por categoria válida e frete grátis false sem ordenação",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -1688,7 +1884,7 @@
 									]
 								},
 								{
-									"name": "[200] Categoria válida e frete grátis false sem ordenação",
+									"name": "[200] Busca por categoria válida e frete grátis false sem ordenação",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -1724,7 +1920,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Categoria válida e frete grátis false sem ordenação",
+											"name": "[200] Busca por categoria válida e frete grátis false sem ordenação",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -1789,7 +1985,7 @@
 									]
 								},
 								{
-									"name": "[200] Categoria válida, frete grátis true sem ordenação",
+									"name": "[200] Busca por categoria válida, frete grátis true sem ordenação",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -1825,7 +2021,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Categoria válida, frete grátis true sem ordenação",
+											"name": "[200] Busca por categoria válida, frete grátis true sem ordenação",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -1890,7 +2086,7 @@
 									]
 								},
 								{
-									"name": "[200] Categoria válida, frete grátis true e ordenação alfabética crescente",
+									"name": "[200] Busca por categoria válida, frete grátis true e ordenação alfabética crescente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -1925,7 +2121,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Categoria válida, frete grátis true e ordenação alfabética crescente",
+											"name": "[200] Busca por categoria válida, frete grátis true e ordenação alfabética crescente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -1989,7 +2185,7 @@
 									]
 								},
 								{
-									"name": "[200] Categoria válida, frete grátis true e ordenação alfabética decrescente",
+									"name": "[200] Busca por categoria válida, frete grátis true e ordenação alfabética decrescente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -2024,7 +2220,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Categoria válida, frete grátis true e ordenação alfabética decrescente",
+											"name": "[200] Busca por categoria válida, frete grátis true e ordenação alfabética decrescente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -2088,7 +2284,7 @@
 									]
 								},
 								{
-									"name": "[200] Categoria válida, frete grátis true ordenado do maior para o menor preço",
+									"name": "[200] Busca por categoria válida, frete grátis true ordenado do maior para o menor preço",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -2123,7 +2319,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Categoria válida, frete grátis true ordenado do maior para o menor preço",
+											"name": "[200] Busca por categoria válida, frete grátis true ordenado do maior para o menor preço",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -2187,7 +2383,7 @@
 									]
 								},
 								{
-									"name": "[200] Categoria válida, frete grátis true ordenado do menor para o maior preço",
+									"name": "[200] Busca por categoria válida, frete grátis true ordenado do menor para o maior preço",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -2222,7 +2418,7 @@
 									},
 									"response": [
 										{
-											"name": "[200] Categoria válida, frete grátis true ordenado do menor para o maior preço",
+											"name": "[200] Busca por categoria válida, frete grátis true ordenado do menor para o maior preço",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -2313,7 +2509,7 @@
 							"name": "4xx",
 							"item": [
 								{
-									"name": "[400] Categoria válida com ordenação não existente",
+									"name": "[400] Busca por categoria válida com ordenação não existente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -2349,7 +2545,7 @@
 									},
 									"response": [
 										{
-											"name": "[400] Categoria válida com ordenação não existente",
+											"name": "[400] Busca por categoria válida com ordenação não existente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -2410,7 +2606,7 @@
 									]
 								},
 								{
-									"name": "[400] Frete grátis true com ordenação não existente",
+									"name": "[400] Busca por frete grátis true com ordenação não existente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -2446,7 +2642,7 @@
 									},
 									"response": [
 										{
-											"name": "[400] Frete grátis true com ordenação não existente",
+											"name": "[400] Busca por frete grátis true com ordenação não existente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -2507,7 +2703,7 @@
 									]
 								},
 								{
-									"name": "[400] Categoria inválida com ordenação não existente",
+									"name": "[400] Busca por categoria inválida com ordenação não existente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -2543,7 +2739,7 @@
 									},
 									"response": [
 										{
-											"name": "[400] Categoria inválida com ordenação não existente",
+											"name": "[400] Busca por categoria inválida com ordenação não existente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -2604,7 +2800,7 @@
 									]
 								},
 								{
-									"name": "[400] Frete grátis false com ordenação não existente",
+									"name": "[400] Busca por frete grátis false com ordenação não existente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -2640,7 +2836,7 @@
 									},
 									"response": [
 										{
-											"name": "[400] Frete grátis false com ordenação não existente",
+											"name": "[400] Busca por frete grátis false com ordenação não existente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -2701,7 +2897,7 @@
 									]
 								},
 								{
-									"name": "[404] Categoria inválida, frete grátis true sem ordenação",
+									"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -2737,7 +2933,7 @@
 									},
 									"response": [
 										{
-											"name": "[404] Categoria inválida, frete grátis true sem ordenação",
+											"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -2802,7 +2998,7 @@
 									]
 								},
 								{
-									"name": "[404] Categoria inválida, frete grátis true sem ordenação alfabética crescente",
+									"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação alfabética crescente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -2837,7 +3033,7 @@
 									},
 									"response": [
 										{
-											"name": "[404] Categoria inválida, frete grátis true sem ordenação alfabética crescente",
+											"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação alfabética crescente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -2901,7 +3097,7 @@
 									]
 								},
 								{
-									"name": "[404] Categoria inválida, frete grátis true sem ordenação alfabética decrescente",
+									"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação alfabética decrescente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -2936,7 +3132,7 @@
 									},
 									"response": [
 										{
-											"name": "[404] Categoria inválida, frete grátis true sem ordenação alfabética decrescente",
+											"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação alfabética decrescente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -3000,7 +3196,7 @@
 									]
 								},
 								{
-									"name": "[404] Categoria inválida, frete grátis true sem ordenação do maior para o menor preço",
+									"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação do maior para o menor preço",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -3035,7 +3231,7 @@
 									},
 									"response": [
 										{
-											"name": "[404] Categoria inválida, frete grátis true sem ordenação do maior para o menor preço",
+											"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação do maior para o menor preço",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -3099,7 +3295,7 @@
 									]
 								},
 								{
-									"name": "[404] Categoria inválida, frete grátis true sem ordenação do menor para o maior preço",
+									"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação do menor para o maior preço",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -3134,7 +3330,7 @@
 									},
 									"response": [
 										{
-											"name": "[404] Categoria inválida, frete grátis true sem ordenação do menor para o maior preço",
+											"name": "[404] Busca por categoria inválida, frete grátis true sem ordenação do menor para o maior preço",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -3198,7 +3394,7 @@
 									]
 								},
 								{
-									"name": "[404] Categoria inválida, frete grátis false sem ordenação",
+									"name": "[404] Busca por categoria inválida, frete grátis false sem ordenação",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -3234,7 +3430,7 @@
 									},
 									"response": [
 										{
-											"name": "[404] Categoria inválida, frete grátis false sem ordenação",
+											"name": "[404] Busca por categoria inválida, frete grátis false sem ordenação",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -3299,7 +3495,7 @@
 									]
 								},
 								{
-									"name": "[404] Categoria inválida, frete grátis false em ordem alfabética crescente",
+									"name": "[404] Busca por categoria inválida, frete grátis false em ordem alfabética crescente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -3334,7 +3530,7 @@
 									},
 									"response": [
 										{
-											"name": "[404] Categoria inválida, frete grátis false em ordem alfabética crescente",
+											"name": "[404] Busca por categoria inválida, frete grátis false em ordem alfabética crescente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -3398,7 +3594,7 @@
 									]
 								},
 								{
-									"name": "[404] Categoria inválida, frete grátis false em ordem alfabética decrescente",
+									"name": "[404] Busca por categoria inválida, frete grátis false em ordem alfabética decrescente",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -3433,7 +3629,7 @@
 									},
 									"response": [
 										{
-											"name": "[404] Categoria inválida, frete grátis false em ordem alfabética decrescente",
+											"name": "[404] Busca por categoria inválida, frete grátis false em ordem alfabética decrescente",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -3497,7 +3693,7 @@
 									]
 								},
 								{
-									"name": "[404] Categoria inválida, frete grátis false em ordem do maior para o menor preço",
+									"name": "[404] Busca por categoria inválida, frete grátis false em ordem do maior para o menor preço",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -3532,7 +3728,7 @@
 									},
 									"response": [
 										{
-											"name": "[404] Categoria inválida, frete grátis false em ordem do maior para o menor preço",
+											"name": "[404] Busca por categoria inválida, frete grátis false em ordem do maior para o menor preço",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -3596,7 +3792,7 @@
 									]
 								},
 								{
-									"name": "[404] Categoria inválida, frete grátis false em ordem do menor para o maior preço",
+									"name": "[404] Busca por categoria inválida, frete grátis false em ordem do menor para o maior preço",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -3631,7 +3827,7 @@
 									},
 									"response": [
 										{
-											"name": "[404] Categoria inválida, frete grátis false em ordem do menor para o maior preço",
+											"name": "[404] Busca por categoria inválida, frete grátis false em ordem do menor para o maior preço",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -3695,7 +3891,7 @@
 									]
 								},
 								{
-									"name": "[404] Categoria inválida",
+									"name": "[404] Busca por categoria inválida",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -3732,7 +3928,7 @@
 									},
 									"response": [
 										{
-											"name": "[404] Categoria inválida",
+											"name": "[404] Busca por categoria inválida",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -3827,36 +4023,284 @@
 					"name": "api/v1/articles?freeShipping=&prestige=",
 					"item": [
 						{
-							"name": "[200] Frete grátis true e",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=***",
-									"host": [
-										"{{API_URL}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"articles"
-									],
-									"query": [
+							"name": "2xx",
+							"item": [
+								{
+									"name": "[200] Busca por produtos sem filtro",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto.",
+													"disabled": true
+												},
+												{
+													"key": "prestige",
+													"value": "*****",
+													"description": "Avaliação do produto.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
 										{
-											"key": "freeShipping",
-											"value": "true"
-										},
-										{
-											"key": "prestige",
-											"value": "***"
+											"name": "[200] Busca por produtos sem filtro",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "false",
+															"description": "Frete grátis do produto.",
+															"disabled": true
+														},
+														{
+															"key": "prestige",
+															"value": "*****",
+															"description": "Avaliação do produto.",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:31:04 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    },\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    }\n]"
 										}
 									]
-								}
-							},
-							"response": [
+								},
 								{
-									"name": "api/v1/articles?freeShipping=&prestige=",
-									"originalRequest": {
+									"name": "[200] Busca por frete grátis true sem filtro de avaliação",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=true",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "",
+													"description": "Avaliação do produto.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[200] Busca por frete grátis true sem filtro de avaliação",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=true",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "true",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "",
+															"description": "Avaliação do produto.",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 02:49:21 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    },\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[200] Busca por frete grátis true e avaliação 2",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=**",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "**",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[200] Busca por frete grátis true e avaliação 2",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=**",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "true",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "**",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 02:47:00 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[200] Busca por frete grátis true e avaliação 3",
+									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
@@ -3872,75 +4316,84 @@
 											"query": [
 												{
 													"key": "freeShipping",
-													"value": "true"
+													"value": "true",
+													"description": "Frete grátis do produto."
 												},
 												{
 													"key": "prestige",
-													"value": "***"
+													"value": "***",
+													"description": "Avaliação do produto."
 												}
 											]
 										}
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
+									"response": [
 										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Sat, 09 Jul 2022 00:00:21 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"name": "[200] Busca por frete grátis true e avaliação 3",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=***",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "true",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "***",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 02:45:28 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    }\n]"
 										}
-									],
-									"cookie": [],
-									"body": "[\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    }\n]"
-								}
-							]
-						}
-					]
-				},
-				{
-					"name": "2xx",
-					"item": [
-						{
-							"name": "[200] Busca de produtos",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{API_URL}}/api/v1/articles",
-									"host": [
-										"{{API_URL}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"articles"
 									]
-								}
-							},
-							"response": [
+								},
 								{
-									"name": "[200] Busca de produtos",
-									"originalRequest": {
+									"name": "[200] Busca por frete grátis true e avaliação 4",
+									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{API_URL}}/api/v1/articles",
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=****",
 											"host": [
 												"{{API_URL}}"
 											],
@@ -3948,164 +4401,1567 @@
 												"api",
 												"v1",
 												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "****",
+													"description": "Avaliação do produto."
+												}
 											]
 										}
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
+									"response": [
 										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 11 Jul 2022 00:34:47 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"name": "[200] Busca por frete grátis true e avaliação 4",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=****",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "true",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "****",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 02:51:11 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    }\n]"
 										}
-									],
-									"cookie": [],
-									"body": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    },\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    }\n]"
-								}
-							]
-						}
-					],
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Status code 200\", () => {",
-									"  pm.response.to.have.status(200);",
-									"});"
-								]
-							}
-						}
-					]
-				},
-				{
-					"name": "4xx",
-					"item": [
-						{
-							"name": "[404] Busca de produtos com rota inválida",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{API_URL}}/api/v1/article",
-									"host": [
-										"{{API_URL}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"article"
 									]
-								}
-							},
-							"response": [
+								},
 								{
-									"name": "[404] Busca de produtos com rota inválida",
-									"originalRequest": {
+									"name": "[200] Busca por frete grátis true e avaliação 5",
+									"request": {
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{API_URL}}/api/v1/article",
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=*****",
 											"host": [
 												"{{API_URL}}"
 											],
 											"path": [
 												"api",
 												"v1",
-												"article"
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "*****",
+													"description": "Avaliação do produto."
+												}
 											]
 										}
 									},
-									"status": "Not Found",
-									"code": 404,
-									"_postman_previewlanguage": "json",
-									"header": [
+									"response": [
 										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 11 Jul 2022 00:36:09 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"name": "[200] Busca por frete grátis true e avaliação 5",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=*****",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "true",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "*****",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 02:51:39 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    }\n]"
 										}
-									],
-									"cookie": [],
-									"body": "{\n    \"timestamp\": \"2022-07-11T00:36:09.616+00:00\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"message\": \"No message available\",\n    \"path\": \"/api/v1/article\"\n}"
+									]
+								},
+								{
+									"name": "[200] Busca por frete grátis false sem filtro de avaliação",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=false",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "",
+													"description": "Avaliação do produto.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[200] Busca por frete grátis false sem filtro de avaliação",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=false",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "false",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "",
+															"description": "Avaliação do produto.",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:19:52 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[200] Busca por frete grátis false e avaliação 1",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&prestige=*",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "*",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[200] Busca por frete grátis false e avaliação 1",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&prestige=*",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "false",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "*",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:22:35 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[200] Busca por frete grátis false e avaliação 3",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&prestige=***",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "***",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[200] Busca por frete grátis false e avaliação 3",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&prestige=***",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "false",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "***",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:24:52 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[200] Busca por avaliação 1",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?prestige=*",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto.",
+													"disabled": true
+												},
+												{
+													"key": "prestige",
+													"value": "*",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[200] Busca por avaliação 1",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?prestige=*",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "false",
+															"description": "Frete grátis do produto.",
+															"disabled": true
+														},
+														{
+															"key": "prestige",
+															"value": "*",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:27:16 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[200] Busca por avaliação 2",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?prestige=**",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto.",
+													"disabled": true
+												},
+												{
+													"key": "prestige",
+													"value": "**",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[200] Busca por avaliação 2",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?prestige=**",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "false",
+															"description": "Frete grátis do produto.",
+															"disabled": true
+														},
+														{
+															"key": "prestige",
+															"value": "**",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:28:52 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[200] Busca por avaliação 3",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?prestige=***",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto.",
+													"disabled": true
+												},
+												{
+													"key": "prestige",
+													"value": "***",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[200] Busca por avaliação 3",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?prestige=***",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "false",
+															"description": "Frete grátis do produto.",
+															"disabled": true
+														},
+														{
+															"key": "prestige",
+															"value": "***",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:29:24 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[200] Busca por avaliação 4",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?prestige=****",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto.",
+													"disabled": true
+												},
+												{
+													"key": "prestige",
+													"value": "****",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[200] Busca por avaliação 4",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?prestige=****",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "false",
+															"description": "Frete grátis do produto.",
+															"disabled": true
+														},
+														{
+															"key": "prestige",
+															"value": "****",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:29:52 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[200] Busca por avaliação 5",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?prestige=*****",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto.",
+													"disabled": true
+												},
+												{
+													"key": "prestige",
+													"value": "*****",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[200] Busca por avaliação 5",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?prestige=*****",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "false",
+															"description": "Frete grátis do produto.",
+															"disabled": true
+														},
+														{
+															"key": "prestige",
+															"value": "*****",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:30:22 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    }\n]"
+										}
+									]
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code 200\", () => {",
+											"  pm.response.to.have.status(200);",
+											"});"
+										]
+									}
 								}
 							]
-						}
-					],
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
 						},
 						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Status code 404\", () => {",
-									"  pm.response.to.have.status(404);",
-									"});"
-								]
-							}
+							"name": "4xx",
+							"item": [
+								{
+									"name": "[404] Busca por frete grátis true e sem avaliação",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[404] Busca por frete grátis true e sem avaliação",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "true",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 02:48:40 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"We don't have products for these filters\",\n    \"timestamp\": \"2022-07-10T23:48:40.549003\"\n}"
+										}
+									]
+								},
+								{
+									"name": "[404] Busca por frete grátis true e avaliação 1",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=*",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "*",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[404] Busca por frete grátis true e avaliação 1",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=*",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "true",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "*",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 02:47:21 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"We don't have products for these filters\",\n    \"timestamp\": \"2022-07-10T23:47:21.629731\"\n}"
+										}
+									]
+								},
+								{
+									"name": "[400] Busca por frete grátis true e avaliação com valor não esperado",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=4*7[*",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "true",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "4*7[*",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[400] Busca por frete grátis true e avaliação com valor não esperado",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=true&prestige=4*7[*",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "true",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "4*7[*",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "html",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/html;charset=utf-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en"
+												},
+												{
+													"key": "Content-Length",
+													"value": "2115"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 02:52:43 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"body": "<!doctype html><html lang=\"en\"><head><title>HTTP Status 400 – Bad Request</title><style type=\"text/css\">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 400 – Bad Request</h1><hr class=\"line\" /><p><b>Type</b> Exception Report</p><p><b>Message</b> Invalid character found in the request target [&#47;api&#47;v1&#47;articles?freeShipping=true&amp;prestige=4*7[* ]. The valid characters are defined in RFC 7230 and RFC 3986</p><p><b>Description</b> The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).</p><p><b>Exception</b></p><pre>java.lang.IllegalArgumentException: Invalid character found in the request target [&#47;api&#47;v1&#47;articles?freeShipping=true&amp;prestige=4*7[* ]. The valid characters are defined in RFC 7230 and RFC 3986\n\torg.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:494)\n\torg.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271)\n\torg.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\n\torg.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\n\torg.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\n\torg.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n\torg.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\n\torg.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n\torg.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n\tjava.base&#47;java.lang.Thread.run(Thread.java:829)\n</pre><p><b>Note</b> The full stack trace of the root cause is available in the server logs.</p><hr class=\"line\" /><h3>Apache Tomcat/9.0.64</h3></body></html>"
+										}
+									]
+								},
+								{
+									"name": "[404] Busca por frete grátis false e sem avaliação",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&prestige=",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[404] Busca por frete grátis false e sem avaliação",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&prestige=",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "false",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:21:57 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"We don't have products for these filters\",\n    \"timestamp\": \"2022-07-11T00:21:57.180743\"\n}"
+										}
+									]
+								},
+								{
+									"name": "[404] Busca por frete grátis false e avaliação 2",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&prestige=**",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "**",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[404] Busca por frete grátis false e avaliação 2",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&prestige=**",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "false",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "**",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:23:47 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"We don't have products for these filters\",\n    \"timestamp\": \"2022-07-11T00:23:47.226601\"\n}"
+										}
+									]
+								},
+								{
+									"name": "[404] Busca por frete grátis false e avaliação 5",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&prestige=*****",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "*****",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[404] Busca por frete grátis false e avaliação 5",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&prestige=*****",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "false",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "*****",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:25:53 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"We don't have products for these filters\",\n    \"timestamp\": \"2022-07-11T00:25:53.352361\"\n}"
+										}
+									]
+								},
+								{
+									"name": "[404] Busca por frete grátis false e avaliação 4",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&prestige=****",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "freeShipping",
+													"value": "false",
+													"description": "Frete grátis do produto."
+												},
+												{
+													"key": "prestige",
+													"value": "****",
+													"description": "Avaliação do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[404] Busca por frete grátis false e avaliação 4",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?freeShipping=false&prestige=****",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "freeShipping",
+															"value": "false",
+															"description": "Frete grátis do produto."
+														},
+														{
+															"key": "prestige",
+															"value": "****",
+															"description": "Avaliação do produto."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:37:10 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"We don't have products for these filters\",\n    \"timestamp\": \"2022-07-11T00:37:10.413718\"\n}"
+										}
+									]
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code 400 ou 404\", () => {",
+											"  pm.expect(pm.response.code).to.be.oneOf([400, 404]);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					]
 				},
