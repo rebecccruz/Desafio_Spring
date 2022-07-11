@@ -5969,33 +5969,501 @@
 					"name": "api/v1/articles?product=&brand=",
 					"item": [
 						{
-							"name": "api/v1/articles?product=&brand=",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{API_URL}}/api/v1/articles?product=Serra de Bancada&brand=FORTGPRO",
-									"host": [
-										"{{API_URL}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"articles"
-									],
-									"query": [
+							"name": "2xx",
+							"item": [
+								{
+									"name": "[200] Busca por produto e marca válidas",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?product=Furadeira&brand=Black %26 Decker",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "product",
+													"value": "Furadeira",
+													"description": "Nome do produto. "
+												},
+												{
+													"key": "brand",
+													"value": "Black %26 Decker",
+													"description": "Marca do produto. "
+												}
+											]
+										}
+									},
+									"response": [
 										{
-											"key": "product",
-											"value": "Serra de Bancada"
-										},
+											"name": "[200] Busca por produto e marca válidas",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?product=Furadeira&brand=Black %26 Decker",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "product",
+															"value": "Furadeira"
+														},
+														{
+															"key": "brand",
+															"value": "Black %26 Decker"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:55:14 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[200] Busca por nome do produto vazio e marca válida",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?product=&brand=FORTGPRO",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "product",
+													"value": "",
+													"description": "Produto do produto."
+												},
+												{
+													"key": "brand",
+													"value": "FORTGPRO",
+													"description": "Marca do produto."
+												}
+											]
+										}
+									},
+									"response": [
 										{
-											"key": "brand",
-											"value": "FORTGPRO"
+											"name": "[200] Busca por nome do produto vazio e marca válida",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?product=&brand=FORTGPRO",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "product",
+															"value": "",
+															"description": "Produto do produto."
+														},
+														{
+															"key": "brand",
+															"value": "FORTGPRO",
+															"description": "Marca do produto."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 04:03:25 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[200] Busca por produto",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?product=Soldadora",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "product",
+													"value": "Soldadora",
+													"description": "Nome do produto."
+												},
+												{
+													"key": "brand",
+													"value": "Lorenzetti",
+													"description": "Marca do produto.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[200] Busca por produto",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?product=Soldadora",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "product",
+															"value": "Soldadora"
+														},
+														{
+															"key": "brand",
+															"value": "Lorenzetti",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:58:55 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"quantity\": 4\n    },\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"quantity\": 15\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"quantity\": 2\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"quantity\": 6\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"quantity\": 9\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "[200] Busca por marca do produto",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?brand=Gonew",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "product",
+													"value": "Soldadora",
+													"description": "Nome do produto.",
+													"disabled": true
+												},
+												{
+													"key": "brand",
+													"value": "Gonew",
+													"description": "Marca do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[200] Busca por marca do produto",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?brand=Gonew",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "product",
+															"value": "Soldadora",
+															"description": "Nome do produto.",
+															"disabled": true
+														},
+														{
+															"key": "brand",
+															"value": "Gonew",
+															"description": "Marca do produto."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 04:01:40 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"quantity\": 8\n    }\n]"
 										}
 									]
 								}
-							},
-							"response": []
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code 200\", () => {",
+											"  pm.response.to.have.status(200);",
+											"});"
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "4xx",
+							"item": [
+								{
+									"name": "[404] Busca por produto e marcas inválidas",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles?product=Lâmpada&brand=Lorenzetti",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles"
+											],
+											"query": [
+												{
+													"key": "product",
+													"value": "Lâmpada",
+													"description": "Produto do produto."
+												},
+												{
+													"key": "brand",
+													"value": "Lorenzetti",
+													"description": "Marca do produto."
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "[404] Busca por produto e marcas inválidas",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{API_URL}}/api/v1/articles?product=Lâmpada&brand=Lorenzetti",
+													"host": [
+														"{{API_URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"articles"
+													],
+													"query": [
+														{
+															"key": "product",
+															"value": "Lâmpada"
+														},
+														{
+															"key": "brand",
+															"value": "Lorenzetti"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 11 Jul 2022 03:57:45 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"message\": \"We don't have products for these filters\",\n    \"timestamp\": \"2022-07-11T00:57:45.018962\"\n}"
+										}
+									]
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code 404\", () => {",
+											"  pm.response.to.have.status(404);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					]
 				}
@@ -6025,32 +6493,617 @@
 			"name": "api/v1/insert-articles-request",
 			"item": [
 				{
-					"name": "api/v1/insert-articles-request",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "[\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000.00,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100.00,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    }\n]",
-							"options": {
-								"raw": {
-									"language": "json"
+					"name": "2xx",
+					"item": [
+						{
+							"name": "[201] Envio de dados do produto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000.00,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100.00,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/insert-articles-request",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"insert-articles-request"
+									]
 								}
-							}
+							},
+							"response": [
+								{
+									"name": "[201] Envio de dados do produto",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000.00,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100.00,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/insert-articles-request",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"insert-articles-request"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:08:54 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"quantity\": 7\n    }\n]"
+								}
+							]
 						},
-						"url": {
-							"raw": "{{API_URL}}/api/v1/insert-articles-request",
-							"host": [
-								"{{API_URL}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"insert-articles-request"
+						{
+							"name": "[201] Envio de dados do produto por array vazio",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[{}]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/insert-articles-request",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"insert-articles-request"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[201] Envio de dados do produto por array vazio",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[{}]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/insert-articles-request",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"insert-articles-request"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:19:14 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": null,\n        \"name\": null,\n        \"quantity\": null\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[201] Envio de dados com atributo nome interpretado como null",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"productId\": 17,\n        \"nome\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000.00,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/insert-articles-request",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"insert-articles-request"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[201] Envio de dados com atributo nome interpretado como null",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"productId\": 17,\n        \"nome\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000.00,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/insert-articles-request",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"insert-articles-request"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:13:36 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 17,\n        \"name\": null,\n        \"quantity\": 5\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "[201] Envio de dados sem preço de produto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"productId\": 17,\n        \"nome\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/insert-articles-request",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"insert-articles-request"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[201] Envio de dados sem preço de produto",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"productId\": 17,\n        \"nome\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/insert-articles-request",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"insert-articles-request"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:17:02 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 17,\n        \"name\": null,\n        \"quantity\": 5\n    }\n]"
+								}
 							]
 						}
-					},
-					"response": []
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code 201\", () => {",
+									"  pm.response.to.have.status(201);",
+									"});"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "4xx",
+					"item": [
+						{
+							"name": "[400] Envio de dados do produto sem body",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/api/v1/insert-articles-request",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"insert-articles-request"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[400] Envio de dados do produto sem body",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{API_URL}}/api/v1/insert-articles-request",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"insert-articles-request"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:17:44 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T04:17:44.499+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.util.List<com.github.transformeli.desafiospring.dto.ProductDTO>> com.github.transformeli.desafiospring.controller.ArticlesController.createArticles(java.util.List<com.github.transformeli.desafiospring.model.Product>)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:163)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:681)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\n\",\n    \"message\": \"Required request body is missing: public org.springframework.http.ResponseEntity<java.util.List<com.github.transformeli.desafiospring.dto.ProductDTO>> com.github.transformeli.desafiospring.controller.ArticlesController.createArticles(java.util.List<com.github.transformeli.desafiospring.model.Product>)\",\n    \"path\": \"/api/v1/insert-articles-request\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[400] Envio de dados com sintaxe errada no body",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"productId\": 15,\n        \"name\": \"Martelo do Thor\"\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000.00,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/insert-articles-request",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"insert-articles-request"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[400] Envio de dados com sintaxe errada no body",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"productId\": 15,\n        \"name\": \"Martelo do Thor\"\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000.00,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/insert-articles-request",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"insert-articles-request"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:12:02 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T04:12:02.389+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 10] (through reference chain: java.util.ArrayList[0])\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:681)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\nCaused by: com.fasterxml.jackson.databind.JsonMappingException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 10] (through reference chain: java.util.ArrayList[0])\\n\\tat com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:392)\\n\\tat com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:363)\\n\\tat com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:371)\\n\\tat com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244)\\n\\tat com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28)\\n\\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380)\\n\\t... 51 more\\nCaused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 10]\\n\\tat com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2391)\\n\\tat com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:735)\\n\\tat com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:659)\\n\\tat com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1056)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:398)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:184)\\n\\tat com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355)\\n\\t... 57 more\\n\",\n    \"message\": \"JSON parse error: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 10] (through reference chain: java.util.ArrayList[0])\",\n    \"path\": \"/api/v1/insert-articles-request\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[415] Envio de dados com body em formato não esperado",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000.00,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100.00,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "javascript"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/insert-articles-request",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"insert-articles-request"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[415] Envio de dados com body em formato não esperado",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000.00,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100.00,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "javascript"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/insert-articles-request",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"insert-articles-request"
+											]
+										}
+									},
+									"status": "Unsupported Media Type",
+									"code": 415,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Accept",
+											"value": "application/json, application/*+json"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:10:30 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T04:10:30.723+00:00\",\n    \"status\": 415,\n    \"error\": \"Unsupported Media Type\",\n    \"trace\": \"org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/javascript;charset=UTF-8' not supported\\n\\tat org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:211)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:681)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\n\",\n    \"message\": \"Content type 'application/javascript;charset=UTF-8' not supported\",\n    \"path\": \"/api/v1/insert-articles-request\"\n}"
+								}
+							]
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code 400 ou 415\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([400, 415]);",
+									"});"
+								]
+							}
+						}
+					]
 				}
 			]
 		},
@@ -6058,32 +7111,572 @@
 			"name": "api/v1/purchase-request",
 			"item": [
 				{
-					"name": "[200] api/v1/purchase-request",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"brand\": \"FORTGPRO\",\n        \"quantity\": 5\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"brand\": \"Black & Decker\",\n        \"quantity\": 7\n    }\n]",
-							"options": {
-								"raw": {
-									"language": "json"
+					"name": "2xx",
+					"item": [
+						{
+							"name": "[200] Envio de dados de compra de produto com body válido",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"brand\": \"Black & Decker\",\n        \"quantity\": 10\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/purchase-request",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"purchase-request"
+									]
 								}
-							}
-						},
-						"url": {
-							"raw": "{{API_URL}}/api/v1/purchase-request",
-							"host": [
-								"{{API_URL}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"purchase-request"
+							},
+							"response": [
+								{
+									"name": "[200] Envio de dados de compra de produto com body válido",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"brand\": \"Black & Decker\",\n        \"quantity\": 10\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/purchase-request",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"purchase-request"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:39:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 4,\n    \"articles\": [\n        {\n            \"productId\": 3,\n            \"name\": \"Soldadora\",\n            \"category\": \"Ferramentas\",\n            \"brand\": \"Black & Decker\",\n            \"price\": 350,\n            \"quantity\": 10,\n            \"freeShipping\": true,\n            \"prestige\": \"***\"\n        }\n    ],\n    \"total\": 350\n}"
+								}
 							]
 						}
-					},
-					"response": []
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code 200\", () => {",
+									"  pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "4xx",
+					"item": [
+						{
+							"name": "[400] Envio de dados de compra de produto com erro de sintaxe",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"productId\" : 7,\n        \"name\" : \"Redmi Note 9\",\n        \"category\" : \"Celulares\",\n        \"brand\" : \"Xiaomi\",\n        \"price\" : 2800.0,\n        \"quantity\" : 15\n        \"freeShipping\" : true,\n        \"prestige\" : \"****\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/purchase-request",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"purchase-request"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[400] Envio de dados de compra de produto com erro de sintaxe",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"productId\" : 7,\n        \"name\" : \"Redmi Note 9\",\n        \"category\" : \"Celulares\",\n        \"brand\" : \"Xiaomi\",\n        \"price\" : 2800.0,\n        \"quantity\" : 15\n        \"freeShipping\" : true,\n        \"prestige\" : \"****\"\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/purchase-request",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"purchase-request"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:41:09 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T04:41:09.337+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 9, column: 10] (through reference chain: java.util.ArrayList[0])\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:681)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\nCaused by: com.fasterxml.jackson.databind.JsonMappingException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 9, column: 10] (through reference chain: java.util.ArrayList[0])\\n\\tat com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:392)\\n\\tat com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:363)\\n\\tat com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:371)\\n\\tat com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244)\\n\\tat com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28)\\n\\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380)\\n\\t... 51 more\\nCaused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 9, column: 10]\\n\\tat com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2391)\\n\\tat com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:735)\\n\\tat com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:659)\\n\\tat com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1056)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:398)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:184)\\n\\tat com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355)\\n\\t... 57 more\\n\",\n    \"message\": \"JSON parse error: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 9, column: 10] (through reference chain: java.util.ArrayList[0])\",\n    \"path\": \"/api/v1/purchase-request\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[400] Envio de dados de compra de produto sem body",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/purchase-request",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"purchase-request"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[400] Envio de dados de compra de produto sem body",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/purchase-request",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"purchase-request"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:45:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T04:45:25.464+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.github.transformeli.desafiospring.model.Ticket> com.github.transformeli.desafiospring.controller.PurchaseController.processPurchase(java.util.List<com.github.transformeli.desafiospring.model.PurchaseRequest>)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:163)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:681)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\n\",\n    \"message\": \"Required request body is missing: public org.springframework.http.ResponseEntity<com.github.transformeli.desafiospring.model.Ticket> com.github.transformeli.desafiospring.controller.PurchaseController.processPurchase(java.util.List<com.github.transformeli.desafiospring.model.PurchaseRequest>)\",\n    \"path\": \"/api/v1/purchase-request\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[400] Envio de dados de compra de produto com formato de frete grátis não esperado",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"productId\" : 7,\n        \"name\" : \"Redmi Note 9\",\n        \"category\" : \"Celulares\",\n        \"brand\" : \"Xiaomi\",\n        \"price\" : 2800.0,\n        \"quantity\" : 15,\n        \"freeShipping\" : bool,\n        \"prestige\" : \"****\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/purchase-request",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"purchase-request"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[400] Envio de dados de compra de produto com formato de frete grátis não esperado",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"productId\" : 7,\n        \"name\" : \"Redmi Note 9\",\n        \"category\" : \"Celulares\",\n        \"brand\" : \"Xiaomi\",\n        \"price\" : 2800.0,\n        \"quantity\" : 15,\n        \"freeShipping\" : bool,\n        \"prestige\" : \"****\"\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/purchase-request",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"purchase-request"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:42:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T04:42:23.057+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'bool': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false'); nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unrecognized token 'bool': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 9, column: 31] (through reference chain: java.util.ArrayList[0])\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:681)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\nCaused by: com.fasterxml.jackson.databind.JsonMappingException: Unrecognized token 'bool': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 9, column: 31] (through reference chain: java.util.ArrayList[0])\\n\\tat com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:392)\\n\\tat com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:363)\\n\\tat com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:371)\\n\\tat com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244)\\n\\tat com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28)\\n\\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380)\\n\\t... 51 more\\nCaused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'bool': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 9, column: 31]\\n\\tat com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2391)\\n\\tat com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:745)\\n\\tat com.fasterxml.jackson.core.json.UTF8StreamJsonParser._reportInvalidToken(UTF8StreamJsonParser.java:3635)\\n\\tat com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2734)\\n\\tat com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1126)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:398)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:184)\\n\\tat com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:355)\\n\\t... 57 more\\n\",\n    \"message\": \"JSON parse error: Unrecognized token 'bool': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false'); nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unrecognized token 'bool': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 9, column: 31] (through reference chain: java.util.ArrayList[0])\",\n    \"path\": \"/api/v1/purchase-request\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[415] Envio de dados de compra de produto com body enviado em formato não esperado",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"productId\" : 7,\n        \"name\" : \"Redmi Note 9\",\n        \"category\" : \"Celulares\",\n        \"brand\" : \"Xiaomi\",\n        \"price\" : 2800.0,\n        \"quantity\" : 15,\n        \"freeShipping\" : true,\n        \"prestige\" : \"****\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "html"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/purchase-request",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"purchase-request"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[415] Envio de dados de compra de produto com body enviado em formato não esperado",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"productId\" : 7,\n        \"name\" : \"Redmi Note 9\",\n        \"category\" : \"Celulares\",\n        \"brand\" : \"Xiaomi\",\n        \"price\" : 2800.0,\n        \"quantity\" : 15,\n        \"freeShipping\" : true,\n        \"prestige\" : \"****\"\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "html"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/purchase-request",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"purchase-request"
+											]
+										}
+									},
+									"status": "Unsupported Media Type",
+									"code": 415,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Accept",
+											"value": "application/json, application/*+json"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:43:16 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T04:43:16.446+00:00\",\n    \"status\": 415,\n    \"error\": \"Unsupported Media Type\",\n    \"trace\": \"org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/html;charset=UTF-8' not supported\\n\\tat org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:211)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:681)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\n\",\n    \"message\": \"Content type 'text/html;charset=UTF-8' not supported\",\n    \"path\": \"/api/v1/purchase-request\"\n}"
+								}
+							]
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code 400 e 415\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([400, 415]);",
+									"});"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "5xx",
+					"item": [
+						{
+							"name": "[500] Envio de dados de compra de produto com array vazio no body",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[{}]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/purchase-request",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"purchase-request"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[500] Envio de dados de compra de produto com array vazio no body",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[{}]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/purchase-request",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"purchase-request"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:44:16 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T04:44:16.972+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"trace\": \"java.lang.NullPointerException\\n\\tat com.github.transformeli.desafiospring.service.PurchaseService.lambda$processPurchase$0(PurchaseService.java:33)\\n\\tat java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90)\\n\\tat java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1632)\\n\\tat java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)\\n\\tat java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)\\n\\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)\\n\\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)\\n\\tat java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230)\\n\\tat java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196)\\n\\tat java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\\n\\tat java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:528)\\n\\tat com.github.transformeli.desafiospring.service.PurchaseService.lambda$processPurchase$1(PurchaseService.java:33)\\n\\tat java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:176)\\n\\tat java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)\\n\\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)\\n\\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)\\n\\tat java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)\\n\\tat java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\\n\\tat java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)\\n\\tat com.github.transformeli.desafiospring.service.PurchaseService.processPurchase(PurchaseService.java:34)\\n\\tat com.github.transformeli.desafiospring.controller.PurchaseController.processPurchase(PurchaseController.java:26)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:681)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\n\",\n    \"message\": \"No message available\",\n    \"path\": \"/api/v1/purchase-request\"\n}"
+								}
+							]
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code 500\", () => {",
+									"  pm.response.to.have.status(500);",
+									"});",
+									""
+								]
+							}
+						}
+					]
 				}
 			]
 		},
@@ -6091,34 +7684,668 @@
 			"name": "api/v1/articles/update-articles/{productId}",
 			"item": [
 				{
-					"name": "[200] api/v1/articles/update-articles/{productId}",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+					"name": "2xx",
+					"item": [
+						{
+							"name": "[200] Atualização do registro de produto",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles/update-articles/:productId",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles",
+										"update-articles",
+										":productId"
+									],
+									"variable": [
+										{
+											"key": "productId",
+											"value": "1",
+											"description": "Identificador do produto."
+										}
+									]
 								}
-							}
-						},
-						"url": {
-							"raw": "{{API_URL}}/api/v1/articles/update-articles/1",
-							"host": [
-								"{{API_URL}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"articles",
-								"update-articles",
-								"1"
+							},
+							"response": [
+								{
+									"name": "[200] Atualização do registro de produto",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles/update-articles/:productId",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles",
+												"update-articles",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": "1",
+													"description": "Identificador do produto."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:24:28 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 1800,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 2,\n        \"name\": \"Furadeira\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 500,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 3,\n        \"name\": \"Soldadora\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 350,\n        \"quantity\": 10,\n        \"freeShipping\": true,\n        \"prestige\": \"***\"\n    },\n    {\n        \"productId\": 4,\n        \"name\": \"Chuteira\",\n        \"category\": \"Esportes\",\n        \"brand\": \"Adidas\",\n        \"price\": 235,\n        \"quantity\": 6,\n        \"freeShipping\": true,\n        \"prestige\": \"*****\"\n    },\n    {\n        \"productId\": 5,\n        \"name\": \"Mini Cama elastica\",\n        \"category\": \"Esportes\",\n        \"brand\": \"Starboard\",\n        \"price\": 183,\n        \"quantity\": 4,\n        \"freeShipping\": true,\n        \"prestige\": \"*****\"\n    },\n    {\n        \"productId\": 6,\n        \"name\": \"Camiseta\",\n        \"category\": \"Esportes\",\n        \"brand\": \"Topper\",\n        \"price\": 80,\n        \"quantity\": 2,\n        \"freeShipping\": false,\n        \"prestige\": \"***\"\n    },\n    {\n        \"productId\": 7,\n        \"name\": \"Redmi Note 9\",\n        \"category\": \"Celulares\",\n        \"brand\": \"Xiaomi\",\n        \"price\": 2800,\n        \"quantity\": 15,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 8,\n        \"name\": \"Smartwatch\",\n        \"category\": \"Celulares\",\n        \"brand\": \"Noga\",\n        \"price\": 1200,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"**\"\n    },\n    {\n        \"productId\": 9,\n        \"name\": \"Camisa\",\n        \"category\": \"Roupas\",\n        \"brand\": \"Fila\",\n        \"price\": 79,\n        \"quantity\": 2,\n        \"freeShipping\": false,\n        \"prestige\": \"***\"\n    },\n    {\n        \"productId\": 10,\n        \"name\": \"Calcas\",\n        \"category\": \"Roupas\",\n        \"brand\": \"Oakley\",\n        \"price\": 73,\n        \"quantity\": 6,\n        \"freeShipping\": false,\n        \"prestige\": \"***\"\n    },\n    {\n        \"productId\": 11,\n        \"name\": \"Meias\",\n        \"category\": \"Roupas\",\n        \"brand\": \"Gonew\",\n        \"price\": 10,\n        \"quantity\": 8,\n        \"freeShipping\": false,\n        \"prestige\": \"*\"\n    },\n    {\n        \"productId\": 12,\n        \"name\": \"Shorts\",\n        \"category\": \"Roupas\",\n        \"brand\": \"Lacoste\",\n        \"price\": 275,\n        \"quantity\": 9,\n        \"freeShipping\": true,\n        \"prestige\": \"***\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 14,\n        \"name\": \"Alicate do Lucas\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"Black & Decker\",\n        \"price\": 100,\n        \"quantity\": 7,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 13,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 15,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 15,\n        \"name\": \"Martelo do Thor\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 1,\n        \"name\": \"Serra de Bancada\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 1800,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 17,\n        \"name\": null,\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 17,\n        \"name\": \"Martel0 do Th0r\",\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 17,\n        \"name\": \"Martel0 do Th0r\",\n        \"category\": \"Fer\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 17,\n        \"name\": \"Martel0 do Th0r\",\n        \"category\": \"Fer\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 500000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 17,\n        \"name\": null,\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": 5000,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": 17,\n        \"name\": null,\n        \"category\": \"Ferramentas\",\n        \"brand\": \"FORTGPRO\",\n        \"price\": null,\n        \"quantity\": 5,\n        \"freeShipping\": true,\n        \"prestige\": \"****\"\n    },\n    {\n        \"productId\": null,\n        \"name\": null,\n        \"category\": null,\n        \"brand\": null,\n        \"price\": null,\n        \"quantity\": null,\n        \"freeShipping\": null,\n        \"prestige\": null\n    }\n]"
+								}
 							]
 						}
-					},
-					"response": []
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code 200\", () => {",
+									"  pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "4xx",
+					"item": [
+						{
+							"name": "[400] Atualização do registro de produto com path param inválido",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles/update-articles/:productId",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles",
+										"update-articles",
+										":productId"
+									],
+									"variable": [
+										{
+											"key": "productId",
+											"value": "OjkD",
+											"description": "Identificador do produto."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[400] Atualização do registro de produto com path param inválido",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles/update-articles/:productId",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles",
+												"update-articles",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": "OjkD",
+													"description": "Identificador do produto."
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:26:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T04:26:53.896+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: \\\"OjkD\\\"\\n\\tat org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:684)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\nCaused by: java.lang.NumberFormatException: For input string: \\\"OjkD\\\"\\n\\tat java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\\n\\tat java.base/java.lang.Long.parseLong(Long.java:692)\\n\\tat java.base/java.lang.Long.valueOf(Long.java:1144)\\n\\tat org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)\\n\\tat org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)\\n\\tat org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)\\n\\tat org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)\\n\\tat org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)\\n\\tat org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)\\n\\tat org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)\\n\\tat org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:729)\\n\\tat org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)\\n\\t... 47 more\\n\",\n    \"message\": \"Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: \\\"OjkD\\\"\",\n    \"path\": \"/api/v1/articles/update-articles/OjkD\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[400] Atualização do registro de produto com quantidade no formato não esperado",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": \"5rsd\",\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles/update-articles/:productId",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles",
+										"update-articles",
+										":productId"
+									],
+									"variable": [
+										{
+											"key": "productId",
+											"value": "5",
+											"description": "Identificador do produto."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[400] Atualização do registro de produto com quantidade no formato não esperado",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": \"5rsd\",\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles/update-articles/:productId",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles",
+												"update-articles",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": "5",
+													"description": "Identificador do produto."
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:28:48 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T04:28:48.680+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String \\\"5rsd\\\": not a valid `java.lang.Integer` value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.lang.Integer` from String \\\"5rsd\\\": not a valid `java.lang.Integer` value\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 6, column: 17] (through reference chain: com.github.transformeli.desafiospring.model.Product[\\\"quantity\\\"])\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:684)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\nCaused by: com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.lang.Integer` from String \\\"5rsd\\\": not a valid `java.lang.Integer` value\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 6, column: 17] (through reference chain: com.github.transformeli.desafiospring.model.Product[\\\"quantity\\\"])\\n\\tat com.fasterxml.jackson.databind.exc.InvalidFormatException.from(InvalidFormatException.java:67)\\n\\tat com.fasterxml.jackson.databind.DeserializationContext.weirdStringException(DeserializationContext.java:1991)\\n\\tat com.fasterxml.jackson.databind.DeserializationContext.handleWeirdStringValue(DeserializationContext.java:1219)\\n\\tat com.fasterxml.jackson.databind.deser.std.StdDeserializer._parseInteger(StdDeserializer.java:840)\\n\\tat com.fasterxml.jackson.databind.deser.std.StdDeserializer._parseInteger(StdDeserializer.java:820)\\n\\tat com.fasterxml.jackson.databind.deser.std.NumberDeserializers$IntegerDeserializer.deserialize(NumberDeserializers.java:531)\\n\\tat com.fasterxml.jackson.databind.deser.std.NumberDeserializers$IntegerDeserializer.deserialize(NumberDeserializers.java:506)\\n\\tat com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:391)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:184)\\n\\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380)\\n\\t... 51 more\\n\",\n    \"message\": \"JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String \\\"5rsd\\\": not a valid `java.lang.Integer` value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.lang.Integer` from String \\\"5rsd\\\": not a valid `java.lang.Integer` value\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 6, column: 17] (through reference chain: com.github.transformeli.desafiospring.model.Product[\\\"quantity\\\"])\",\n    \"path\": \"/api/v1/articles/update-articles/5\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[400] Atualização do registro de produto com erro de sintaxe no body",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Serra de Bancada\"\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles/update-articles/:productId",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles",
+										"update-articles",
+										":productId"
+									],
+									"variable": [
+										{
+											"key": "productId",
+											"value": "10",
+											"description": "Identificador do produto."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[400] Atualização do registro de produto com erro de sintaxe no body",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Serra de Bancada\"\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles/update-articles/:productId",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles",
+												"update-articles",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": "10",
+													"description": "Identificador do produto."
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:30:15 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T04:30:15.611+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 3, column: 6]\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:391)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:684)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\nCaused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 3, column: 6]\\n\\tat com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2391)\\n\\tat com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:735)\\n\\tat com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:659)\\n\\tat com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1056)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:398)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:184)\\n\\tat com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)\\n\\tat com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682)\\n\\tat org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380)\\n\\t... 51 more\\n\",\n    \"message\": \"JSON parse error: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('\\\"' (code 34)): was expecting comma to separate Object entries\\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 3, column: 6]\",\n    \"path\": \"/api/v1/articles/update-articles/10\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[404] Atualização do registro de produto com path param vazio",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles/update-articles/:productId",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles",
+										"update-articles",
+										":productId"
+									],
+									"variable": [
+										{
+											"key": "productId",
+											"value": "",
+											"description": "Identificador do produto."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] Atualização do registro de produto com path param vazio",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles/update-articles/:productId",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles",
+												"update-articles",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": "",
+													"description": "Identificador do produto."
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:27:46 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T04:27:46.009+00:00\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"message\": \"No message available\",\n    \"path\": \"/api/v1/articles/update-articles/\"\n}"
+								}
+							]
+						},
+						{
+							"name": "[415] Atualização do registro de produto em formato não suportado",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+									"options": {
+										"raw": {
+											"language": "text"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/api/v1/articles/update-articles/:productId",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"articles",
+										"update-articles",
+										":productId"
+									],
+									"variable": [
+										{
+											"key": "productId",
+											"value": "10",
+											"description": "Identificador do produto."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[415] Atualização do registro de produto em formato não suportado",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Serra de Bancada\",\n    \"category\": \"Ferramentas\",\n    \"brand\": \"FORTGPRO\",\n    \"price\": 1800.0,\n    \"quantity\": 5,\n    \"freeShipping\": true,\n    \"prestige\": \"****\"\n}",
+											"options": {
+												"raw": {
+													"language": "text"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{API_URL}}/api/v1/articles/update-articles/:productId",
+											"host": [
+												"{{API_URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"articles",
+												"update-articles",
+												":productId"
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": "10",
+													"description": "Identificador do produto."
+												}
+											]
+										}
+									},
+									"status": "Unsupported Media Type",
+									"code": 415,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Accept",
+											"value": "application/json, application/*+json"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 04:32:00 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2022-07-11T04:32:00.697+00:00\",\n    \"status\": 415,\n    \"error\": \"Unsupported Media Type\",\n    \"trace\": \"org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported\\n\\tat org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:211)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:684)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:829)\\n\",\n    \"message\": \"Content type 'text/plain;charset=UTF-8' not supported\",\n    \"path\": \"/api/v1/articles/update-articles/10\"\n}"
+								}
+							]
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code 400, 404, 415\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([400, 404, 415]);",
+									"});"
+								]
+							}
+						}
+					]
 				}
 			]
 		},
